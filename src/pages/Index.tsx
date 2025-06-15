@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -99,7 +100,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="bg-black/50 backdrop-blur-sm rounded-xl p-8 mx-auto max-w-5xl">
+          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 mx-auto max-w-5xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Savor Luxury: Space, Light, Views
             </h1>
