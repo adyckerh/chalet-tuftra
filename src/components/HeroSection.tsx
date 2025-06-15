@@ -49,39 +49,41 @@ export const HeroSection = ({
           />
         ))}
 
-        {/* Overlay Box */}
-        <div className="relative z-20 flex flex-col items-center justify-center bg-white/75 bg-blur-md border border-emerald-900 rounded-2xl shadow-xl px-8 py-8 md:py-12 max-w-2xl mx-auto text-center animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-stone-900 mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.11)]">
-            {heading || "Where Luxury Meets Alpine Authenticity"}
-          </h1>
-          <p className="text-xl text-stone-700 max-w-xl mx-auto mb-6 md:mb-8">
-            Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic
-          </p>
-          {/* 3D Tour Link */}
-          <a
-            href="https://my.matterport.com/show/?m=VnYcNjgkFQ2"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="inline-block text-emerald-900 font-semibold underline underline-offset-4 mb-6 hover:text-emerald-800 hover-scale transition-all"
-          >
-            Explore 3D Virtual Tour
-          </a>
-          {/* CTA Button */}
-          <button
-            onClick={() => setIsInquiryOpen(true)}
-            className="px-8 py-4 rounded-xl bg-emerald-900 text-white text-lg font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
-          >
-            Reserve Your Alpine Escape
-          </button>
+        {/* Overlay Box at the bottom */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 w-[96%] max-w-2xl">
+          <div className="flex flex-col items-center justify-center bg-white/75 bg-blur-md border border-emerald-900 rounded-2xl shadow-xl px-4 py-4 md:px-6 md:py-6 text-center animate-fade-in">
+            <h1 className="text-2xl md:text-3xl font-bold text-stone-900 mb-2 leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.10)]">
+              {heading || "Where Luxury Meets Alpine Authenticity"}
+            </h1>
+            <p className="text-base md:text-lg text-stone-700 max-w-lg mx-auto mb-4 md:mb-5">
+              Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic
+            </p>
+            {/* 3D Tour Link */}
+            <a
+              href="https://my.matterport.com/show/?m=VnYcNjgkFQ2"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="inline-block text-emerald-900 text-sm md:text-base font-semibold underline underline-offset-4 mb-3 hover:text-emerald-800 hover-scale transition-all"
+            >
+              Explore 3D Virtual Tour
+            </a>
+            {/* CTA Button */}
+            <button
+              onClick={() => setIsInquiryOpen(true)}
+              className="px-5 py-2 rounded-xl bg-emerald-900 text-white text-base font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
+            >
+              Reserve Your Alpine Escape
+            </button>
+          </div>
         </div>
 
         {/* Dots */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-30">
+        <div className="absolute bottom-3 left-0 right-0 flex justify-center space-x-2 z-30">
           {images.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
                 idx === activeIndex
                   ? "bg-emerald-900 scale-110"
                   : "bg-white/70 border border-emerald-900"
