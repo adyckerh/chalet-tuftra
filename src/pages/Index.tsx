@@ -96,8 +96,9 @@ const Index = () => {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 text-lg"
+              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
             >
-              Explore Our Chalet
+              3D Virtual Walkthrough
             </Button>
           </div>
         </div>
