@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -130,7 +129,7 @@ const Index = () => {
       <AboutSection id="about" setIsInquiryOpen={setIsInquiryOpen} />
       <GallerySection id="amenities" categories={galleryCategories} />
       <LocationSection id="contact" />
-      <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
+
       <FooterSection />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
