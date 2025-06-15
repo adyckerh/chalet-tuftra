@@ -37,7 +37,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="text-2xl font-bold text-amber-900">Chalet Tuftra</h1>
+              <h1 className="text-2xl font-bold text-emerald-700">Chalet Tuftra Findelbach</h1>
               <p className="text-sm text-stone-600 italic">Zermatt</p>
             </div>
             
@@ -191,7 +191,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Chalet Tuftra</h3>
+              <h3 className="text-xl font-bold mb-4">Chalet Tuftra Findelbach</h3>
               <p className="text-stone-300">{t('luxury_sanctuary')}</p>
             </div>
             
