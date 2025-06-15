@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -85,7 +84,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-end pb-32 overflow-hidden">
+      <section id="home" className="relative h-screen flex items-end pb-16 overflow-hidden">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -104,10 +103,6 @@ const Index = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Savor Luxury: Space, Light, Views
             </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed">
-              Discover our family hub in Zermatt, where the fascinating view of the Matterhorn meets the rushing Findelbach. 
-              A light-flooded sanctuary designed for shared experiences and lasting memories.
-            </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
                 size="lg"
@@ -133,9 +128,13 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Our Chalet Philosophy</h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+            <p className="text-xl text-stone-600 max-w-3xl mx-auto mb-8">
               Space, view, and light - the fundamental elements that make Chalet Tuftra a place where every guest 
               can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
+            </p>
+            <p className="text-xl text-stone-600 max-w-4xl mx-auto">
+              Discover our family hub in Zermatt, where the fascinating view of the Matterhorn meets the rushing Findelbach. 
+              A light-flooded sanctuary designed for shared experiences and lasting memories.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
