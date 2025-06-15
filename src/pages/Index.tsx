@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -41,7 +40,10 @@ const Index = () => {
         "/lovable-uploads/4942d381-e5bb-4390-9cbd-f9042e15a2d5.png",
         "/lovable-uploads/ed3fc4a1-8745-4593-8672-17ee1bc9e3fc.png",
         "/lovable-uploads/50460ede-534b-4b2c-9f26-3a53a353b317.png",
-        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png"
+        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png",
+        "/lovable-uploads/e7e5245e-1ec9-4458-b5af-bb496308426d.png",
+        "/lovable-uploads/49e7784a-7fbc-4caf-9140-32c580d075a1.png",
+        "/lovable-uploads/a93e0bd2-1eea-4eef-8655-f0d1e72c4e4a.png"
       ]
     },
     {
@@ -52,7 +54,10 @@ const Index = () => {
         "/lovable-uploads/cfa74102-a2d2-474c-ac9c-8d37fc8373f5.png",
         "/lovable-uploads/6a4be8ef-2ba5-43f8-aa59-9f4fd5677d50.png",
         "/lovable-uploads/ea84128a-a75b-4dff-a5e8-a7f920e6a3d5.png",
-        "/lovable-uploads/b60b771b-de97-412e-8272-b6dcca64efc5.png"
+        "/lovable-uploads/b60b771b-de97-412e-8272-b6dcca64efc5.png",
+        "/lovable-uploads/5c063f50-934e-4cd9-85ec-a073ec892bee.png",
+        "/lovable-uploads/75ab0420-29cb-4ca7-93cb-9cceb2aea845.png",
+        "/lovable-uploads/65fc1e7e-089d-47d3-8967-52fc7e13c53f.png"
       ]
     },
     {
@@ -68,7 +73,10 @@ const Index = () => {
         "/lovable-uploads/65446efd-48bb-4572-a912-e653ff78a500.png",
         "/lovable-uploads/6d1de32e-26f0-4e09-ab07-d035b9b3a53f.png",
         "/lovable-uploads/78d06a0c-c2b6-4d01-8e17-03e966cad9d3.png",
-        "/lovable-uploads/32218385-99c9-4275-918c-ed9f8fbdf180.png"
+        "/lovable-uploads/32218385-99c9-4275-918c-ed9f8fbdf180.png",
+        "/lovable-uploads/52d1e32d-3557-4a34-8943-3e85c1ce774e.png",
+        "/lovable-uploads/8094eb0f-eeda-4435-9914-e076a90d761c.png",
+        "/lovable-uploads/153e8c1a-7341-4337-9b2d-da04b3472e9d.png"
       ]
     }
   ];
