@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -88,17 +87,16 @@ const Index = () => {
             <Button 
               size="lg"
               onClick={() => setIsInquiryOpen(true)}
-              className="bg-amber-900 hover:bg-amber-800 text-white px-8 py-4 text-lg"
+              className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
             >
-              Reserve Your Alpine Escape
+              Reserve your alpine escape
             </Button>
             <Button 
               size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 text-lg"
+              className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
               onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
             >
-              3D Virtual Walkthrough
+              3D virtual walkthrough
             </Button>
           </div>
         </div>
