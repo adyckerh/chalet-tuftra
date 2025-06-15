@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -47,15 +48,16 @@ const Index = () => {
               </div>
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('home')}</a>
-              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('about')}</a>
-              <a href="#experiences" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('experiences')}</a>
-              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('contact')}</a>
+            <div className="hidden lg:flex items-center space-x-6">
+              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('home')}</a>
+              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('about')}</a>
+              <a href="#experiences" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('experiences')}</a>
+              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('contact')}</a>
               <LanguageSelector />
               <Button 
                 onClick={() => setIsInquiryOpen(true)}
-                className="bg-emerald-900 hover:bg-emerald-800 text-white"
+                className="bg-emerald-900 hover:bg-emerald-800 text-white whitespace-nowrap"
+                size="sm"
               >
                 {t('make_inquiry')}
               </Button>
