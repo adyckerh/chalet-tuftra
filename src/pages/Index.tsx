@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -45,6 +44,21 @@ const Index = () => {
       icon: Users,
       title: "Family Hub Concept",
       description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
+    }
+  ];
+
+  const reviews = [
+    {
+      text: "A beautiful chalet with first-class amenities. Outstanding service and attentive care. The location suited us perfectly too—slightly outside the village center, yet wonderfully quiet.",
+      rating: 5
+    },
+    {
+      text: "Lovely chalet, equipped with quality appliances all around. Fantastic concierge and housekeeping. Truly exceeded our expectations.",
+      rating: 5
+    },
+    {
+      text: "Amazing accommodation! Incredible staff! Excellent food—loved it! 🙌",
+      rating: 5
     }
   ];
 
@@ -263,6 +277,53 @@ const Index = () => {
                 className="rounded-lg shadow-2xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-20 bg-stone-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
+              What Our Guests Say
+            </h2>
+            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+              Discover why guests return again and again to create lasting memories at Chalet Tuftra.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <div key={i} className="w-5 h-5 text-yellow-400 fill-current">
+                      ⭐
+                    </div>
+                  ))}
+                </div>
+                <p className="text-stone-700 leading-relaxed mb-6 italic">
+                  "{review.text}"
+                </p>
+                <div className="text-sm text-stone-500 font-medium">
+                  Verified Airbnb Guest
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-stone-600 mb-6">
+              Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
+            </p>
+            <Button 
+              size="lg"
+              onClick={() => setIsInquiryOpen(true)}
+              className="bg-emerald-900 hover:bg-emerald-800 text-white"
+            >
+              Book Your Stay
+            </Button>
           </div>
         </div>
       </section>
