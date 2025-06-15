@@ -1,6 +1,6 @@
 
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Mountain, Eye, Sun, Users, Calendar, Mail, MapPin, Phone } from "lucide-react";
@@ -10,8 +10,26 @@ import { useLanguage } from "@/hooks/useLanguage";
 
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { t } = useLanguage();
   const { toast } = useToast();
+
+  const heroImages = [
+    "/lovable-uploads/9c9b4ae8-1529-47bd-81f8-9d9ee0f89e56.png",
+    "/lovable-uploads/8411f363-94bd-4bca-b0b3-5b325145f606.png",
+    "/lovable-uploads/7918234d-5f87-4e28-903f-69cf7b0ee909.png",
+    "/lovable-uploads/21fff439-a418-44a3-ac6a-54ee7236d35d.png"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const heroFeatures = [
     {
@@ -69,12 +87,17 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="relative h-screen flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80")'
-          }}
-        />
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url("${image}")`
+            }}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
