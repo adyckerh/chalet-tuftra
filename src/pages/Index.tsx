@@ -85,7 +85,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-end pb-16 overflow-hidden">
+      <section id="home" className="relative h-screen flex items-end pb-8 overflow-hidden">
         {heroImages.map((image, index) => (
           <div
             key={index}
