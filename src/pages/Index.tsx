@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -32,7 +33,7 @@ const Index = () => {
   const heroFeatures = [
     {
       icon: Mountain,
-      title: "Matterhorn & Findelbach Views",
+      title: "Iconic Views",
       description: "Experience the mesmerizing combination of the iconic Matterhorn peak and the rushing Findelbach stream from every room"
     },
     {
