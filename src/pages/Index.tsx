@@ -129,10 +129,11 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Our Chalet Philosophy</h2>
             <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Space, view, and light - the fundamental elements that make Chalet Tuftra a place where every guest 
+              Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
               can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
             </p>
           </div>
+          
           <div className="grid md:grid-cols-3 gap-12">
             {heroFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
