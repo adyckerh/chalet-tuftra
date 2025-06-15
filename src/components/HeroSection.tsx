@@ -35,32 +35,27 @@ export const HeroSection = ({
       className="relative min-h-[80vh] w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white flex items-center justify-center pt-28 mb-6 overflow-hidden"
       style={{ position: "relative" }}
     >
-      {/* Full-width slideshow */}
-      <div className="relative w-full h-96 md:h-[48rem] select-none flex items-center justify-center">
+      {/* Full-width slideshow with responsive aspect ratio */}
+      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] select-none flex items-end justify-center overflow-hidden">
         {/* Slideshow Images Full Width */}
         {images.map((image, idx) => (
           <img
             key={idx}
             src={image}
             alt={`Chalet Tuftra View ${idx + 1}`}
-            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
               idx === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
             draggable={false}
             style={{
               pointerEvents: idx === activeIndex ? "auto" : "none",
-              width: "100vw",
-              minWidth: "100vw",
-              maxWidth: "100vw",
-              height: "100%",
             }}
           />
         ))}
 
         {/* Overlay Box: full-width, at bottom, sleek */}
         <div className="absolute bottom-0 left-0 w-full z-20">
-          <div className="flex flex-col items-center justify-center bg-white/75 backdrop-blur-md border-t border-emerald-900 rounded-t-2xl shadow-xl px-4 py-4 md:px-8 md:py-6 text-center animate-fade-in"
-          >
+          <div className="flex flex-col items-center justify-center bg-white/75 backdrop-blur-md border-t border-emerald-900 rounded-t-2xl shadow-xl px-4 py-4 md:px-8 md:py-6 text-center animate-fade-in w-full">
             <h1 className="text-xl md:text-2xl font-bold text-stone-900 mb-2 leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.10)]">
               {heading || "Where Luxury Meets Alpine Authenticity"}
             </h1>
