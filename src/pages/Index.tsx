@@ -97,10 +97,11 @@ const Index = () => {
               </div>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('home')}</a>
-              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('about')}</a>
-              <a href="#experiences" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('experiences')}</a>
-              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('contact')}</a>
+              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Home</a>
+              <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
+              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
+              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amenities</a>
+              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Contact</a>
               <LanguageSelector />
               <Button 
                 onClick={() => setIsInquiryOpen(true)}
