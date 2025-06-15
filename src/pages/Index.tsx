@@ -31,19 +31,13 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/da512c2d-eb45-4192-bf27-dbf8a0e46408.png",
         "/lovable-uploads/1d396e61-b084-4551-a93d-d33b95eee865.png",
         "/lovable-uploads/9c4576ca-ccda-408a-822b-3304455fc0cc.png",
         "/lovable-uploads/d1f3b039-5a52-4ecd-bba8-7e57ef3d251d.png",
-        "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png",
         "/lovable-uploads/0ecea736-22a3-4dec-b343-51115f5c7af1.png",
         "/lovable-uploads/4942d381-e5bb-4390-9cbd-f9042e15a2d5.png",
         "/lovable-uploads/ed3fc4a1-8745-4593-8672-17ee1bc9e3fc.png",
-        "/lovable-uploads/50460ede-534b-4b2c-9f26-3a53a353b317.png",
-        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png",
-        "/lovable-uploads/e7e5245e-1ec9-4458-b5af-bb496308426d.png",
-        "/lovable-uploads/49e7784a-7fbc-4caf-9140-32c580d075a1.png",
-        "/lovable-uploads/a93e0bd2-1eea-4eef-8655-f0d1e72c4e4a.png"
+        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png"
       ]
     },
     {
@@ -421,7 +415,7 @@ const Index = () => {
               
               <Button 
                 size="lg"
-                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D', '_blank')}
+                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS.wIKXMDSoASAFQAw%3D%3D', '_blank')}
                 className="bg-emerald-700 hover:bg-emerald-600 text-white"
               >
                 View on Google Maps
