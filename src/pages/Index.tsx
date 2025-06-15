@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -362,9 +360,9 @@ const Index = () => {
             
             <div>
               <h4 className="font-semibold mb-4">Partnership</h4>
-              <p className="text-stone-300 mb-2">Managed in partnership with</p>
+              <p className="text-stone-300 mb-2">Managed by</p>
               <a 
-                href="https://zermattskichalets.com" 
+                href="https://zermattskichalets.com/accommodation/chalet-tuftra-findelbach/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-emerald-300 hover:text-emerald-200 font-semibold"
@@ -386,4 +384,3 @@ const Index = () => {
 };
 
 export default Index;
-
