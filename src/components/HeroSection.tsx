@@ -50,20 +50,21 @@ export const HeroSection = ({
             style={{
               pointerEvents: idx === activeIndex ? "auto" : "none",
               width: "100vw",
-              minWidth: "100%",
-              maxWidth: "100%",
+              minWidth: "100vw",
+              maxWidth: "100vw",
               height: "100%",
             }}
           />
         ))}
 
-        {/* Overlay Box at the bottom, centered horizontally and covering max 96% of viewport width */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 w-[96vw] max-w-2xl">
-          <div className="flex flex-col items-center justify-center bg-white/75 bg-blur-md border border-emerald-900 rounded-2xl shadow-xl px-4 py-4 md:px-6 md:py-6 text-center animate-fade-in">
+        {/* Overlay Box: full-width, at bottom, sleek */}
+        <div className="absolute bottom-0 left-0 w-full z-20">
+          <div className="flex flex-col items-center justify-center bg-white/75 backdrop-blur-md border-t border-emerald-900 rounded-t-2xl shadow-xl px-4 py-4 md:px-8 md:py-6 text-center animate-fade-in"
+          >
             <h1 className="text-xl md:text-2xl font-bold text-stone-900 mb-2 leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.10)]">
               {heading || "Where Luxury Meets Alpine Authenticity"}
             </h1>
-            <p className="text-sm md:text-base text-stone-700 max-w-lg mx-auto mb-4 md:mb-5">
+            <p className="text-sm md:text-base text-stone-700 max-w-xl mx-auto mb-4 md:mb-5">
               Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic
             </p>
             {/* 3D Tour Link */}
