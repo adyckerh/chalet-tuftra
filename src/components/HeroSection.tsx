@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-// Add `id` and `heading` props for anchor and heading control
 export const HeroSection = ({
   id,
   heading,
@@ -17,40 +16,26 @@ export const HeroSection = ({
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Clear any previous timers
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    // Set next timer
     timeoutRef.current = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
     }, 5000);
-    // Cleanup
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [activeIndex, images.length]);
 
-  // Optional: Allow clicking the dots to jump to that slide
   const goToSlide = (idx: number) => {
     setActiveIndex(idx);
   };
 
   return (
-    <section id={id} className="relative min-h-[80vh] bg-white flex flex-col items-center justify-center pt-28 mb-6">
-      <div className="w-full max-w-4xl text-center mx-auto mb-12 px-4">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-stone-900 mb-6 leading-tight">
-          {heading || "Where Luxury Meets Alpine Authenticity"}
-        </h1>
-        <p className="text-xl text-stone-700 max-w-xl mx-auto mb-8">
-          Experience the perfect harmony of space, view, and light at Chalet Tuftra - your exclusive gateway to Matterhorn magic
-        </p>
-        <button
-          onClick={() => setIsInquiryOpen(true)}
-          className="px-8 py-4 rounded-xl bg-emerald-900 text-white text-lg font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
-        >
-          Reserve Your Alpine Escape
-        </button>
-      </div>
-      <div className="relative w-full max-w-4xl mx-auto h-96 md:h-[48rem] select-none">
+    <section
+      id={id}
+      className="relative min-h-[80vh] bg-white flex items-center justify-center pt-28 mb-6"
+    >
+      <div className="relative w-full max-w-4xl mx-auto h-96 md:h-[48rem] select-none flex items-center justify-center">
+        {/* Slideshow Images */}
         {images.map((image, idx) => (
           <img
             key={idx}
@@ -63,14 +48,43 @@ export const HeroSection = ({
             style={{ pointerEvents: idx === activeIndex ? "auto" : "none" }}
           />
         ))}
+
+        {/* Overlay Box */}
+        <div className="relative z-20 flex flex-col items-center justify-center bg-white/75 bg-blur-md border border-emerald-900 rounded-2xl shadow-xl px-8 py-8 md:py-12 max-w-2xl mx-auto text-center animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-stone-900 mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.11)]">
+            {heading || "Where Luxury Meets Alpine Authenticity"}
+          </h1>
+          <p className="text-xl text-stone-700 max-w-xl mx-auto mb-6 md:mb-8">
+            Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic
+          </p>
+          {/* 3D Tour Link */}
+          <a
+            href="https://my.matterport.com/show/?m=VnYcNjgkFQ2"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="inline-block text-emerald-900 font-semibold underline underline-offset-4 mb-6 hover:text-emerald-800 hover-scale transition-all"
+          >
+            Explore 3D Virtual Tour
+          </a>
+          {/* CTA Button */}
+          <button
+            onClick={() => setIsInquiryOpen(true)}
+            className="px-8 py-4 rounded-xl bg-emerald-900 text-white text-lg font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
+          >
+            Reserve Your Alpine Escape
+          </button>
+        </div>
+
         {/* Dots */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-20">
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-30">
           {images.map((_, idx) => (
             <button
               key={idx}
               onClick={() => goToSlide(idx)}
               className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                idx === activeIndex ? "bg-emerald-900 scale-110" : "bg-white/70 border border-emerald-900"
+                idx === activeIndex
+                  ? "bg-emerald-900 scale-110"
+                  : "bg-white/70 border border-emerald-900"
               }`}
               aria-label={`Go to image ${idx + 1}`}
               style={{ outline: "none" }}
