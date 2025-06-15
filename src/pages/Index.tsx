@@ -119,8 +119,8 @@ const Index = () => {
       <FeaturesSection features={heroFeatures} />
       <AboutSection setIsInquiryOpen={setIsInquiryOpen} />
       <GallerySection categories={galleryCategories} />
-      <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
       <LocationSection />
+      <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
       <FooterSection />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
@@ -128,3 +128,4 @@ const Index = () => {
   );
 };
 export default Index;
+
