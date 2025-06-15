@@ -345,7 +345,7 @@ const Index = () => {
                 onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS.wIKXMDSoASAFQAw%3D%3D', '_blank')}
               >
                 <img 
-                  src="https://maps.googleapis.com/maps/api/staticmap?center=46.0117737,7.7459185&zoom=15&size=600x400&maptype=terrain&markers=color:red%7Clabel:C%7C46.0117737,7.7459185&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dOMD0Ni5Tj4Usk"
+                  src="/lovable-uploads/85d6e6c5-dee7-470d-8942-1a2db8e7b9f3.png"
                   alt="Chalet Tuftra Findelbach Location Map - Click to open in Google Maps"
                   className="w-full h-80 object-cover hover:scale-105 transition-transform"
                 />
