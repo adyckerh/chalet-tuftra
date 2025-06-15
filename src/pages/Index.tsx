@@ -31,8 +31,14 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
-        "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png"
+        "/lovable-uploads/132cb960-93a5-42e9-9798-c75565ab4b13.png",
+        "/lovable-uploads/53649ca6-d238-457c-9fab-033ffe717993.png",
+        "/lovable-uploads/4d3ccb14-31e7-4789-93ff-5780dacf71d7.png",
+        "/lovable-uploads/9bbce33f-4d62-47ed-a535-7b0b7c5f0070.png",
+        "/lovable-uploads/5b2630cc-3a20-43ba-a20d-e17bc6d0a5d7.png",
+        "/lovable-uploads/ebfad54d-d180-4e31-8e5f-d6e00daccc28.png",
+        "/lovable-uploads/cfedd57a-1915-4d38-8dbf-4fcead5e9122.png",
+        "/lovable-uploads/8fc23b91-81ba-4ce6-b068-f1dc47c662b2.png"
       ]
     },
     {
