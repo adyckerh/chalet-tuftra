@@ -5,6 +5,13 @@ import { Mountain, Eye, Sun, Users, Calendar, Mail, MapPin, Phone } from "lucide
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { useLanguage } from "@/hooks/useLanguage";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
@@ -17,6 +24,33 @@ const Index = () => {
     "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png",
     "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
     "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
+  ];
+
+  const galleryCategories = [
+    {
+      title: "Living & Dining Areas",
+      description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
+      images: [
+        "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
+        "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png"
+      ]
+    },
+    {
+      title: "Bedrooms",
+      description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
+      images: [
+        "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
+        "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
+      ]
+    },
+    {
+      title: "Wellness & Recreation",
+      description: "Dedicated wellness and gym areas, plus entertainment spaces including a cozy TV room for relaxation after days on the slopes or hiking trails.",
+      images: [
+        "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
+        "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png"
+      ]
+    }
   ];
 
   useEffect(() => {
@@ -213,7 +247,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Experience Section with Gallery */}
       <section id="experiences" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -226,60 +260,37 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Living & Dining Areas</h4>
-                  <p className="text-stone-600">
-                    Generous open spaces flooded with natural light, perfect for shared meals and conversations 
-                    while enjoying panoramic views of the Matterhorn and Findelbach.
+          <div className="space-y-16">
+            {galleryCategories.map((category, index) => (
+              <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <h3 className="text-3xl font-bold text-emerald-900">{category.title}</h3>
+                  <p className="text-stone-600 leading-relaxed text-lg">
+                    {category.description}
                   </p>
                 </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Wellness & Recreation</h4>
-                  <p className="text-stone-600">
-                    Dedicated wellness and gym areas, plus entertainment spaces including a cozy TV room 
-                    for relaxation after days on the slopes or hiking trails.
-                  </p>
+                
+                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
+                  <Carousel className="w-full max-w-lg mx-auto">
+                    <CarouselContent>
+                      {category.images.map((image, imageIndex) => (
+                        <CarouselItem key={imageIndex}>
+                          <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src={image}
+                              alt={`${category.title} - Image ${imageIndex + 1}`}
+                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
                 </div>
               </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Garden & Outdoor Spaces</h4>
-                  <p className="text-stone-600">
-                    Beautiful garden areas and outdoor spaces where you can enjoy the crisp mountain air 
-                    and spectacular alpine scenery in every season.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Private Retreats</h4>
-                  <p className="text-stone-600">
-                    Each beautifully appointed room offers a peaceful sanctuary where guests can retreat 
-                    and recharge, all while maintaining connection to the stunning natural surroundings.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Alpine chalet with mountain views"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </section>
