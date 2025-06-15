@@ -1,111 +1,84 @@
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
-import { Mountain, Eye, Sun, Users, Calendar, Mail, MapPin, Phone } from "lucide-react";
+
+import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { useLanguage } from "@/hooks/useLanguage";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { HeroSection } from "@/components/HeroSection";
+import { FeaturesSection } from "@/components/FeaturesSection";
+import { AboutSection } from "@/components/AboutSection";
+import { GallerySection } from "@/components/GallerySection";
+import { CtaSection } from "@/components/CtaSection";
+import { LocationSection } from "@/components/LocationSection";
+import { FooterSection } from "@/components/FooterSection";
+import { Button } from "@/components/ui/button";
+
+// Static data
+const heroImages = [
+  "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
+  "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png",
+  "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
+  "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
+];
+
+const heroFeatures = [
+  {
+    iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
+    title: "Iconic Views",
+    description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
+  },
+  {
+    iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
+    title: "Light-Flooded Spaces",
+    description: "Our chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
+  },
+  {
+    iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
+    title: "Family Hub Concept",
+    description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
+  }
+];
+
+const galleryCategories = [
+  {
+    title: "Living & Dining Areas",
+    description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
+    images: [
+      "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png",
+      "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png",
+      "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png",
+      "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png",
+      "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png",
+      "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png"
+    ]
+  },
+  {
+    title: "Wellness & Recreation",
+    description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, sauna, and fitness facilities, perfect for relaxation after days on the slopes or hiking trails.",
+    images: [
+      "/lovable-uploads/593bbcd2-d56c-497f-a011-25d0306cf99b.png",
+      "/lovable-uploads/fbcd800c-d1ce-4e11-9e0b-5a9e99fbf8ad.png",
+      "/lovable-uploads/9741a072-840c-4489-892e-15487e39cf62.png",
+      "/lovable-uploads/ca99ceb3-8416-46fb-9052-24d079ac3a5d.png",
+      "/lovable-uploads/c3151d33-4da4-4e2e-ab09-2b7a4ad90373.png"
+    ]
+  },
+  {
+    title: "Bedrooms",
+    description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
+    images: [
+      "/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png",
+      "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png",
+      "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png",
+      "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png",
+      "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png",
+      "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"
+    ]
+  }
+];
 
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { t } = useLanguage();
-  const { toast } = useToast();
-
-  const heroImages = [
-    "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
-    "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png",
-    "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
-    "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
-  ];
-
-  const galleryCategories = [
-    {
-      title: "Living & Dining Areas",
-      description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
-      images: [
-        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png",
-        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png",
-        "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png",
-        "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png",
-        "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png",
-        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png"
-      ]
-    },
-    {
-      title: "Wellness & Recreation",
-      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, sauna, and fitness facilities, perfect for relaxation after days on the slopes or hiking trails.",
-      images: [
-        "/lovable-uploads/593bbcd2-d56c-497f-a011-25d0306cf99b.png",
-        "/lovable-uploads/fbcd800c-d1ce-4e11-9e0b-5a9e99fbf8ad.png",
-        "/lovable-uploads/9741a072-840c-4489-892e-15487e39cf62.png",
-        "/lovable-uploads/ca99ceb3-8416-46fb-9052-24d079ac3a5d.png",
-        "/lovable-uploads/c3151d33-4da4-4e2e-ab09-2b7a4ad90373.png"
-      ]
-    },
-    {
-      title: "Bedrooms",
-      description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
-      images: [
-        "/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png",
-        "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png",
-        "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png",
-        "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png",
-        "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png",
-        "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"
-      ]
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
-
-  const heroFeatures = [
-    {
-      iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
-      title: "Iconic Views",
-      description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
-    },
-    {
-      iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
-      title: "Light-Flooded Spaces",
-      description: "Our chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
-    },
-    {
-      iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
-      title: "Family Hub Concept",
-      description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
-    }
-  ];
-
-  const reviews = [
-    {
-      text: "A beautiful chalet with first-class amenities. Outstanding service and attentive care. The location suited us perfectly too—slightly outside the village center, yet wonderfully quiet.",
-      rating: 5
-    },
-    {
-      text: "Lovely chalet, equipped with quality appliances all around. Fantastic concierge and housekeeping. Truly exceeded our expectations.",
-      rating: 5
-    },
-    {
-      text: "Amazing accommodation! Incredible staff! Excellent food—loved it! 🙌",
-      rating: 5
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -123,7 +96,6 @@ const Index = () => {
                 <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
               </div>
             </div>
-            
             <div className="hidden lg:flex items-center space-x-6 ml-8">
               <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('home')}</a>
               <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('about')}</a>
@@ -142,311 +114,16 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-end pb-8 overflow-hidden">
-        {heroImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{
-              backgroundImage: `url("${image}")`
-            }}
-          />
-        ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 mx-auto max-w-5xl">
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-              Savor Luxury: Space, Light, Views
-            </h1>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                size="lg"
-                onClick={() => setIsInquiryOpen(true)}
-                className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
-              >
-                Reserve your alpine escape
-              </Button>
-              <Button 
-                size="lg"
-                className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
-                onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
-              >
-                3D virtual walkthrough
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Our Chalet Philosophy</h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
-              can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            {heroFeatures.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-32 h-32 mb-6 group-hover:scale-110 transition-transform">
-                  <img 
-                    src={feature.iconSrc} 
-                    alt={feature.title}
-                    className="w-24 h-24"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-stone-900 mb-4">{feature.title}</h3>
-                <p className="text-stone-600 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-stone-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-                Our Story & Vision
-              </h2>
-              <div className="space-y-6 text-stone-600 leading-relaxed">
-                <p>
-                  We are pleased that you have found your way here and wish you wonderful holidays. 
-                  After 17 years living in Shanghai and Hong Kong, we returned to Switzerland and now live 
-                  next to Lake Lucerne with our family of 5 children.
-                </p>
-                <p>
-                  Our goal at Chalet Tuftra was to combine the fascinating view of the Matterhorn with 
-                  the view of the rushing Findelbach. We believe that a chalet should not be dark but 
-                  flooded with light, creating spaces where every guest can retreat to a beautiful room 
-                  while also enjoying generous shared experiences.
-                </p>
-                <p>
-                  We designed Chalet Tuftra to be our "Family Hub" - a place where we want our children 
-                  and their families to return again and again, and where they and we will always enjoy 
-                  spending time together and with friends. We hope that you will find it equally fulfilling.
-                </p>
-              </div>
-              
-              <Button 
-                size="lg"
-                onClick={() => setIsInquiryOpen(true)}
-                className="mt-8 bg-emerald-900 hover:bg-emerald-800 text-white"
-              >
-                Begin Your Journey
-              </Button>
-            </div>
-            
-            <div className="relative">
-              <img 
-                src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png"
-                alt="Our family at a beautiful temple location"
-                className="rounded-lg shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Experience Section with Gallery */}
-      <section id="experiences" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-              A chalet that accommodates to every desire
-            </h2>
-            <p className="text-xl text-stone-600 max-w-4xl mx-auto">
-              From intimate retreats to grand gatherings, our chalet offers thoughtfully designed spaces 
-              that cater to every moment of your Alpine adventure.
-            </p>
-          </div>
-          
-          <div className="space-y-16">
-            {galleryCategories.map((category, index) => (
-              <div key={index} className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <h3 className="text-3xl font-bold text-emerald-900">{category.title}</h3>
-                  <p className="text-stone-600 leading-relaxed text-lg">
-                    {category.description}
-                  </p>
-                </div>
-                
-                <div className={`${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                  <Carousel className="w-full max-w-lg mx-auto">
-                    <CarouselContent>
-                      {category.images.map((image, imageIndex) => (
-                        <CarouselItem key={imageIndex}>
-                          <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src={image}
-                              alt={`${category.title} - Image ${imageIndex + 1}`}
-                              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                            />
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="left-2" />
-                    <CarouselNext className="right-2" />
-                  </Carousel>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Reviews Section */}
-      {/* REPLACING REVIEWS/CTA SECTIONS */}
-      {/* Instead of "What Our Guests Say", insert new CTA here */}
-      <section className="py-32 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="border-4 border-emerald-700 bg-emerald-50 rounded-2xl px-6 py-12 shadow-lg">
-            <h2 className="text-4xl font-bold mb-6 text-emerald-900">Ready to Experience Chalet Tuftra?</h2>
-            <p className="text-xl mb-10 leading-relaxed text-stone-700">
-              Join our family of guests who have discovered the perfect blend of luxury, nature, and togetherness. 
-              Create your own unforgettable memories in our light-filled Alpine sanctuary.
-            </p>
-            <Button 
-              size="lg"
-              onClick={() => setIsInquiryOpen(true)}
-              className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-4 text-lg"
-            >
-              Make Your Inquiry Today
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Location Section */}
-      <section className="py-20 bg-stone-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-              Find Us in Zermatt
-            </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Nestled in the heart of Zermatt with breathtaking views of the Matterhorn and the sound of the Findelbach stream.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div 
-                className="rounded-lg overflow-hidden shadow-2xl cursor-pointer hover:shadow-3xl transition-shadow"
-                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS.wIKXMDSoASAFQAw%3D%3D', '_blank')}
-              >
-                <img 
-                  src="/lovable-uploads/85d6e6c5-dee7-470d-8942-1a2db8e7b9f3.png"
-                  alt="Chalet Tuftra Findelbach Location Map - Click to open in Google Maps"
-                  className="w-full h-80 object-cover hover:scale-105 transition-transform"
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Prime Zermatt Location</h4>
-                  <p className="text-stone-600">
-                    Located in one of Zermatt's most coveted areas, our chalet offers easy access to ski lifts, 
-                    hiking trails, and the charming village center while maintaining a peaceful, private atmosphere.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <Mountain className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-stone-900 mb-2">Unobstructed Mountain Views</h4>
-                  <p className="text-stone-600">
-                    Wake up to the magnificent Matterhorn right outside your window, with the soothing sounds 
-                    of the Findelbach stream creating a natural symphony throughout your stay.
-                  </p>
-                </div>
-              </div>
-              
-              <Button 
-                size="lg"
-                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS.wIKXMDSoASAFQAw%3D%3D', '_blank')}
-                className="bg-emerald-700 hover:bg-emerald-600 text-white"
-              >
-                View on Google Maps
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="contact" className="bg-stone-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Chalet Tuftra Findelbach</h3>
-              <p className="text-stone-300">Your light-filled family hub in the heart of Zermatt</p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-stone-300">
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Zermatt, Switzerland</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4" />
-                  <span>info@chalettuftra.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4" />
-                  <span>+41 27 XXX XXXX</span>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Guest Experience</h4>
-              <p className="text-stone-300 mb-2">
-                We encourage you to share your experience in our guest book and let us know 
-                what we can improve for future guests.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Partnership</h4>
-              <p className="text-stone-300 mb-2">Managed by</p>
-              <a 
-                href="https://zermattskichalets.com/accommodation/chalet-tuftra-findelbach/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-emerald-300 hover:text-emerald-200 font-semibold"
-              >
-                Zermatt Ski Chalets
-              </a>
-            </div>
-          </div>
-          
-          <div className="border-t border-stone-700 mt-12 pt-8 text-center text-stone-400">
-            <p>&copy; 2024 Chalet Tuftra. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <HeroSection images={heroImages} setIsInquiryOpen={setIsInquiryOpen} />
+      <FeaturesSection features={heroFeatures} />
+      <AboutSection setIsInquiryOpen={setIsInquiryOpen} />
+      <GallerySection categories={galleryCategories} />
+      <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
+      <LocationSection />
+      <FooterSection />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
     </div>
   );
 };
-
 export default Index;
