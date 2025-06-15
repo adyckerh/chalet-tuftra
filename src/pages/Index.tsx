@@ -31,14 +31,14 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/132cb960-93a5-42e9-9798-c75565ab4b13.png",
-        "/lovable-uploads/53649ca6-d238-457c-9fab-033ffe717993.png",
-        "/lovable-uploads/4d3ccb14-31e7-4789-93ff-5780dacf71d7.png",
-        "/lovable-uploads/9bbce33f-4d62-47ed-a535-7b0b7c5f0070.png",
-        "/lovable-uploads/5b2630cc-3a20-43ba-a20d-e17bc6d0a5d7.png",
-        "/lovable-uploads/ebfad54d-d180-4e31-8e5f-d6e00daccc28.png",
-        "/lovable-uploads/cfedd57a-1915-4d38-8dbf-4fcead5e9122.png",
-        "/lovable-uploads/8fc23b91-81ba-4ce6-b068-f1dc47c662b2.png"
+        "/lovable-uploads/34d4756f-f92c-42cf-96ae-b74c490083aa.png",
+        "/lovable-uploads/598bb28c-d75f-4294-bc9e-3da9890403cd.png",
+        "/lovable-uploads/7b937219-2457-447a-96cb-851e781b6ef8.png",
+        "/lovable-uploads/7ef744eb-a504-473c-9da7-a65058fb8336.png",
+        "/lovable-uploads/a364ec28-56bc-463c-a802-da30031138fd.png",
+        "/lovable-uploads/13862709-f54d-4d48-ad40-ad33e106790d.png",
+        "/lovable-uploads/3f10bd70-c810-49ef-b636-500a62a749c5.png",
+        "/lovable-uploads/0e3fa725-c79c-4dfc-8dad-a9c374647053.png"
       ]
     },
     {
