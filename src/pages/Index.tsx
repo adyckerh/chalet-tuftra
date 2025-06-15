@@ -152,11 +152,11 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {heroFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 group-hover:scale-110 transition-transform">
+                <div className="inline-flex items-center justify-center w-32 h-32 mb-6 group-hover:scale-110 transition-transform">
                   <img 
                     src={feature.iconSrc} 
                     alt={feature.title}
-                    className="w-16 h-16"
+                    className="w-24 h-24"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-stone-900 mb-4">{feature.title}</h3>
