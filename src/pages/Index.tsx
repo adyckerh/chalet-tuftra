@@ -31,22 +31,20 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/34d4756f-f92c-42cf-96ae-b74c490083aa.png",
-        "/lovable-uploads/598bb28c-d75f-4294-bc9e-3da9890403cd.png",
-        "/lovable-uploads/7b937219-2457-447a-96cb-851e781b6ef8.png",
-        "/lovable-uploads/7ef744eb-a504-473c-9da7-a65058fb8336.png",
-        "/lovable-uploads/a364ec28-56bc-463c-a802-da30031138fd.png",
-        "/lovable-uploads/13862709-f54d-4d48-ad40-ad33e106790d.png",
-        "/lovable-uploads/3f10bd70-c810-49ef-b636-500a62a749c5.png",
-        "/lovable-uploads/0e3fa725-c79c-4dfc-8dad-a9c374647053.png"
+        "/lovable-uploads/da512c2d-eb45-4192-bf27-dbf8a0e46408.png",
+        "/lovable-uploads/1d396e61-b084-4551-a93d-d33b95eee865.png",
+        "/lovable-uploads/9c4576ca-ccda-408a-822b-3304455fc0cc.png",
+        "/lovable-uploads/d1f3b039-5a52-4ecd-bba8-7e57ef3d251d.png",
+        "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png"
       ]
     },
     {
       title: "Bedrooms",
       description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
       images: [
-        "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
-        "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
+        "/lovable-uploads/d2ada5ad-1df4-4838-9053-b19a3604b702.png",
+        "/lovable-uploads/9bbe61cf-3e0f-426d-bab8-da5bcc0d9412.png",
+        "/lovable-uploads/69b4499e-91b7-4888-9392-da1a830352c0.png"
       ]
     },
     {
