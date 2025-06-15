@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -36,9 +35,17 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div>
-              <h1 className="text-2xl font-bold text-emerald-700">Chalet Tuftra Findelbach</h1>
-              <p className="text-sm text-stone-600 italic">Zermatt</p>
+            <div className="flex items-center space-x-4">
+              <img 
+                src="/lovable-uploads/1e9ea58d-fe69-4e26-ad51-89d81f1f8ba8.png" 
+                alt="Chalet Tuftra Logo" 
+                className="h-12 w-12"
+                style={{ filter: 'hue-rotate(120deg) saturate(1.2) brightness(0.8)' }}
+              />
+              <div>
+                <h1 className="text-2xl font-bold text-emerald-700">Chalet Tuftra Findelbach</h1>
+                <p className="text-sm text-stone-600 italic">Zermatt</p>
+              </div>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
