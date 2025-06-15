@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -35,7 +36,12 @@ const Index = () => {
         "/lovable-uploads/1d396e61-b084-4551-a93d-d33b95eee865.png",
         "/lovable-uploads/9c4576ca-ccda-408a-822b-3304455fc0cc.png",
         "/lovable-uploads/d1f3b039-5a52-4ecd-bba8-7e57ef3d251d.png",
-        "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png"
+        "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png",
+        "/lovable-uploads/0ecea736-22a3-4dec-b343-51115f5c7af1.png",
+        "/lovable-uploads/4942d381-e5bb-4390-9cbd-f9042e15a2d5.png",
+        "/lovable-uploads/ed3fc4a1-8745-4593-8672-17ee1bc9e3fc.png",
+        "/lovable-uploads/50460ede-534b-4b2c-9f26-3a53a353b317.png",
+        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png"
       ]
     },
     {
@@ -45,19 +51,24 @@ const Index = () => {
         "/lovable-uploads/ce50b2f3-5ce5-43a2-8933-aabcf20c1739.png",
         "/lovable-uploads/cfa74102-a2d2-474c-ac9c-8d37fc8373f5.png",
         "/lovable-uploads/6a4be8ef-2ba5-43f8-aa59-9f4fd5677d50.png",
-        "/lovable-uploads/ea84128a-a75b-4dff-a5e8-a7f920e6a3d5.png"
+        "/lovable-uploads/ea84128a-a75b-4dff-a5e8-a7f920e6a3d5.png",
+        "/lovable-uploads/b60b771b-de97-412e-8272-b6dcca64efc5.png"
       ]
     },
     {
       title: "Wellness & Recreation",
-      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, perfect for relaxation after days on the slopes or hiking trails.",
+      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, sauna, and fitness facilities, perfect for relaxation after days on the slopes or hiking trails.",
       images: [
         "/lovable-uploads/e16e993e-962f-4efd-9aa2-6d138c142c69.png",
         "/lovable-uploads/1a6a7f76-373c-4d9f-98fc-c7b187b134cd.png",
         "/lovable-uploads/225a0397-7cce-4537-8071-ee957909d9fb.png",
         "/lovable-uploads/a6745a2a-fc69-4c82-aa97-3328ffc0d1b4.png",
         "/lovable-uploads/742f0c6c-0da1-4f29-ba60-011ff6a61a98.png",
-        "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png"
+        "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png",
+        "/lovable-uploads/65446efd-48bb-4572-a912-e653ff78a500.png",
+        "/lovable-uploads/6d1de32e-26f0-4e09-ab07-d035b9b3a53f.png",
+        "/lovable-uploads/78d06a0c-c2b6-4d01-8e17-03e966cad9d3.png",
+        "/lovable-uploads/32218385-99c9-4275-918c-ed9f8fbdf180.png"
       ]
     }
   ];
