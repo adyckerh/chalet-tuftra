@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -44,20 +45,20 @@ const Index = () => {
                 style={{ filter: 'hue-rotate(120deg) saturate(1.2) brightness(0.8)' }}
               />
               <div>
-                <h1 className="text-2xl font-bold text-emerald-700">Chalet Tuftra Findelbach</h1>
+                <h1 className="text-xl md:text-2xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
                 <p className="text-sm text-stone-600 italic">Zermatt</p>
               </div>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-stone-700 hover:text-amber-900 transition-colors">{t('home')}</a>
-              <a href="#about" className="text-stone-700 hover:text-amber-900 transition-colors">{t('about')}</a>
-              <a href="#experiences" className="text-stone-700 hover:text-amber-900 transition-colors">{t('experiences')}</a>
-              <a href="#contact" className="text-stone-700 hover:text-amber-900 transition-colors">{t('contact')}</a>
+              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('home')}</a>
+              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('about')}</a>
+              <a href="#experiences" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('experiences')}</a>
+              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors">{t('contact')}</a>
               <LanguageSelector />
               <Button 
                 onClick={() => setIsInquiryOpen(true)}
-                className="bg-amber-900 hover:bg-amber-800 text-white"
+                className="bg-emerald-900 hover:bg-emerald-800 text-white"
               >
                 {t('make_inquiry')}
               </Button>
@@ -116,8 +117,8 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {heroFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-100 rounded-full mb-6 group-hover:bg-amber-200 transition-colors">
-                  <feature.icon className="w-8 h-8 text-amber-900" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6 group-hover:bg-emerald-200 transition-colors">
+                  <feature.icon className="w-8 h-8 text-emerald-900" />
                 </div>
                 <h3 className="text-2xl font-bold text-stone-900 mb-4">{feature.title}</h3>
                 <p className="text-stone-600 leading-relaxed">{feature.description}</p>
@@ -132,7 +133,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-amber-900 mb-6">
+              <h2 className="text-4xl font-bold text-emerald-900 mb-6">
                 Our Story & Vision
               </h2>
               <div className="space-y-6 text-stone-600 leading-relaxed">
@@ -157,7 +158,7 @@ const Index = () => {
               <Button 
                 size="lg"
                 onClick={() => setIsInquiryOpen(true)}
-                className="mt-8 bg-amber-900 hover:bg-amber-800 text-white"
+                className="mt-8 bg-emerald-900 hover:bg-emerald-800 text-white"
               >
                 Begin Your Journey
               </Button>
@@ -178,7 +179,7 @@ const Index = () => {
       <section id="experiences" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-amber-900 mb-6">
+            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
               Spaces Designed for Every Experience
             </h2>
             <p className="text-xl text-stone-600 max-w-4xl mx-auto">
@@ -190,7 +191,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-amber-900 rounded-full flex-shrink-0 mt-1" />
+                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Living & Dining Areas</h4>
                   <p className="text-stone-600">
@@ -201,7 +202,7 @@ const Index = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-amber-900 rounded-full flex-shrink-0 mt-1" />
+                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Wellness & Recreation</h4>
                   <p className="text-stone-600">
@@ -212,7 +213,7 @@ const Index = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-amber-900 rounded-full flex-shrink-0 mt-1" />
+                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Garden & Outdoor Spaces</h4>
                   <p className="text-stone-600">
@@ -223,7 +224,7 @@ const Index = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-6 h-6 bg-amber-900 rounded-full flex-shrink-0 mt-1" />
+                <div className="w-6 h-6 bg-emerald-900 rounded-full flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Private Retreats</h4>
                   <p className="text-stone-600">
@@ -249,7 +250,7 @@ const Index = () => {
       <section className="py-20 bg-stone-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-amber-900 mb-6">
+            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
               Find Us in Zermatt
             </h2>
             <p className="text-xl text-stone-600 max-w-3xl mx-auto">
@@ -273,7 +274,7 @@ const Index = () => {
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <MapPin className="w-6 h-6 text-amber-900 flex-shrink-0 mt-1" />
+                <MapPin className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Prime Zermatt Location</h4>
                   <p className="text-stone-600">
@@ -284,7 +285,7 @@ const Index = () => {
               </div>
               
               <div className="flex items-start space-x-4">
-                <Mountain className="w-6 h-6 text-amber-900 flex-shrink-0 mt-1" />
+                <Mountain className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-stone-900 mb-2">Unobstructed Mountain Views</h4>
                   <p className="text-stone-600">
@@ -307,7 +308,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-900 to-amber-800 text-white">
+      <section className="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Ready to Experience Chalet Tuftra?</h2>
           <p className="text-xl mb-10 leading-relaxed">
@@ -317,7 +318,7 @@ const Index = () => {
           <Button 
             size="lg"
             onClick={() => setIsInquiryOpen(true)}
-            className="bg-white text-amber-900 hover:bg-stone-100 px-8 py-4 text-lg"
+            className="bg-white text-emerald-900 hover:bg-stone-100 px-8 py-4 text-lg"
           >
             Make Your Inquiry Today
           </Button>
@@ -366,7 +367,7 @@ const Index = () => {
                 href="https://zermattskichalets.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-amber-300 hover:text-amber-200 font-semibold"
+                className="text-emerald-300 hover:text-emerald-200 font-semibold"
               >
                 Zermatt Ski Chalets
               </a>
@@ -385,3 +386,4 @@ const Index = () => {
 };
 
 export default Index;
+
