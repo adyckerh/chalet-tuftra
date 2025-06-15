@@ -93,17 +93,17 @@ const Index = () => {
 
   const heroFeatures = [
     {
-      iconSrc: "/lovable-uploads/e1a6bc06-8d9f-4ffe-883c-e3cefc1fd01d.png",
+      iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
       title: "Iconic Views",
       description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
     },
     {
-      iconSrc: "/lovable-uploads/23961fc0-efaa-4dc7-9d60-bd4f7dc73fe5.png",
+      iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
       title: "Light-Flooded Spaces",
       description: "Our chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
     },
     {
-      iconSrc: "/lovable-uploads/ad3f96ad-9e8a-49e8-8e32-a53dfaac497a.png",
+      iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
       title: "Family Hub Concept",
       description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
     }
