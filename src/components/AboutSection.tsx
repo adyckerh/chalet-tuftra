@@ -1,4 +1,7 @@
+
 import React from "react";
+import { Button } from "@/components/ui/button";
+
 interface AboutSectionProps {
   id?: string;
   setIsInquiryOpen: (open: boolean) => void;
