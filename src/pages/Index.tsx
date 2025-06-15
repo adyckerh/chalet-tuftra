@@ -42,17 +42,22 @@ const Index = () => {
       title: "Bedrooms",
       description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
       images: [
-        "/lovable-uploads/d2ada5ad-1df4-4838-9053-b19a3604b702.png",
-        "/lovable-uploads/9bbe61cf-3e0f-426d-bab8-da5bcc0d9412.png",
-        "/lovable-uploads/69b4499e-91b7-4888-9392-da1a830352c0.png"
+        "/lovable-uploads/ce50b2f3-5ce5-43a2-8933-aabcf20c1739.png",
+        "/lovable-uploads/cfa74102-a2d2-474c-ac9c-8d37fc8373f5.png",
+        "/lovable-uploads/6a4be8ef-2ba5-43f8-aa59-9f4fd5677d50.png",
+        "/lovable-uploads/ea84128a-a75b-4dff-a5e8-a7f920e6a3d5.png"
       ]
     },
     {
       title: "Wellness & Recreation",
-      description: "Dedicated wellness and gym areas, plus entertainment spaces including a cozy TV room for relaxation after days on the slopes or hiking trails.",
+      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, perfect for relaxation after days on the slopes or hiking trails.",
       images: [
-        "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
-        "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png"
+        "/lovable-uploads/e16e993e-962f-4efd-9aa2-6d138c142c69.png",
+        "/lovable-uploads/1a6a7f76-373c-4d9f-98fc-c7b187b134cd.png",
+        "/lovable-uploads/225a0397-7cce-4537-8071-ee957909d9fb.png",
+        "/lovable-uploads/a6745a2a-fc69-4c82-aa97-3328ffc0d1b4.png",
+        "/lovable-uploads/742f0c6c-0da1-4f29-ba60-011ff6a61a98.png",
+        "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png"
       ]
     }
   ];
