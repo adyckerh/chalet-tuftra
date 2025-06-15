@@ -31,13 +31,12 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/1d396e61-b084-4551-a93d-d33b95eee865.png",
-        "/lovable-uploads/9c4576ca-ccda-408a-822b-3304455fc0cc.png",
-        "/lovable-uploads/d1f3b039-5a52-4ecd-bba8-7e57ef3d251d.png",
-        "/lovable-uploads/0ecea736-22a3-4dec-b343-51115f5c7af1.png",
-        "/lovable-uploads/4942d381-e5bb-4390-9cbd-f9042e15a2d5.png",
-        "/lovable-uploads/ed3fc4a1-8745-4593-8672-17ee1bc9e3fc.png",
-        "/lovable-uploads/705d357b-adb7-418b-b485-c3c843f64956.png"
+        "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png", // 1st image (living room - big view)
+        "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png", // 2nd image (fireplace with Matterhorn)
+        "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png", // 3rd image (glass wall/chair/dining view)
+        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png", // 4th image (living overview, big windows)
+        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png", // 5th image (dining table + kitchen)
+        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png"  // 6th image (fireplace close up + dining)
       ]
     },
     {
