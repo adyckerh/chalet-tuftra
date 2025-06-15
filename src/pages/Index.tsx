@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -203,7 +204,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-              Spaces Designed for Every Experience
+              A chalet that accommodates to every desire
             </h2>
             <p className="text-xl text-stone-600 max-w-4xl mx-auto">
               From intimate retreats to grand gatherings, our chalet offers thoughtfully designed spaces 
