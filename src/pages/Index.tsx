@@ -34,7 +34,7 @@ const Index = () => {
     {
       icon: Mountain,
       title: "Iconic Views",
-      description: "Experience the mesmerizing combination of the iconic Matterhorn peak and the rushing Findelbach stream from every room"
+      description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
     },
     {
       icon: Eye,
