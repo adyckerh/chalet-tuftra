@@ -39,12 +39,11 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/1e9ea58d-fe69-4e26-ad51-89d81f1f8ba8.png" 
                 alt="Chalet Tuftra Logo" 
-                className="h-12 w-12"
+                className="h-16 w-16"
                 style={{ filter: 'hue-rotate(120deg) saturate(1.2) brightness(0.8)' }}
               />
               <div>
                 <h1 className="text-xl md:text-2xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
-                <p className="text-sm text-stone-600 italic">Zermatt</p>
               </div>
             </div>
             
