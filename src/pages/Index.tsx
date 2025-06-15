@@ -307,49 +307,22 @@ const Index = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-20 bg-stone-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-              What Our Guests Say
-            </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-              Discover why guests return again and again to create lasting memories at Chalet Tuftra.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="flex mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <div key={i} className="w-5 h-5 text-yellow-400 fill-current">
-                      ⭐
-                    </div>
-                  ))}
-                </div>
-                <p className="text-stone-700 leading-relaxed mb-6 italic">
-                  "{review.text}"
-                </p>
-                <div className="text-sm text-stone-500 font-medium">
-                  Verified Airbnb Guest
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-stone-600 mb-6">
-              Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
-            </p>
-            <Button 
-              size="lg"
-              onClick={() => setIsInquiryOpen(true)}
-              className="bg-emerald-900 hover:bg-emerald-800 text-white"
-            >
-              Book Your Stay
-            </Button>
-          </div>
+      {/* REPLACING REVIEWS/CTA SECTIONS */}
+      {/* Instead of "What Our Guests Say", insert new CTA here */}
+      <section className="py-32 bg-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">Ready to Experience Chalet Tuftra?</h2>
+          <p className="text-xl mb-10 leading-relaxed">
+            Join our family of guests who have discovered the perfect blend of luxury, nature, and togetherness. 
+            Create your own unforgettable memories in our light-filled Alpine sanctuary.
+          </p>
+          <Button 
+            size="lg"
+            onClick={() => setIsInquiryOpen(true)}
+            className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-4 text-lg"
+          >
+            Make Your Inquiry Today
+          </Button>
         </div>
       </section>
 
@@ -411,24 +384,6 @@ const Index = () => {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-900 to-emerald-800 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience Chalet Tuftra?</h2>
-          <p className="text-xl mb-10 leading-relaxed">
-            Join our family of guests who have discovered the perfect blend of luxury, nature, and togetherness. 
-            Create your own unforgettable memories in our light-filled Alpine sanctuary.
-          </p>
-          <Button 
-            size="lg"
-            onClick={() => setIsInquiryOpen(true)}
-            className="bg-white text-emerald-900 hover:bg-stone-100 px-8 py-4 text-lg"
-          >
-            Make Your Inquiry Today
-          </Button>
         </div>
       </section>
 
