@@ -15,10 +15,10 @@ const Index = () => {
   const { toast } = useToast();
 
   const heroImages = [
-    "/lovable-uploads/9c9b4ae8-1529-47bd-81f8-9d9ee0f89e56.png",
-    "/lovable-uploads/8411f363-94bd-4bca-b0b3-5b325145f606.png",
-    "/lovable-uploads/7918234d-5f87-4e28-903f-69cf7b0ee909.png",
-    "/lovable-uploads/21fff439-a418-44a3-ac6a-54ee7236d35d.png"
+    "/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png",
+    "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png",
+    "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png",
+    "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"
   ];
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Index = () => {
       setCurrentImageIndex((prevIndex) => 
         prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
