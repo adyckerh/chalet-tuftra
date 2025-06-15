@@ -1,24 +1,333 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tuftra-alpine-web</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalet Tuftra - Luxury Alpine Accommodation in Zermatt</title>
+    <meta name="description" content="Experience luxury Alpine living at Chalet Tuftra in Zermatt. Stunning Matterhorn views, spacious accommodations for families and corporate retreats.">
+    <meta name="keywords" content="luxury chalet Zermatt, Matterhorn views, Alpine accommodation, family chalet, corporate retreat, Zermatt luxury">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chalet Tuftra - Luxury Alpine Accommodation in Zermatt">
+    <meta property="og:description" content="Experience luxury Alpine living with stunning Matterhorn views">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chalettuftra.com">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Chalet Tuftra",
+      "description": "Luxury Alpine chalet accommodation in Zermatt with stunning Matterhorn views",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Zermatt",
+        "addressCountry": "Switzerland"
+      },
+      "telephone": "+41-27-xxx-xxxx",
+      "url": "https://chalettuftra.com",
+      "priceRange": "$$$$",
+      "amenityFeature": [
+        "Matterhorn views",
+        "Family accommodation",
+        "Corporate retreat facilities",
+        "Luxury amenities"
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Chalet Tuftra</h1>
+                <span class="nav-tagline">Zermatt</span>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="winter.html" class="nav-link">Winter</a>
+                <a href="summer.html" class="nav-link">Summer</a>
+                <a href="family.html" class="nav-link">Family</a>
+                <a href="corporate.html" class="nav-link">Corporate</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="location.html" class="nav-link">Location</a>
+                <a href="guestbook.html" class="nav-link">Guest Book</a>
+                
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+                
+                <button class="cta-btn" onclick="openInquiryModal()">Make an Inquiry</button>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="tuftra-alpine-web" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-media">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                 alt="Stunning Alpine mountain landscape with snow-capped peaks" 
+                 class="hero-image" 
+                 loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-en="Where Luxury Meets Alpine Authenticity" 
+                                      data-de="Wo Luxus auf Alpine Authentizität trifft" 
+                                      data-fr="Où le Luxe Rencontre l'Authenticité Alpine">
+                    Where Luxury Meets Alpine Authenticity
+                </h1>
+                <p class="hero-subtitle" data-en="Experience the perfect harmony of space, view, and light at Chalet Tuftra - your exclusive gateway to Matterhorn magic" 
+                                       data-de="Erleben Sie die perfekte Harmonie von Raum, Aussicht und Licht im Chalet Tuftra - Ihr exklusiver Zugang zur Matterhorn-Magie" 
+                                       data-fr="Découvrez l'harmonie parfaite de l'espace, de la vue et de la lumière au Chalet Tuftra - votre porte d'entrée exclusive vers la magie du Cervin">
+                    Experience the perfect harmony of space, view, and light at Chalet Tuftra - your exclusive gateway to Matterhorn magic
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary" onclick="openInquiryModal()" 
+                            data-en="Reserve Your Alpine Escape" 
+                            data-de="Reservieren Sie Ihren Alpine Rückzugsort" 
+                            data-fr="Réservez Votre Évasion Alpine">
+                        Reserve Your Alpine Escape
+                    </button>
+                    <a href="gallery.html" class="btn btn-secondary" 
+                       data-en="Explore the Chalet" 
+                       data-de="Erkunden Sie das Chalet" 
+                       data-fr="Explorez le Chalet">
+                        Explore the Chalet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏔️</div>
+                    <h3 data-en="Matterhorn Views" data-de="Matterhorn Blick" data-fr="Vues sur le Cervin">Matterhorn Views</h3>
+                    <p data-en="Wake up to breathtaking panoramic views of the iconic Matterhorn from every window" 
+                       data-de="Erwachen Sie mit atemberaubenden Panoramablicken auf das ikonische Matterhorn aus jedem Fenster" 
+                       data-fr="Réveillez-vous avec des vues panoramiques époustouflantes sur l'emblématique Cervin depuis chaque fenêtre">
+                        Wake up to breathtaking panoramic views of the iconic Matterhorn from every window
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 data-en="Space & Light" data-de="Raum & Licht" data-fr="Espace & Lumière">Space & Light</h3>
+                    <p data-en="Thoughtfully designed interiors flooded with natural light create an atmosphere of serene luxury" 
+                       data-de="Durchdacht gestaltete Innenräume, durchflutet von natürlichem Licht, schaffen eine Atmosphäre ruhigen Luxus" 
+                       data-fr="Des intérieurs soigneusement conçus baignés de lumière naturelle créent une atmosphère de luxe serein">
+                        Thoughtfully designed interiors flooded with natural light create an atmosphere of serene luxury
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3 data-en="Family Hub" data-de="Familien-Zentrum" data-fr="Centre Familial">Family Hub</h3>
+                    <p data-en="Spacious layouts perfect for multi-generational gatherings and creating lifelong memories" 
+                       data-de="Geräumige Grundrisse, perfekt für Mehrgenerationen-Treffen und das Schaffen lebenslanger Erinnerungen" 
+                       data-fr="Des aménagements spacieux parfaits pour les rassemblements multigénérationnels et la création de souvenirs inoubliables">
+                        Spacious layouts perfect for multi-generational gatherings and creating lifelong memories
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text">
+                    <h2 class="section-title" data-en="Your Alpine Sanctuary Awaits" 
+                                             data-de="Ihr Alpine Refugium erwartet Sie" 
+                                             data-fr="Votre Sanctuaire Alpin Vous Attend">
+                        Your Alpine Sanctuary Awaits
+                    </h2>
+                    <p class="section-subtitle" data-en="More than accommodation - it's your home in the heart of the Alps" 
+                                               data-de="Mehr als Unterkunft - es ist Ihr Zuhause im Herzen der Alpen" 
+                                               data-fr="Plus qu'un hébergement - c'est votre maison au cœur des Alpes">
+                        More than accommodation - it's your home in the heart of the Alps
+                    </p>
+                    <div class="experience-features">
+                        <div class="exp-feature">
+                            <h4 data-en="Winter Wonderland" data-de="Winter Wunderland" data-fr="Merveille d'Hiver">Winter Wonderland</h4>
+                            <p data-en="Ski-in, ski-out access to world-class slopes with cozy après-ski comfort" 
+                               data-de="Ski-in, Ski-out Zugang zu Weltklasse-Pisten mit gemütlichem Après-Ski Komfort" 
+                               data-fr="Accès ski aux pieds aux pistes de classe mondiale avec le confort douillet de l'après-ski">
+                                Ski-in, ski-out access to world-class slopes with cozy après-ski comfort
+                            </p>
+                        </div>
+                        <div class="exp-feature">
+                            <h4 data-en="Summer Serenity" data-de="Sommer Gelassenheit" data-fr="Sérénité Estivale">Summer Serenity</h4>
+                            <p data-en="Alpine hiking trails and peaceful mountain air with luxury bed & breakfast service" 
+                               data-de="Alpine Wanderwege und friedliche Bergluft mit luxuriösem Bed & Breakfast Service" 
+                               data-fr="Sentiers de randonnée alpins et air pur de montagne avec service de luxe bed & breakfast">
+                                Alpine hiking trails and peaceful mountain air with luxury bed & breakfast service
+                            </p>
+                        </div>
+                        <div class="exp-feature">
+                            <h4 data-en="Corporate Excellence" data-de="Corporate Exzellenz" data-fr="Excellence Corporative">Corporate Excellence</h4>
+                            <p data-en="Inspiring meeting spaces where innovation flourishes in Alpine tranquility" 
+                               data-de="Inspirierende Tagungsräume, wo Innovation in alpiner Ruhe gedeiht" 
+                               data-fr="Des espaces de réunion inspirants où l'innovation prospère dans la tranquillité alpine">
+                                Inspiring meeting spaces where innovation flourishes in Alpine tranquility
+                            </p>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" onclick="openInquiryModal()" 
+                            data-en="Begin Your Journey" 
+                            data-de="Beginnen Sie Ihre Reise" 
+                            data-fr="Commencez Votre Voyage">
+                        Begin Your Journey
+                    </button>
+                </div>
+                <div class="experience-image">
+                    <img src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Luxurious Alpine chalet interior with mountain views" 
+                         loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-en="Ready to Experience Alpine Luxury?" 
+                    data-de="Bereit, Alpine Luxus zu erleben?" 
+                    data-fr="Prêt à Découvrir le Luxe Alpin ?">
+                    Ready to Experience Alpine Luxury?
+                </h2>
+                <p data-en="Let us craft your perfect Alpine escape. From family celebrations to corporate retreats, your extraordinary experience begins with a single inquiry." 
+                   data-de="Lassen Sie uns Ihren perfekten Alpine Rückzugsort gestalten. Von Familienfeiern bis zu Corporate Retreats, Ihr außergewöhnliches Erlebnis beginnt mit einer einzigen Anfrage." 
+                   data-fr="Laissez-nous créer votre évasion alpine parfaite. Des célébrations familiales aux retraites d'entreprise, votre expérience extraordinaire commence par une simple demande.">
+                    Let us craft your perfect Alpine escape. From family celebrations to corporate retreats, your extraordinary experience begins with a single inquiry.
+                </p>
+                <button class="btn btn-primary btn-large" onclick="openInquiryModal()" 
+                        data-en="Make Your Inquiry Today" 
+                        data-de="Stellen Sie heute Ihre Anfrage" 
+                        data-fr="Faites Votre Demande Aujourd'hui">
+                    Make Your Inquiry Today
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chalet Tuftra</h3>
+                    <p data-en="Your luxury Alpine sanctuary in the heart of Zermatt" 
+                       data-de="Ihr luxuriöses Alpine Refugium im Herzen von Zermatt" 
+                       data-fr="Votre sanctuaire alpin de luxe au cœur de Zermatt">
+                        Your luxury Alpine sanctuary in the heart of Zermatt
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-de="Schnelle Links" data-fr="Liens Rapides">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About" data-de="Über uns" data-fr="À Propos">About</a></li>
+                        <li><a href="gallery.html" data-en="Gallery" data-de="Galerie" data-fr="Galerie">Gallery</a></li>
+                        <li><a href="location.html" data-en="Location" data-de="Lage" data-fr="Emplacement">Location</a></li>
+                        <li><a href="legal.html" data-en="Legal" data-de="Rechtliches" data-fr="Légal">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-de="Kontakt" data-fr="Contact">Contact</h4>
+                    <p>Zermatt, Switzerland</p>
+                    <p>info@chalettuftra.com</p>
+                    <p>+41 27 XXX XXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Partnership" data-de="Partnerschaft" data-fr="Partenariat">Partnership</h4>
+                    <p data-en="Managed in partnership with" data-de="Verwaltet in Partnerschaft mit" data-fr="Géré en partenariat avec">Managed in partnership with</p>
+                    <a href="https://zermattskichalets.com" target="_blank" class="partner-link">
+                        Zermatt Ski Chalets
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chalet Tuftra. <span data-en="All rights reserved" data-de="Alle Rechte vorbehalten" data-fr="Tous droits réservés">All rights reserved</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeInquiryModal()">&times;</span>
+            <h2 data-en="Make an Inquiry" data-de="Anfrage stellen" data-fr="Faire une Demande">Make an Inquiry</h2>
+            <form class="inquiry-form" id="inquiryForm">
+                <div class="form-group">
+                    <label for="name" data-en="Full Name *" data-de="Vollständiger Name *" data-fr="Nom Complet *">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-en="Email Address *" data-de="E-Mail-Adresse *" data-fr="Adresse E-mail *">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin" data-en="Check-in Date" data-de="Anreisedatum" data-fr="Date d'Arrivée">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout" data-en="Check-out Date" data-de="Abreisedatum" data-fr="Date de Départ">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests" data-en="Number of Guests" data-de="Anzahl der Gäste" data-fr="Nombre d'Invités">Number of Guests</label>
+                    <select id="guests" name="guests">
+                        <option value="">Select number of guests</option>
+                        <option value="1-4">1-4 guests</option>
+                        <option value="5-8">5-8 guests</option>
+                        <option value="9-12">9-12 guests</option>
+                        <option value="13+">13+ guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-en="Message" data-de="Nachricht" data-fr="Message">Message</label>
+                    <textarea id="message" name="message" rows="4" 
+                              placeholder="Tell us about your ideal Alpine experience..." 
+                              data-en-placeholder="Tell us about your ideal Alpine experience..." 
+                              data-de-placeholder="Erzählen Sie uns von Ihrem idealen Alpine Erlebnis..." 
+                              data-fr-placeholder="Parlez-nous de votre expérience alpine idéale..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" 
+                        data-en="Send Inquiry" 
+                        data-de="Anfrage senden" 
+                        data-fr="Envoyer la Demande">
+                    Send Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>

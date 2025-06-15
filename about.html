@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Chalet Tuftra - Luxury Alpine Experience in Zermatt</title>
+    <meta name="description" content="Discover the story behind Chalet Tuftra, where space, view, and light create the perfect Alpine sanctuary in the heart of Zermatt.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1>Chalet Tuftra</h1>
+                    <span class="nav-tagline">Zermatt</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="winter.html" class="nav-link">Winter</a>
+                <a href="summer.html" class="nav-link">Summer</a>
+                <a href="family.html" class="nav-link">Family</a>
+                <a href="corporate.html" class="nav-link">Corporate</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="location.html" class="nav-link">Location</a>
+                <a href="guestbook.html" class="nav-link">Guest Book</a>
+                
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                </div>
+                
+                <button class="cta-btn" onclick="openInquiryModal()">Make an Inquiry</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-media">
+            <img src="https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+                 alt="Dramatic Alpine landscape with green valleys and rocky peaks" 
+                 class="page-header-image">
+        </div>
+        <div class="page-header-overlay"></div>
+        <div class="page-header-content">
+            <div class="container">
+                <h1 class="page-title" data-en="About Chalet Tuftra" 
+                                      data-de="Über Chalet Tuftra" 
+                                      data-fr="À Propos du Chalet Tuftra">
+                    About Chalet Tuftra
+                </h1>
+                <p class="page-subtitle" data-en="Where every detail tells a story of Alpine elegance and authentic hospitality" 
+                                       data-de="Wo jedes Detail eine Geschichte von alpiner Eleganz und authentischer Gastfreundschaft erzählt" 
+                                       data-fr="Où chaque détail raconte une histoire d'élégance alpine et d'hospitalité authentique">
+                    Where every detail tells a story of Alpine elegance and authentic hospitality
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <!-- Story Section -->
+            <div class="content-section">
+                <div class="content-grid">
+                    <div class="content-text">
+                        <h2 class="section-title" data-en="Our Story" 
+                                                 data-de="Unsere Geschichte" 
+                                                 data-fr="Notre Histoire">
+                            Our Story
+                        </h2>
+                        <p data-en="Nestled in the heart of Zermatt's Findelbach district, Chalet Tuftra stands as a testament to the perfect marriage of traditional Alpine architecture and contemporary luxury. Our philosophy centers on three fundamental elements that define the ultimate mountain retreat: space, view, and light." 
+                           data-de="Eingebettet im Herzen von Zermatts Findelbach-Viertel steht das Chalet Tuftra als Zeugnis für die perfekte Verbindung traditioneller alpiner Architektur mit zeitgenössischem Luxus. Unsere Philosophie konzentriert sich auf drei grundlegende Elemente, die den ultimativen Bergrückzugsort definieren: Raum, Aussicht und Licht." 
+                           data-fr="Niché au cœur du quartier de Findelbach à Zermatt, le Chalet Tuftra témoigne du mariage parfait entre l'architecture alpine traditionnelle et le luxe contemporain. Notre philosophie se concentre sur trois éléments fondamentaux qui définissent la retraite de montagne ultime : l'espace, la vue et la lumière.">
+                            Nestled in the heart of Zermatt's Findelbach district, Chalet Tuftra stands as a testament to the perfect marriage of traditional Alpine architecture and contemporary luxury. Our philosophy centers on three fundamental elements that define the ultimate mountain retreat: space, view, and light.
+                        </p>
+                        <p data-en="Every room in our chalet has been thoughtfully designed to maximize these elements, creating an atmosphere where families can gather, memories are made, and the stresses of everyday life simply melt away against the backdrop of the majestic Matterhorn." 
+                           data-de="Jeder Raum in unserem Chalet wurde durchdacht gestaltet, um diese Elemente zu maximieren und eine Atmosphäre zu schaffen, in der sich Familien versammeln, Erinnerungen entstehen und der Stress des Alltags vor der Kulisse des majestätischen Matterhorns einfach schmilzt." 
+                           data-fr="Chaque pièce de notre chalet a été soigneusement conçue pour maximiser ces éléments, créant une atmosphère où les familles peuvent se rassembler, où les souvenirs se créent et où le stress de la vie quotidienne fond simplement devant la toile de fond du majestueux Cervin.">
+                            Every room in our chalet has been thoughtfully designed to maximize these elements, creating an atmosphere where families can gather, memories are made, and the stresses of everyday life simply melt away against the backdrop of the majestic Matterhorn.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Stunning Alpine landscape showing traditional architecture against mountain backdrop" 
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Philosophy Section -->
+            <div class="content-section philosophy-section">
+                <div class="container">
+                    <h2 class="section-title text-center" data-en="Our Philosophy: Space, View & Light" 
+                                                         data-de="Unsere Philosophie: Raum, Aussicht & Licht" 
+                                                         data-fr="Notre Philosophie : Espace, Vue & Lumière">
+                        Our Philosophy: Space, View & Light
+                    </h2>
+                    <div class="philosophy-grid">
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">🏔️</div>
+                            <h3 data-en="Space" data-de="Raum" data-fr="Espace">Space</h3>
+                            <p data-en="Generous living areas that breathe with Alpine air, designed for gatherings that span generations. Our open-plan design creates fluid movement between indoor comfort and outdoor wonder." 
+                               data-de="Großzügige Wohnbereiche, die mit Alpenluft atmen, entworfen für Zusammenkünfte, die Generationen umspannen. Unser offenes Design schafft fließende Bewegung zwischen Innenkomfort und Außenwunder." 
+                               data-fr="Des espaces de vie généreux qui respirent l'air alpin, conçus pour des rassemblements qui traversent les générations. Notre design ouvert crée un mouvement fluide entre le confort intérieur et l'émerveillement extérieur.">
+                                Generous living areas that breathe with Alpine air, designed for gatherings that span generations. Our open-plan design creates fluid movement between indoor comfort and outdoor wonder.
+                            </p>
+                        </div>
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">👁️</div>
+                            <h3 data-en="View" data-de="Aussicht" data-fr="Vue">View</h3>
+                            <p data-en="Every window frames the Matterhorn like a living masterpiece. From sunrise to sunset, the ever-changing mountain panorama provides a natural theater that never fails to inspire." 
+                               data-de="Jedes Fenster rahmt das Matterhorn wie ein lebendiges Meisterwerk ein. Von Sonnenaufgang bis Sonnenuntergang bietet das sich ständig verändernde Bergpanorama ein natürliches Theater, das nie aufhört zu inspirieren." 
+                               data-fr="Chaque fenêtre encadre le Cervin comme un chef-d'œuvre vivant. Du lever au coucher du soleil, le panorama montagneux en constante évolution offre un théâtre naturel qui ne manque jamais d'inspirer.">
+                                Every window frames the Matterhorn like a living masterpiece. From sunrise to sunset, the ever-changing mountain panorama provides a natural theater that never fails to inspire.
+                            </p>
+                        </div>
+                        <div class="philosophy-card">
+                            <div class="philosophy-icon">☀️</div>
+                            <h3 data-en="Light" data-de="Licht" data-fr="Lumière">Light</h3>
+                            <p data-en="Crystal-clear Alpine light floods every corner, creating warmth and vitality. Large windows and skylights ensure that natural illumination dances through our spaces from dawn to dusk." 
+                               data-de="Kristallklares Alpenlicht durchflutet jeden Winkel und schafft Wärme und Vitalität. Große Fenster und Oberlichter sorgen dafür, dass natürliche Beleuchtung von der Morgendämmerung bis zur Abenddämmerung durch unsere Räume tanzt." 
+                               data-fr="La lumière alpine cristalline inonde chaque recoin, créant chaleur et vitalité. Les grandes fenêtres et lucarnes garantissent que l'éclairage naturel danse dans nos espaces de l'aube au crépuscule.">
+                                Crystal-clear Alpine light floods every corner, creating warmth and vitality. Large windows and skylights ensure that natural illumination dances through our spaces from dawn to dusk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="content-section">
+                <div class="content-grid reverse">
+                    <div class="content-text">
+                        <h2 class="section-title" data-en="The Family Hub Experience" 
+                                                 data-de="Das Familien-Hub Erlebnis" 
+                                                 data-fr="L'Expérience du Centre Familial">
+                            The Family Hub Experience
+                        </h2>
+                        <p data-en="Chalet Tuftra serves as more than accommodation—it's the heart of your Alpine adventure. Designed as the perfect family hub, our chalet brings together multiple generations in comfort and style." 
+                           data-de="Das Chalet Tuftra dient als mehr als nur Unterkunft—es ist das Herz Ihres alpinen Abenteuers. Als perfekter Familien-Hub entworfen, bringt unser Chalet mehrere Generationen in Komfort und Stil zusammen." 
+                           data-fr="Le Chalet Tuftra sert plus qu'un hébergement—c'est le cœur de votre aventure alpine. Conçu comme le centre familial parfait, notre chalet rassemble plusieurs générations dans le confort et le style.">
+                            Chalet Tuftra serves as more than accommodation—it's the heart of your Alpine adventure. Designed as the perfect family hub, our chalet brings together multiple generations in comfort and style.
+                        </p>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-bullet">✓</div>
+                                <span data-en="Multi-generational living spaces that adapt to every need" 
+                                      data-de="Mehrgenerationen-Wohnräume, die sich an jeden Bedarf anpassen" 
+                                      data-fr="Espaces de vie multigénérationnels qui s'adaptent à tous les besoins">
+                                    Multi-generational living spaces that adapt to every need
+                                </span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-bullet">✓</div>
+                                <span data-en="Premium amenities for both relaxation and adventure" 
+                                      data-de="Premium-Annehmlichkeiten für Entspannung und Abenteuer" 
+                                      data-fr="Équipements premium pour la détente et l'aventure">
+                                    Premium amenities for both relaxation and adventure
+                                </span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-bullet">✓</div>
+                                <span data-en="Seamless indoor-outdoor living with mountain access" 
+                                      data-de="Nahtloses Innen-Außen-Wohnen mit Bergzugang" 
+                                      data-fr="Vie intérieur-extérieur fluide avec accès à la montagne">
+                                    Seamless indoor-outdoor living with mountain access
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Aerial view of pristine Alpine landscape with dramatic mountain ridges" 
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-en="Our Commitment to Excellence" 
+                                                 data-de="Unser Engagement für Exzellenz" 
+                                                 data-fr="Notre Engagement envers l'Excellence">
+                Our Commitment to Excellence
+            </h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3 data-en="Authentic Alpine Experience" 
+                        data-de="Authentisches Alpine Erlebnis" 
+                        data-fr="Expérience Alpine Authentique">
+                        Authentic Alpine Experience
+                    </h3>
+                    <p data-en="We preserve the soul of traditional Alpine hospitality while embracing modern luxury standards." 
+                       data-de="Wir bewahren die Seele der traditionellen alpinen Gastfreundschaft und nehmen moderne Luxusstandards an." 
+                       data-fr="Nous préservons l'âme de l'hospitalité alpine traditionnelle tout en adoptant les standards de luxe modernes.">
+                        We preserve the soul of traditional Alpine hospitality while embracing modern luxury standards.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3 data-en="Personalized Service" 
+                        data-de="Persönlicher Service" 
+                        data-fr="Service Personnalisé">
+                        Personalized Service
+                    </h3>
+                    <p data-en="Every guest receives tailored attention to ensure their Alpine experience exceeds expectations." 
+                       data-de="Jeder Gast erhält maßgeschneiderte Aufmerksamkeit, um sicherzustellen, dass sein alpines Erlebnis die Erwartungen übertrifft." 
+                       data-fr="Chaque invité reçoit une attention personnalisée pour s'assurer que son expérience alpine dépasse les attentes.">
+                        Every guest receives tailored attention to ensure their Alpine experience exceeds expectations.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3 data-en="Sustainable Luxury" 
+                        data-de="Nachhaltiger Luxus" 
+                        data-fr="Luxe Durable">
+                        Sustainable Luxury
+                    </h3>
+                    <p data-en="Our commitment to the Alpine environment guides every decision, preserving beauty for future generations." 
+                       data-de="Unser Engagement für die alpine Umwelt leitet jede Entscheidung und bewahrt die Schönheit für zukünftige Generationen." 
+                       data-fr="Notre engagement envers l'environnement alpin guide chaque décision, préservant la beauté pour les générations futures.">
+                        Our commitment to the Alpine environment guides every decision, preserving beauty for future generations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-en="Experience the Chalet Tuftra Difference" 
+                    data-de="Erleben Sie den Chalet Tuftra Unterschied" 
+                    data-fr="Découvrez la Différence Chalet Tuftra">
+                    Experience the Chalet Tuftra Difference
+                </h2>
+                <p data-en="Discover why discerning travelers choose Chalet Tuftra for their most precious family moments and important gatherings." 
+                   data-de="Entdecken Sie, warum anspruchsvolle Reisende das Chalet Tuftra für ihre wertvollsten Familienmomente und wichtigen Zusammenkünfte wählen." 
+                   data-fr="Découvrez pourquoi les voyageurs exigeants choisissent le Chalet Tuftra pour leurs moments familiaux les plus précieux et leurs rassemblements importants.">
+                    Discover why discerning travelers choose Chalet Tuftra for their most precious family moments and important gatherings.
+                </p>
+                <button class="btn btn-primary btn-large" onclick="openInquiryModal()" 
+                        data-en="Plan Your Stay" 
+                        data-de="Planen Sie Ihren Aufenthalt" 
+                        data-fr="Planifiez Votre Séjour">
+                    Plan Your Stay
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Chalet Tuftra</h3>
+                    <p data-en="Your luxury Alpine sanctuary in the heart of Zermatt" 
+                       data-de="Ihr luxuriöses Alpine Refugium im Herzen von Zermatt" 
+                       data-fr="Votre sanctuaire alpin de luxe au cœur de Zermatt">
+                        Your luxury Alpine sanctuary in the heart of Zermatt
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-de="Schnelle Links" data-fr="Liens Rapides">Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html" data-en="About" data-de="Über uns" data-fr="À Propos">About</a></li>
+                        <li><a href="gallery.html" data-en="Gallery" data-de="Galerie" data-fr="Galerie">Gallery</a></li>
+                        <li><a href="location.html" data-en="Location" data-de="Lage" data-fr="Emplacement">Location</a></li>
+                        <li><a href="legal.html" data-en="Legal" data-de="Rechtliches" data-fr="Légal">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact" data-de="Kontakt" data-fr="Contact">Contact</h4>
+                    <p>Zermatt, Switzerland</p>
+                    <p>info@chalettuftra.com</p>
+                    <p>+41 27 XXX XXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Partnership" data-de="Partnerschaft" data-fr="Partenariat">Partnership</h4>
+                    <p data-en="Managed in partnership with" data-de="Verwaltet in Partnerschaft mit" data-fr="Géré en partenariat avec">Managed in partnership with</p>
+                    <a href="https://zermattskichalets.com" target="_blank" class="partner-link">
+                        Zermatt Ski Chalets
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chalet Tuftra. <span data-en="All rights reserved" data-de="Alle Rechte vorbehalten" data-fr="Tous droits réservés">All rights reserved</span>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeInquiryModal()">&times;</span>
+            <h2 data-en="Make an Inquiry" data-de="Anfrage stellen" data-fr="Faire une Demande">Make an Inquiry</h2>
+            <form class="inquiry-form" id="inquiryForm">
+                <div class="form-group">
+                    <label for="name" data-en="Full Name *" data-de="Vollständiger Name *" data-fr="Nom Complet *">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-en="Email Address *" data-de="E-Mail-Adresse *" data-fr="Adresse E-mail *">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin" data-en="Check-in Date" data-de="Anreisedatum" data-fr="Date d'Arrivée">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin">
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout" data-en="Check-out Date" data-de="Abreisedatum" data-fr="Date de Départ">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests" data-en="Number of Guests" data-de="Anzahl der Gäste" data-fr="Nombre d'Invités">Number of Guests</label>
+                    <select id="guests" name="guests">
+                        <option value="">Select number of guests</option>
+                        <option value="1-4">1-4 guests</option>
+                        <option value="5-8">5-8 guests</option>
+                        <option value="9-12">9-12 guests</option>
+                        <option value="13+">13+ guests</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-en="Message" data-de="Nachricht" data-fr="Message">Message</label>
+                    <textarea id="message" name="message" rows="4" 
+                              placeholder="Tell us about your ideal Alpine experience..." 
+                              data-en-placeholder="Tell us about your ideal Alpine experience..." 
+                              data-de-placeholder="Erzählen Sie uns von Ihrem idealen Alpine Erlebnis..." 
+                              data-fr-placeholder="Parlez-nous de votre expérience alpine idéale..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" 
+                        data-en="Send Inquiry" 
+                        data-de="Anfrage senden" 
+                        data-fr="Envoyer la Demande">
+                    Send Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
