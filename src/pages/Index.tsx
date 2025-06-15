@@ -31,17 +31,17 @@ const Index = () => {
 
   const heroFeatures = [
     {
-      icon: Mountain,
+      iconSrc: "/lovable-uploads/e1a6bc06-8d9f-4ffe-883c-e3cefc1fd01d.png",
       title: "Iconic Views",
       description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
     },
     {
-      icon: Eye,
+      iconSrc: "/lovable-uploads/23961fc0-efaa-4dc7-9d60-bd4f7dc73fe5.png",
       title: "Light-Flooded Spaces",
       description: "Our chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
     },
     {
-      icon: Users,
+      iconSrc: "/lovable-uploads/ad3f96ad-9e8a-49e8-8e32-a53dfaac497a.png",
       title: "Family Hub Concept",
       description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
     }
@@ -152,8 +152,12 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-12">
             {heroFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6 group-hover:bg-emerald-200 transition-colors">
-                  <feature.icon className="w-8 h-8 text-emerald-900" />
+                <div className="inline-flex items-center justify-center w-20 h-20 mb-6 group-hover:scale-110 transition-transform">
+                  <img 
+                    src={feature.iconSrc} 
+                    alt={feature.title}
+                    className="w-16 h-16"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-stone-900 mb-4">{feature.title}</h3>
                 <p className="text-stone-600 leading-relaxed">{feature.description}</p>
