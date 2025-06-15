@@ -70,10 +70,9 @@ const Index = () => {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4 flex-1">
               <img 
-                src="/lovable-uploads/1e9ea58d-fe69-4e26-ad51-89d81f1f8ba8.png" 
+                src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" 
                 alt="Chalet Tuftra Logo" 
-                className="h-20 w-20"
-                style={{ filter: 'hue-rotate(120deg) saturate(1.2) brightness(0.8)' }}
+                className="h-16 w-auto"
               />
               <div>
                 <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
