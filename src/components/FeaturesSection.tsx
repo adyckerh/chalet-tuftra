@@ -1,14 +1,25 @@
 
+import React from "react";
 interface Feature {
   iconSrc: string;
   title: string;
   description: string;
 }
-export const FeaturesSection = ({ features }: { features: Feature[] }) => (
-  <section className="py-20 bg-white">
+
+// Add id prop for scroll anchor
+export const FeaturesSection = ({
+  id,
+  features,
+}: {
+  id?: string;
+  features: Feature[];
+}) => (
+  <section id={id} className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">Our Chalet Philosophy</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
+          Our Chalet Philosophy
+        </h2>
         <p className="text-xl text-stone-600 max-w-3xl mx-auto">
           Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.

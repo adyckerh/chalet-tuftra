@@ -97,6 +97,7 @@ const Index = () => {
               </div>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
+              {/* Updated navigation links: */}
               <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Home</a>
               <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
               <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
@@ -115,8 +116,17 @@ const Index = () => {
         </div>
       </nav>
 
-      <HeroSection images={heroImages} setIsInquiryOpen={setIsInquiryOpen} />
-      <FeaturesSection features={heroFeatures} />
+      {/* Sections with anchor ids */}
+      <HeroSection 
+        id="home"
+        heading="Savor Luxury: Space, Light, Views"
+        images={heroImages} 
+        setIsInquiryOpen={setIsInquiryOpen} 
+      />
+      <FeaturesSection 
+        id="philosophy"
+        features={heroFeatures} 
+      />
       <AboutSection setIsInquiryOpen={setIsInquiryOpen} />
       <GallerySection categories={galleryCategories} />
       <LocationSection />
@@ -128,4 +138,3 @@ const Index = () => {
   );
 };
 export default Index;
-

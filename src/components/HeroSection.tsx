@@ -1,64 +1,44 @@
+import React from "react";
 
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/hooks/useLanguage";
-
-interface HeroSectionProps {
-  images: string[];
-  setIsInquiryOpen: (open: boolean) => void;
-}
-
+// Add `id` and `heading` props for anchor and heading control
 export const HeroSection = ({
+  id,
+  heading,
   images,
   setIsInquiryOpen,
-}: HeroSectionProps) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { t } = useLanguage();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  return (
-    <section id="home" className="relative h-screen flex items-end pb-8 overflow-hidden">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
-            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{ backgroundImage: `url("${image}")` }}
-        />
-      ))}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <div className="bg-black/20 backdrop-blur-sm rounded-xl p-8 mx-auto max-w-5xl">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
-            Savor Luxury: Space, Light, Views
-          </h1>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button 
-              size="lg"
-              onClick={() => setIsInquiryOpen(true)}
-              className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
-            >
-              Reserve your alpine escape
-            </Button>
-            <Button 
-              size="lg"
-              className="bg-emerald-700 hover:bg-emerald-600 text-white px-8 py-4 text-lg"
-              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
-            >
-              3D virtual walkthrough
-            </Button>
+}: {
+  id?: string;
+  heading?: string;
+  images: string[];
+  setIsInquiryOpen: (open: boolean) => void;
+}) => (
+  <section id={id} className="relative min-h-[80vh] bg-white flex flex-col items-center justify-center pt-28 mb-6">
+    <div className="w-full max-w-4xl text-center mx-auto mb-12 px-4">
+      <h1 className="text-4xl md:text-6xl font-extrabold text-stone-900 mb-6 leading-tight">
+        {heading || "Where Luxury Meets Alpine Authenticity"}
+      </h1>
+      <p className="text-xl text-stone-700 max-w-xl mx-auto mb-8">
+        Experience the perfect harmony of space, view, and light at Chalet Tuftra - your exclusive gateway to Matterhorn magic
+      </p>
+      <button
+        onClick={() => setIsInquiryOpen(true)}
+        className="px-8 py-4 rounded-xl bg-emerald-900 text-white text-lg font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
+      >
+        Reserve Your Alpine Escape
+      </button>
+    </div>
+    <div className="relative w-full max-w-4xl mx-auto">
+      <div className="flex overflow-x-auto snap-x snap-mandatory">
+        {images.map((image, index) => (
+          <div key={index} className="snap-start shrink-0 w-full h-96 md:h-[48rem] relative">
+            <img
+              src={image}
+              alt={`Chalet Tuftra View ${index + 1}`}
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+            />
           </div>
-        </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
