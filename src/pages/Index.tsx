@@ -31,12 +31,12 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
+        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png",
+        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png",
         "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png",
         "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png",
         "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png",
-        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png",
-        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png",
-        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png"
+        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png"
       ]
     },
     {
@@ -54,14 +54,12 @@ const Index = () => {
       title: "Bedrooms",
       description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
       images: [
-        "/lovable-uploads/ce50b2f3-5ce5-43a2-8933-aabcf20c1739.png",
-        "/lovable-uploads/cfa74102-a2d2-474c-ac9c-8d37fc8373f5.png",
-        "/lovable-uploads/6a4be8ef-2ba5-43f8-aa59-9f4fd5677d50.png",
-        "/lovable-uploads/ea84128a-a75b-4dff-a5e8-a7f920e6a3d5.png",
-        "/lovable-uploads/b60b771b-de97-412e-8272-b6dcca64efc5.png",
-        "/lovable-uploads/5c063f50-934e-4cd9-85ec-a073ec892bee.png",
-        "/lovable-uploads/75ab0420-29cb-4ca7-93cb-9cceb2aea845.png",
-        "/lovable-uploads/65fc1e7e-089d-47d3-8967-52fc7e13c53f.png"
+        "/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png",
+        "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png",
+        "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png",
+        "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png",
+        "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png",
+        "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"
       ]
     }
   ];
