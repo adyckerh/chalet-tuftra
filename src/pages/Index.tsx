@@ -187,8 +187,8 @@ const Index = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Luxurious Alpine chalet interior"
+                src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png"
+                alt="Our family at a beautiful temple location"
                 className="rounded-lg shadow-2xl"
               />
             </div>
