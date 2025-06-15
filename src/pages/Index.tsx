@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -36,19 +37,19 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 flex-1">
               <img 
                 src="/lovable-uploads/1e9ea58d-fe69-4e26-ad51-89d81f1f8ba8.png" 
                 alt="Chalet Tuftra Logo" 
-                className="h-16 w-16"
+                className="h-20 w-20"
                 style={{ filter: 'hue-rotate(120deg) saturate(1.2) brightness(0.8)' }}
               />
               <div>
-                <h1 className="text-xl md:text-2xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
+                <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
               </div>
             </div>
             
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-6 ml-8">
               <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('home')}</a>
               <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('about')}</a>
               <a href="#experiences" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">{t('experiences')}</a>
@@ -385,3 +386,4 @@ const Index = () => {
 };
 
 export default Index;
+
