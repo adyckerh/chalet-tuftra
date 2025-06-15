@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
@@ -161,9 +160,6 @@ const Index = () => {
                 Our Story & Vision
               </h2>
               <div className="space-y-6 text-stone-600 leading-relaxed">
-                <p>
-                  Discover our family hub in Zermatt, where the fascinating view of the Matterhorn meets the rushing Findelbach. A light-flooded sanctuary designed for shared experiences and lasting memories.
-                </p>
                 <p>
                   We are pleased that you have found your way here and wish you wonderful holidays. 
                   After 17 years living in Shanghai and Hong Kong, we returned to Switzerland and now live 
