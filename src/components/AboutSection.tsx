@@ -1,8 +1,10 @@
-
-import { Button } from "@/components/ui/button";
-
-export const AboutSection = ({ setIsInquiryOpen }: { setIsInquiryOpen: (open: boolean) => void }) => (
-  <section id="about" className="py-20 bg-stone-100">
+import React from "react";
+interface AboutSectionProps {
+  id?: string;
+  setIsInquiryOpen: (open: boolean) => void;
+}
+export const AboutSection = ({ id, setIsInquiryOpen }: AboutSectionProps) => (
+  <section id={id} className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -46,3 +48,4 @@ export const AboutSection = ({ setIsInquiryOpen }: { setIsInquiryOpen: (open: bo
     </div>
   </section>
 );
+export default AboutSection;

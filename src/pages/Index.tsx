@@ -101,7 +101,7 @@ const Index = () => {
               <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Home</a>
               <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
               <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
-              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amenities</a>
+              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amneties</a>
               <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Contact</a>
               <LanguageSelector />
               <Button 
@@ -127,9 +127,9 @@ const Index = () => {
         id="philosophy"
         features={heroFeatures} 
       />
-      <AboutSection setIsInquiryOpen={setIsInquiryOpen} />
-      <GallerySection categories={galleryCategories} />
-      <LocationSection />
+      <AboutSection id="about" setIsInquiryOpen={setIsInquiryOpen} />
+      <GallerySection id="amenities" categories={galleryCategories} />
+      <LocationSection id="contact" />
       <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
       <FooterSection />
 

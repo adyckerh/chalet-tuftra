@@ -1,9 +1,8 @@
-
 import { Mountain, MapPin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const LocationSection = () => (
-  <section className="py-20 bg-stone-100">
+export const LocationSection = ({ id }: { id?: string }) => (
+  <section id={id} className="py-20 bg-stone-100">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-emerald-900 mb-6">
