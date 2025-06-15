@@ -31,12 +31,23 @@ const Index = () => {
       title: "Living & Dining Areas",
       description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
       images: [
-        "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png", // 1st image (living room - big view)
-        "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png", // 2nd image (fireplace with Matterhorn)
-        "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png", // 3rd image (glass wall/chair/dining view)
-        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png", // 4th image (living overview, big windows)
-        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png", // 5th image (dining table + kitchen)
-        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png"  // 6th image (fireplace close up + dining)
+        "/lovable-uploads/a2527a19-e5f1-4940-9bae-7708f25e18a2.png",
+        "/lovable-uploads/09a410bd-0495-4d07-a9d8-dfb07f3db001.png",
+        "/lovable-uploads/dde40bf0-9b7c-4736-a995-8debd26ae8bb.png",
+        "/lovable-uploads/70c8f368-d818-44ac-8b4a-2f98a77be6da.png",
+        "/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png",
+        "/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png"
+      ]
+    },
+    {
+      title: "Wellness & Recreation",
+      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, sauna, and fitness facilities, perfect for relaxation after days on the slopes or hiking trails.",
+      images: [
+        "/lovable-uploads/593bbcd2-d56c-497f-a011-25d0306cf99b.png",
+        "/lovable-uploads/fbcd800c-d1ce-4e11-9e0b-5a9e99fbf8ad.png",
+        "/lovable-uploads/9741a072-840c-4489-892e-15487e39cf62.png",
+        "/lovable-uploads/ca99ceb3-8416-46fb-9052-24d079ac3a5d.png",
+        "/lovable-uploads/c3151d33-4da4-4e2e-ab09-2b7a4ad90373.png"
       ]
     },
     {
@@ -51,25 +62,6 @@ const Index = () => {
         "/lovable-uploads/5c063f50-934e-4cd9-85ec-a073ec892bee.png",
         "/lovable-uploads/75ab0420-29cb-4ca7-93cb-9cceb2aea845.png",
         "/lovable-uploads/65fc1e7e-089d-47d3-8967-52fc7e13c53f.png"
-      ]
-    },
-    {
-      title: "Wellness & Recreation",
-      description: "Dedicated wellness and spa areas featuring luxurious bathrooms with mountain views, sauna, and fitness facilities, perfect for relaxation after days on the slopes or hiking trails.",
-      images: [
-        "/lovable-uploads/e16e993e-962f-4efd-9aa2-6d138c142c69.png",
-        "/lovable-uploads/1a6a7f76-373c-4d9f-98fc-c7b187b134cd.png",
-        "/lovable-uploads/225a0397-7cce-4537-8071-ee957909d9fb.png",
-        "/lovable-uploads/a6745a2a-fc69-4c82-aa97-3328ffc0d1b4.png",
-        "/lovable-uploads/742f0c6c-0da1-4f29-ba60-011ff6a61a98.png",
-        "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png",
-        "/lovable-uploads/65446efd-48bb-4572-a912-e653ff78a500.png",
-        "/lovable-uploads/6d1de32e-26f0-4e09-ab07-d035b9b3a53f.png",
-        "/lovable-uploads/78d06a0c-c2b6-4d01-8e17-03e966cad9d3.png",
-        "/lovable-uploads/32218385-99c9-4275-918c-ed9f8fbdf180.png",
-        "/lovable-uploads/52d1e32d-3557-4a34-8943-3e85c1ce774e.png",
-        "/lovable-uploads/8094eb0f-eeda-4435-9914-e076a90d761c.png",
-        "/lovable-uploads/153e8c1a-7341-4337-9b2d-da04b3472e9d.png"
       ]
     }
   ];
@@ -379,7 +371,7 @@ const Index = () => {
             <div>
               <div 
                 className="rounded-lg overflow-hidden shadow-2xl cursor-pointer hover:shadow-3xl transition-shadow"
-                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D', '_blank')}
+                onClick={() => window.open('https://www.google.com/maps/place/Chalet+Tuftra+Findelbach/@46.0117737,7.7433436,17z/data=!3m1!4b1!4m6!3m5!1s0x478f35b314ba925f:0xa18bb3cca3c5d433!8m2!3d46.0117737!4d7.7459185!16s%2Fg%2F11shjq8_7j?entry=ttu&g_ep=EgoyMDI1MDYxMS.wIKXMDSoASAFQAw%3D%3D', '_blank')}
               >
                 <img 
                   src="https://maps.googleapis.com/maps/api/staticmap?center=46.0117737,7.7459185&zoom=15&size=600x400&maptype=terrain&markers=color:red%7Clabel:C%7C46.0117737,7.7459185&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dOMD0Ni5Tj4Usk"
