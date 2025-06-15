@@ -1,16 +1,23 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+// Extend props for translation
 export const HeroSection = ({
   id,
   heading,
+  subtitle,
   images,
   setIsInquiryOpen,
+  buttonText,
+  tourText,
 }: {
   id?: string;
   heading?: string;
+  subtitle?: string;
   images: string[];
   setIsInquiryOpen: (open: boolean) => void;
+  buttonText?: string;
+  tourText?: string;
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -60,7 +67,8 @@ export const HeroSection = ({
               {heading || "Where Luxury Meets Alpine Authenticity"}
             </h1>
             <p className="text-sm md:text-base text-stone-700 max-w-xl mx-auto mb-4 md:mb-5">
-              Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic
+              {subtitle ||
+                "Experience the perfect harmony of space, view, and light at Chalet Tuftra – your exclusive gateway to Matterhorn magic"}
             </p>
             {/* 3D Tour Link */}
             <a
@@ -69,14 +77,14 @@ export const HeroSection = ({
               target="_blank"
               className="inline-block text-emerald-900 text-xs md:text-sm font-semibold underline underline-offset-4 mb-3 hover:text-emerald-800 hover-scale transition-all"
             >
-              Explore 3D Virtual Tour
+              {tourText || "Explore 3D Virtual Tour"}
             </a>
             {/* CTA Button */}
             <button
               onClick={() => setIsInquiryOpen(true)}
               className="px-4 py-1.5 rounded-xl bg-emerald-900 text-white text-sm font-semibold hover:bg-emerald-800 transition-colors shadow-lg"
             >
-              Reserve Your Alpine Escape
+              {buttonText || "Reserve Your Alpine Escape"}
             </button>
           </div>
         </div>

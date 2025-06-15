@@ -6,23 +6,26 @@ interface Feature {
   description: string;
 }
 
-// Add id prop for scroll anchor
 export const FeaturesSection = ({
   id,
   features,
+  heading,
+  subheading,
 }: {
   id?: string;
   features: Feature[];
+  heading?: string;
+  subheading?: string;
 }) => (
   <section id={id} className="py-20 bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-          Our Chalet Philosophy
+          {heading || "Our Chalet Philosophy"}
         </h2>
         <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-          Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
-          can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
+          {subheading ||
+            "Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences."}
         </p>
       </div>
       <div className="grid md:grid-cols-3 gap-12">

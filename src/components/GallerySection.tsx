@@ -1,3 +1,4 @@
+
 import React from "react";
 import {
   Carousel,
@@ -13,16 +14,26 @@ interface GalleryCategory {
   images: string[];
 }
 
-export const GallerySection = ({ id, categories }: { id?: string; categories: GalleryCategory[] }) => (
+export const GallerySection = ({
+  id,
+  categories,
+  heading,
+  subheading,
+}: {
+  id?: string;
+  categories: GalleryCategory[];
+  heading?: string;
+  subheading?: string;
+}) => (
   <section id={id} className="py-20 bg-stone-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-emerald-900 mb-6">
-          A chalet that accommodates to every desire
+          {heading || "A chalet that accommodates to every desire"}
         </h2>
         <p className="text-xl text-stone-600 max-w-4xl mx-auto">
-          From intimate retreats to grand gatherings, our chalet offers thoughtfully designed spaces 
-          that cater to every moment of your Alpine adventure.
+          {subheading ||
+            "From intimate retreats to grand gatherings, our chalet offers thoughtfully designed spaces that cater to every moment of your Alpine adventure."}
         </p>
       </div>
       <div className="space-y-16">
