@@ -25,17 +25,13 @@ export const HeroSection = ({
     };
   }, [activeIndex, images.length]);
 
-  const goToSlide = (idx: number) => {
-    setActiveIndex(idx);
-  };
-
   return (
     <section
       id={id}
       className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white flex items-center justify-center overflow-hidden"
     >
       {/* Full-viewport slideshow */}
-      <div className="relative w-full h-full select-none flex items-end justify-center overflow-hidden">
+      <div className="relative w-full h-full select-none flex items-center justify-center overflow-hidden">
         {/* Slideshow Images Full Viewport */}
         {images.map((image, idx) => (
           <img
@@ -54,7 +50,7 @@ export const HeroSection = ({
 
         {/* Transparent caption box at bottom of hero only */}
         <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none">
-          <div className="flex flex-col items-center justify-center bg-black/30 backdrop-blur-sm px-4 py-6 md:px-8 md:py-8 text-center pointer-events-auto">
+          <div className="flex flex-col items-center justify-center bg-black/30 backdrop-blur-sm px-4 py-6 md:px-8 md:py-12 text-center pointer-events-auto">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight drop-shadow-lg">
               {heading || "Savor Luxury: Space, Light, Views"}
             </h1>
@@ -78,23 +74,6 @@ export const HeroSection = ({
               Reserve Your Alpine Escape
             </button>
           </div>
-        </div>
-
-        {/* Dots navigation */}
-        <div className="absolute bottom-20 md:bottom-24 left-0 right-0 flex justify-center space-x-2 z-30">
-          {images.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => goToSlide(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                idx === activeIndex
-                  ? "bg-white scale-110 shadow-lg"
-                  : "bg-white/50 border border-white/70 hover:bg-white/70"
-              }`}
-              aria-label={`Go to image ${idx + 1}`}
-              style={{ outline: "none" }}
-            />
-          ))}
         </div>
       </div>
     </section>
