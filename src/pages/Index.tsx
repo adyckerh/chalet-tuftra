@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -79,6 +80,10 @@ const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const { t } = useLanguage();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
@@ -86,21 +91,24 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4 flex-1">
-              <img 
-                src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" 
-                alt="Chalet Tuftra Logo" 
-                className="h-16 w-auto"
-              />
-              <div>
-                <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
-              </div>
+              <button 
+                onClick={scrollToTop}
+                className="flex items-center space-x-4 hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" 
+                  alt="Chalet Tuftra Logo" 
+                  className="h-16 w-auto"
+                />
+                <div>
+                  <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
+                </div>
+              </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              {/* Updated navigation links: */}
-              <a href="#home" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Home</a>
               <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
               <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
-              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amneties</a>
+              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amenities</a>
               <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Contact</a>
               <LanguageSelector />
               <Button 
