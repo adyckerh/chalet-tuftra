@@ -52,8 +52,8 @@ export const HeroSection = ({
           />
         ))}
 
-        {/* Fixed transparent caption box at bottom */}
-        <div className="fixed bottom-0 left-0 right-0 z-20 pointer-events-none">
+        {/* Transparent caption box at bottom of hero only */}
+        <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none">
           <div className="flex flex-col items-center justify-center bg-black/30 backdrop-blur-sm px-4 py-6 md:px-8 md:py-8 text-center pointer-events-auto">
             <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight drop-shadow-lg">
               {heading || "Savor Luxury: Space, Light, Views"}
