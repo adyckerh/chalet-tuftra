@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/hooks/useLanguage";
+import { supabase } from "@/integrations/supabase/client";
 
 interface InquiryModalProps {
   open: boolean;
@@ -23,20 +24,52 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const formData = new FormData(e.target as HTMLFormElement);
     
-    toast({
-      title: "Inquiry Sent!",
-      description: "Thank you for your inquiry. We will contact you soon.",
-    });
-    
-    setIsSubmitting(false);
-    onOpenChange(false);
-    
-    // Reset form
-    const form = e.target as HTMLFormElement;
-    form.reset();
+    try {
+      // Extract form data
+      const inquiryData = {
+        full_name: formData.get('name') as string,
+        email: formData.get('email') as string,
+        check_in: formData.get('checkin') as string || null,
+        check_out: formData.get('checkout') as string || null,
+        guests: formData.get('guests') ? parseInt(formData.get('guests') as string.split('-')[0]) : null,
+        mesage: formData.get('message') as string || null
+      };
+
+      console.log('Submitting inquiry:', inquiryData);
+
+      // Insert into Supabase
+      const { error } = await supabase
+        .from('Guest inquiries')
+        .insert([inquiryData]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw new Error(error.message);
+      }
+
+      toast({
+        title: "Inquiry Sent Successfully!",
+        description: "Thank you for your inquiry. We will contact you soon.",
+      });
+      
+      onOpenChange(false);
+      
+      // Reset form
+      const form = e.target as HTMLFormElement;
+      form.reset();
+      
+    } catch (error: any) {
+      console.error('Error submitting inquiry:', error);
+      toast({
+        title: "Error Sending Inquiry",
+        description: error.message || "There was a problem submitting your inquiry. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
