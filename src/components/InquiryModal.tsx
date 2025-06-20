@@ -28,12 +28,13 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
     
     try {
       // Extract form data
+      const guestsValue = formData.get('guests') as string;
       const inquiryData = {
         full_name: formData.get('name') as string,
         email: formData.get('email') as string,
         check_in: formData.get('checkin') as string || null,
         check_out: formData.get('checkout') as string || null,
-        guests: formData.get('guests') ? parseInt(formData.get('guests') as string.split('-')[0]) : null,
+        guests: guestsValue ? parseInt(guestsValue.split('-')[0]) : null,
         mesage: formData.get('message') as string || null
       };
 
