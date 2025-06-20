@@ -40,9 +40,9 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase - using from() with quoted table name for spaces
+      // Insert into Supabase - table name with spaces
       const { error } = await supabase
-        .from('"Guest inquiries"')
+        .from('Guest inquiries')
         .insert([inquiryData]);
 
       if (error) {
