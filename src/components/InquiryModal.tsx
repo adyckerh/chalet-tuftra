@@ -39,8 +39,9 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase - updated table name to match database
+      // Insert into Supabase - using the api schema
       const { data, error } = await supabase
+        .schema('api')
         .from('Guest_inquiries')
         .insert([inquiryData])
         .select();
