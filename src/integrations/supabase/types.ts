@@ -9,39 +9,7 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      Guest_inquiries: {
-        Row: {
-          check_in: string | null
-          check_out: string | null
-          created_at: string | null
-          email: string
-          full_name: string
-          guests: number | null
-          message: string | null
-          updated_at: string | null
-        }
-        Insert: {
-          check_in?: string | null
-          check_out?: string | null
-          created_at?: string | null
-          email?: string
-          full_name?: string
-          guests?: number | null
-          message?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          check_in?: string | null
-          check_out?: string | null
-          created_at?: string | null
-          email?: string
-          full_name?: string
-          guests?: number | null
-          message?: string | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
