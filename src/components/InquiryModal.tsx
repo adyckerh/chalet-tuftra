@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -40,10 +39,9 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase using the schema and table specification
+      // Insert into Supabase - updated table name to match database
       const { data, error } = await supabase
-        .schema('public')
-        .from('Guest inquiries')
+        .from('Guest_inquiries')
         .insert([inquiryData])
         .select();
 
