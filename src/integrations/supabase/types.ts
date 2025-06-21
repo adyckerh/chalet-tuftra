@@ -13,26 +13,32 @@ export type Database = {
         Row: {
           check_in: string | null
           check_out: string | null
+          created_at: string | null
           email: string
           full_name: string
           guests: number | null
-          mesage: string | null
+          message: string | null
+          updated_at: string | null
         }
         Insert: {
           check_in?: string | null
           check_out?: string | null
+          created_at?: string | null
           email?: string
           full_name?: string
           guests?: number | null
-          mesage?: string | null
+          message?: string | null
+          updated_at?: string | null
         }
         Update: {
           check_in?: string | null
           check_out?: string | null
+          created_at?: string | null
           email?: string
           full_name?: string
           guests?: number | null
-          mesage?: string | null
+          message?: string | null
+          updated_at?: string | null
         }
         Relationships: []
       }

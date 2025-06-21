@@ -35,7 +35,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
         check_in: formData.get('checkin') as string || null,
         check_out: formData.get('checkout') as string || null,
         guests: guestsValue ? parseInt(guestsValue.split('-')[0]) : null,
-        mesage: formData.get('message') as string || null
+        message: formData.get('message') as string || null
       };
 
       console.log('Submitting inquiry:', inquiryData);
