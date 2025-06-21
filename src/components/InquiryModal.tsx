@@ -40,8 +40,9 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase - using direct table access with type assertion
-      const { data, error } = await (supabase as any)
+      // Insert into Supabase using the api schema explicitly
+      const { data, error } = await supabase
+        .schema('api')
         .from('Guest_inquiries')
         .insert([inquiryData])
         .select();
