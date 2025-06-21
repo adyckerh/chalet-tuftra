@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -39,9 +40,8 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase - using the api schema
-      const { data, error } = await supabase
-        .schema('api')
+      // Insert into Supabase - using direct table access with type assertion
+      const { data, error } = await (supabase as any)
         .from('Guest_inquiries')
         .insert([inquiryData])
         .select();
