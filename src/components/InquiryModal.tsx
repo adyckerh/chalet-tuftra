@@ -40,15 +40,19 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase - table name with spaces
-      const { error } = await supabase
+      // Insert into Supabase using the schema and table specification
+      const { data, error } = await supabase
+        .schema('public')
         .from('Guest inquiries')
-        .insert([inquiryData]);
+        .insert([inquiryData])
+        .select();
 
       if (error) {
         console.error('Supabase error:', error);
         throw new Error(error.message);
       }
+
+      console.log('Successfully inserted:', data);
 
       toast({
         title: "Inquiry Sent Successfully!",
