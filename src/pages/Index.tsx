@@ -59,7 +59,7 @@ const Index = () => {
               <button onClick={scrollToTop} className="">
                 <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
                 <div>
-                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap drop-shadow-lg">Chalet Tuftra Findelbach</h1>
+                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap drop-shadow-lg mx-[70px] my-[5px]">Chalet Tuftra Findelbach</h1>
                 </div>
               </button>
             </div>
