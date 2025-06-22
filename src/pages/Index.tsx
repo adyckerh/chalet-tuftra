@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -61,21 +62,21 @@ const Index = () => {
   };
 
   return <div className="min-h-screen bg-stone-50">
-      {/* Navigation - Transparent overlay */}
+      {/* Navigation */}
       <nav className="absolute top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-4 flex-1">
+            <div className="flex items-center space-x-3">
               <button onClick={scrollToTop} className="flex items-center space-x-3">
                 <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
-                <div className="bg-emerald-900/80 px-4 py-2 rounded-lg backdrop-blur-sm">
-                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap">Chalet Tuftra Findelbach</h1>
-                </div>
+                <h1 className="text-lg md:text-xl font-bold text-white drop-shadow-md">Chalet Tuftra Findelbach</h1>
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="#amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Amenities</a>
-              <a href="#contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
+              <a href="/" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-semibold">Home</a>
+              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Family</a>
+              <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Corporate Retreats</a>
+              <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
               <LanguageSelector />
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10" size="sm">
                 {t('make_inquiry')}
@@ -85,7 +86,29 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Full-width Hero Section - No top margin */}
+      {/* Inquiry Form at top of page */}
+      <div className="relative z-10 bg-emerald-50 py-8 mt-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Experience Alpine Luxury</h2>
+            <p className="text-emerald-700">Discover our exclusive mountain chalet with breathtaking Matterhorn views and premium amenities.</p>
+          </div>
+          <div className="flex justify-center space-x-4">
+            <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
+              Make Inquiry
+            </Button>
+            <Button 
+              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
+              variant="outline" 
+              className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white"
+            >
+              Explore 3D Virtual Tour
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* Full-width Hero Section */}
       <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} onDiscoverMore={scrollToPhilosophy} />
       
       {/* Other sections with proper spacing */}

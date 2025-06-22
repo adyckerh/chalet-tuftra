@@ -51,7 +51,12 @@ export const HeroSection = ({
                 >
                   Discover More
                 </button>
-                <button onClick={() => setIsInquiryOpen(true)} className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-emerald-900/90 text-white text-base sm:text-lg font-semibold hover:bg-emerald-800/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10">3D virtual tour</button>
+                <button 
+                  onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
+                  className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-emerald-900/90 text-white text-base sm:text-lg font-semibold hover:bg-emerald-800/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10"
+                >
+                  Explore 3D Virtual Tour
+                </button>
               </div>
             </div>
           </div>
