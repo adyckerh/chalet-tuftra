@@ -29,9 +29,8 @@ export const HeroSection = ({
     <section
       id={id}
       className="relative h-screen w-full bg-white overflow-hidden"
-      style={{ marginTop: '80px' }}
     >
-      {/* Full-viewport slideshow taking remaining screen space */}
+      {/* Full-viewport slideshow taking entire screen */}
       <div className="relative w-full h-full">
         {/* Slideshow Images Full Viewport */}
         {images.map((image, idx) => (
