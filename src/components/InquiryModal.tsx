@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { useLanguage } from "@/hooks/useLanguage";
 import { supabase } from "@/integrations/supabase/client";
 
 interface InquiryModalProps {
@@ -16,7 +15,6 @@ interface InquiryModalProps {
 }
 
 export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
-  const { t } = useLanguage();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -82,14 +80,14 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-amber-900">
-            {t('make_inquiry')}
+            Make an Inquiry
           </DialogTitle>
         </DialogHeader>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <Label htmlFor="name" className="text-stone-700">
-              {t('full_name')} *
+              Full Name *
             </Label>
             <Input 
               id="name" 
@@ -101,7 +99,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
           
           <div>
             <Label htmlFor="email" className="text-stone-700">
-              {t('email_address')} *
+              Email Address *
             </Label>
             <Input 
               id="email" 
@@ -115,7 +113,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <Label htmlFor="checkin" className="text-stone-700">
-                {t('checkin_date')}
+                Check-in Date
               </Label>
               <Input 
                 id="checkin" 
@@ -126,7 +124,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
             </div>
             <div>
               <Label htmlFor="checkout" className="text-stone-700">
-                {t('checkout_date')}
+                Check-out Date
               </Label>
               <Input 
                 id="checkout" 
@@ -139,30 +137,30 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
           
           <div>
             <Label htmlFor="guests" className="text-stone-700">
-              {t('number_guests')}
+              Number of Guests
             </Label>
             <Select name="guests">
               <SelectTrigger className="mt-1">
-                <SelectValue placeholder={t('select_guests')} />
+                <SelectValue placeholder="Select number of guests" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1-4">{t('guests_1_4')}</SelectItem>
-                <SelectItem value="5-8">{t('guests_5_8')}</SelectItem>
-                <SelectItem value="9-12">{t('guests_9_12')}</SelectItem>
-                <SelectItem value="13+">{t('guests_13_plus')}</SelectItem>
+                <SelectItem value="1-4">1-4 guests</SelectItem>
+                <SelectItem value="5-8">5-8 guests</SelectItem>
+                <SelectItem value="9-12">9-12 guests</SelectItem>
+                <SelectItem value="13+">13+ guests</SelectItem>
               </SelectContent>
             </Select>
           </div>
           
           <div>
             <Label htmlFor="message" className="text-stone-700">
-              {t('message')}
+              Message
             </Label>
             <Textarea 
               id="message" 
               name="message" 
               rows={4}
-              placeholder={t('message_placeholder')}
+              placeholder="Tell us about your stay preferences, special requests, or any questions you have..."
               className="mt-1"
             />
           </div>
@@ -172,7 +170,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
             className="w-full bg-amber-900 hover:bg-amber-800 text-white"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Sending..." : t('send_inquiry')}
+            {isSubmitting ? "Sending..." : "Send Inquiry"}
           </Button>
         </form>
       </DialogContent>

@@ -1,13 +1,10 @@
 
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
-import { LanguageSelector } from "@/components/LanguageSelector";
-import { useLanguage } from "@/hooks/useLanguage";
 import { Button } from "@/components/ui/button";
 
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const { t } = useLanguage();
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -24,9 +21,8 @@ const CorporateRetreats = () => {
               <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors">Family</a>
               <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Corporate Retreats</a>
               <a href="/contact" className="text-emerald-900 hover:text-emerald-800 transition-colors">Contact</a>
-              <LanguageSelector />
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white" size="sm">
-                {t('make_inquiry')}
+                Make an Inquiry
               </Button>
             </div>
           </div>
