@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -122,15 +123,13 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section - Full viewport with navigation offset */}
+      {/* Sections with anchor ids */}
       <HeroSection 
         id="home"
         heading="Savor Luxury: Space, Light, Views"
         images={heroImages} 
         setIsInquiryOpen={setIsInquiryOpen} 
       />
-      
-      {/* Other sections */}
       <FeaturesSection 
         id="philosophy"
         features={heroFeatures} 
