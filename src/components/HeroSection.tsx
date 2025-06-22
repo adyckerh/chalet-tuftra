@@ -36,22 +36,18 @@ export const HeroSection = ({
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">Enjoy a unique alpine retreat in Zermatt</p>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">Enjoy your unique alpine retreat in Zermatt</p>
               
               
               {/* 3D Tour Link */}
-              <a href="https://my.matterport.com/show/?m=VnYcNjgkFQ2" rel="noopener noreferrer" target="_blank" className="inline-block text-white/90 text-base font-semibold underline underline-offset-4 mb-6 hover:text-white transition-all drop-shadow-md">
-                Explore 3D Virtual Tour
-              </a>
+              
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-amber-600/90 text-white text-base sm:text-lg font-semibold hover:bg-amber-500/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10">
+                <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white text-base sm:text-lg font-semibold transition-colors shadow-lg backdrop-blur-sm border border-white/10 bg-emerald-900/90 hover:bg-emerald-800">
                   Discover More
                 </button>
-                <button onClick={() => setIsInquiryOpen(true)} className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-emerald-900/90 text-white text-base sm:text-lg font-semibold hover:bg-emerald-800/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10">
-                  Make an Inquiry
-                </button>
+                <button onClick={() => setIsInquiryOpen(true)} className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-emerald-900/90 text-white text-base sm:text-lg font-semibold hover:bg-emerald-800/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10">3D virtual tour</button>
               </div>
             </div>
           </div>
