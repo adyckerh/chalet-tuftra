@@ -28,9 +28,10 @@ export const HeroSection = ({
   return (
     <section
       id={id}
-      className="relative h-screen w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white overflow-hidden"
+      className="relative h-screen w-full bg-white overflow-hidden"
+      style={{ marginTop: '80px' }}
     >
-      {/* Full-viewport slideshow taking entire screen */}
+      {/* Full-viewport slideshow taking remaining screen space */}
       <div className="relative w-full h-full">
         {/* Slideshow Images Full Viewport */}
         {images.map((image, idx) => (
@@ -50,7 +51,7 @@ export const HeroSection = ({
 
         {/* Overlay content centered on the image */}
         <div className="absolute inset-0 z-20 flex items-center justify-center">
-          <div className="text-center bg-black/40 backdrop-blur-sm px-8 py-12 rounded-lg max-w-4xl mx-4">
+          <div className="text-center px-8 py-12 max-w-4xl mx-4">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
               {heading || "Welcome to Chalet Tuftra"}
             </h1>
