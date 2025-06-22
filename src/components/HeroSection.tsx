@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 export const HeroSection = ({
   id,
@@ -33,7 +32,7 @@ export const HeroSection = ({
         {/* Content Overlay - Positioned at Bottom */}
         <div className="absolute bottom-0 left-0 right-0 z-20 flex items-end justify-center pb-20">
           <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <div className="bg-black/40 backdrop-blur-sm px-6 py-8 rounded-lg sm:px-[20px] sm:py-0">
+            <div className="bottom-0 sm:px-[20px] sm:py-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
@@ -73,7 +72,7 @@ export const HeroSection = ({
 
         {/* Pagination Dots - Positioned at Bottom */}
         <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2 sm:space-x-3">
-          {images.map((_, idx) => <button key={idx} onClick={() => setActiveIndex(idx)} className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${idx === activeIndex ? "bg-white scale-110" : "bg-white/50 hover:bg-white/70"}`} aria-label={`Go to slide ${idx + 1}`} />)}
+          {images.map((_, idx) => {})}
         </div>
       </div>
     </section>;
