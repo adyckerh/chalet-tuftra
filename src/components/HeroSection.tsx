@@ -30,17 +30,17 @@ export const HeroSection = ({
         pointerEvents: idx === activeIndex ? "auto" : "none"
       }} />)}
 
-        {/* Content Overlay - Positioned at Bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 flex items-end justify-center pb-20">
-          <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-            <div className="bg-black/40 backdrop-blur-sm px-6 py-8 rounded-lg sm:px-[20px] sm:py-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
+        {/* Content Overlay - Positioned at Bottom, Full Width, Half Height */}
+        <div className="absolute bottom-0 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
+          <div className="w-full h-full flex items-end justify-center pb-20">
+            <div className="bg-black/40 backdrop-blur-sm w-full h-full px-6 py-8 flex flex-col justify-end items-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">
                 Luxury Alpine Retreat in Zermatt
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 drop-shadow-md">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 drop-shadow-md text-center">
                 Space, view, and light - a family hub with stunning Matterhorn views
               </p>
               
