@@ -1,7 +1,6 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
-import { LanguageSelector } from "@/components/LanguageSelector";
-import { useLanguage } from "@/hooks/useLanguage";
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { AboutSection } from "@/components/AboutSection";
@@ -39,17 +38,17 @@ const galleryCategories = [{
   description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
   images: ["/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png", "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png", "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png", "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png", "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png", "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"]
 }];
+
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const {
-    t
-  } = useLanguage();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
+
   const scrollToPhilosophy = () => {
     const element = document.getElementById('philosophy');
     if (element) {
@@ -58,7 +57,9 @@ const Index = () => {
       });
     }
   };
-  return <div className="min-h-screen bg-stone-50">
+
+  return (
+    <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,13 +71,11 @@ const Index = () => {
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              
               <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Family</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Corporate Retreats</a>
               <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
-              <LanguageSelector />
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10" size="sm">
-                {t('make_inquiry')}
+                Make an Inquiry
               </Button>
             </div>
           </div>
@@ -84,7 +83,26 @@ const Index = () => {
       </nav>
 
       {/* Inquiry Form at top of page */}
-      
+      <div className="bg-emerald-50 py-8 mt-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Plan Your Alpine Getaway</h2>
+            <p className="text-emerald-700">Ready to experience luxury in the heart of Zermatt? Let us help you plan the perfect mountain retreat.</p>
+          </div>
+          <div className="flex justify-center space-x-4">
+            <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
+              Submit Inquiry
+            </Button>
+            <Button 
+              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
+              variant="outline" 
+              className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white"
+            >
+              Explore 3D Virtual Tour
+            </Button>
+          </div>
+        </div>
+      </div>
 
       {/* Full-width Hero Section */}
       <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} onDiscoverMore={scrollToPhilosophy} />
@@ -99,6 +117,8 @@ const Index = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
