@@ -39,33 +39,41 @@ const galleryCategories = [{
   description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
   images: ["/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png", "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png", "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png", "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png", "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png", "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"]
 }];
+
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const {
     t
   } = useLanguage();
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
+
+  const scrollToPhilosophy = () => {
+    const element = document.getElementById('philosophy');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <div className="min-h-screen bg-stone-50">
       {/* Navigation - Transparent overlay */}
       <nav className="absolute top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4 flex-1">
-              <button onClick={scrollToTop} className="">
+              <button onClick={scrollToTop} className="flex items-center space-x-3">
                 <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
-                <div>
-                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap drop-shadow-lg mx-[70px] my-[5px]">Chalet Tuftra Findelbach</h1>
+                <div className="bg-emerald-900/80 px-4 py-2 rounded-lg backdrop-blur-sm">
+                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap">Chalet Tuftra Findelbach</h1>
                 </div>
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="#philosophy" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Our chalet philosophy</a>
-              <a href="#about" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Our Story</a>
               <a href="#amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Amenities</a>
               <a href="#contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
               <LanguageSelector />
@@ -78,7 +86,7 @@ const Index = () => {
       </nav>
 
       {/* Full-width Hero Section - No top margin */}
-      <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} />
+      <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} onDiscoverMore={scrollToPhilosophy} />
       
       {/* Other sections with proper spacing */}
       <div className="relative z-10">

@@ -1,17 +1,22 @@
+
 import React, { useEffect, useRef, useState } from "react";
+
 export const HeroSection = ({
   id,
   heading,
   images,
-  setIsInquiryOpen
+  setIsInquiryOpen,
+  onDiscoverMore
 }: {
   id?: string;
   heading?: string;
   images: string[];
   setIsInquiryOpen: (open: boolean) => void;
+  onDiscoverMore?: () => void;
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   useEffect(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = setTimeout(() => {
@@ -21,6 +26,7 @@ export const HeroSection = ({
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
   }, [activeIndex, images.length]);
+
   return <section id={id} className="relative h-screen w-full overflow-hidden">
       {/* Full-viewport slideshow - Edge to edge */}
       <div className="relative w-full h-full">
@@ -30,21 +36,19 @@ export const HeroSection = ({
       }} />)}
 
         {/* Content Overlay - Positioned at Bottom, Full Width, Half Height */}
-        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
-          <div className="w-full h-full flex items-end justify-center pb-4 sm:pb-6 md:pb-8">
+        <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
+          <div className="w-full h-full flex items-end justify-center pb-2 sm:pb-3 md:pb-4">
             <div className="backdrop-blur-sm absolute inset-x-0 bottom-1 h-35 flex flex-col justify-end items-center rounded-tl-lg bg-[#064e18]/35 px-0 rounded-lg mx-0 py-[10px] my-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center lg:text-6xl">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
               
-              
-              
-              {/* 3D Tour Link */}
-              
-              
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white text-base sm:text-lg font-semibold transition-colors shadow-lg backdrop-blur-sm border border-white/10 bg-emerald-900/90 hover:bg-emerald-800">
+                <button 
+                  onClick={onDiscoverMore}
+                  className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white text-base sm:text-lg font-semibold transition-colors shadow-lg backdrop-blur-sm border border-white/10 bg-emerald-900/90 hover:bg-emerald-800"
+                >
                   Discover More
                 </button>
                 <button onClick={() => setIsInquiryOpen(true)} className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl bg-emerald-900/90 text-white text-base sm:text-lg font-semibold hover:bg-emerald-800/90 transition-colors shadow-lg backdrop-blur-sm border border-white/10">3D virtual tour</button>
