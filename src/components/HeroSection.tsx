@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 export const HeroSection = ({
   id,
@@ -33,7 +32,7 @@ export const HeroSection = ({
         {/* Content Overlay - Positioned at Bottom, Full Width, Half Height */}
         <div className="absolute bottom-0 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
           <div className="w-full h-full flex items-end justify-center pb-20">
-            <div className="bg-black/40 backdrop-blur-sm w-full h-full px-6 py-8 flex flex-col justify-end items-center">
+            <div className="bg-black/40 backdrop-blur-sm w-full h-full px-6 py-8 flex flex-col justify-end items-center rounded-t-lg">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
