@@ -36,12 +36,8 @@ export const HeroSection = ({
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">
-                Luxury Alpine Retreat in Zermatt
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-6 sm:mb-8 drop-shadow-md text-center">
-                Space, view, and light - a family hub with stunning Matterhorn views
-              </p>
+              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">Enjoy a unique alpine retreat in Zermatt</p>
+              
               
               {/* 3D Tour Link */}
               <a href="https://my.matterport.com/show/?m=VnYcNjgkFQ2" rel="noopener noreferrer" target="_blank" className="inline-block text-white/90 text-base font-semibold underline underline-offset-4 mb-6 hover:text-white transition-all drop-shadow-md">
