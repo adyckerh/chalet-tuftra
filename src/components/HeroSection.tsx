@@ -32,11 +32,11 @@ export const HeroSection = ({
         {/* Content Overlay - Positioned at Bottom, Full Width, Half Height */}
         <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
           <div className="w-full h-full flex items-end justify-center pb-4 sm:pb-6 md:pb-8">
-            <div className="bg-black/40 backdrop-blur-sm w-full h-40 px-6 py-8 flex flex-col justify-end items-center rounded-t-lg">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
+            <div className="backdrop-blur-sm absolute inset-x-0 bottom-1 h-35 px-6 py-4 flex flex-col justify-end items-center rounded-tl-lg bg-[#064e18]/90">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center lg:text-6xl">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-6 sm:mb-8 drop-shadow-md leading-relaxed text-center">Enjoy your unique alpine retreat in Zermatt</p>
+              
               
               
               {/* 3D Tour Link */}
