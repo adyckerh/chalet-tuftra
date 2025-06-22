@@ -19,8 +19,6 @@ export const LanguageSelector = () => {
     label: 'FR'
   }];
   return <div className="flex space-x-2">
-      {languages.map(lang => <Button key={lang.code} variant={language === lang.code ? "default" : "outline"} size="sm" onClick={() => changeLanguage(lang.code)} className="bg-emerald-900/80 hover:bg-emerald-800 rounded-lg font-thin text-white text-base">
-          {lang.label}
-        </Button>)}
+      {languages.map(lang => {})}
     </div>;
 };
