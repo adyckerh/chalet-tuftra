@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -86,7 +85,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Navigation */}
+      {/* Navigation - Floating over hero */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -123,25 +122,29 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Sections with anchor ids */}
+      {/* Full-width Hero Section */}
       <HeroSection 
         id="home"
         heading="Savor Luxury: Space, Light, Views"
         images={heroImages} 
         setIsInquiryOpen={setIsInquiryOpen} 
       />
-      <FeaturesSection 
-        id="philosophy"
-        features={heroFeatures} 
-      />
-      <AboutSection id="about" setIsInquiryOpen={setIsInquiryOpen} />
-      <GallerySection id="amenities" categories={galleryCategories} />
-      <LocationSection id="contact" />
-
-      <FooterSection />
+      
+      {/* Other sections with proper spacing */}
+      <div className="relative z-10">
+        <FeaturesSection 
+          id="philosophy"
+          features={heroFeatures} 
+        />
+        <AboutSection id="about" setIsInquiryOpen={setIsInquiryOpen} />
+        <GallerySection id="amenities" categories={galleryCategories} />
+        <LocationSection id="contact" />
+        <FooterSection />
+      </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
     </div>
   );
 };
+
 export default Index;
