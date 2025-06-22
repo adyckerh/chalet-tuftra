@@ -40,7 +40,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
-      // Insert into Supabase using type assertion to bypass TypeScript restrictions
+      // Insert into Supabase api schema
       const { data, error } = await (supabase as any)
         .schema('api')
         .from('Guest_inquiries')
