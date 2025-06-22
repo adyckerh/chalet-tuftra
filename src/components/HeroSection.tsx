@@ -32,7 +32,7 @@ export const HeroSection = ({
         {/* Content Overlay - Positioned at Bottom, Full Width, Half Height */}
         <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
           <div className="w-full h-full flex items-end justify-center pb-4 sm:pb-6 md:pb-8">
-            <div className="bg-black/40 backdrop-blur-sm w-full h-64 px-6 py-8 flex flex-col justify-end items-center rounded-t-lg">
+            <div className="bg-black/40 backdrop-blur-sm w-full h-40 px-6 py-8 flex flex-col justify-end items-center rounded-t-lg">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heading || "Welcome to Chalet Tuftra"}
               </h1>
