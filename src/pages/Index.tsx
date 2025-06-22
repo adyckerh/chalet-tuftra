@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { LanguageSelector } from "@/components/LanguageSelector";
@@ -9,6 +10,7 @@ import { GallerySection } from "@/components/GallerySection";
 import { CtaSection } from "@/components/CtaSection";
 import { LocationSection } from "@/components/LocationSection";
 import { FooterSection } from "@/components/FooterSection";
+import { Button } from "@/components/ui/button";
 
 // Static data
 const heroImages = [
@@ -84,6 +86,43 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-4 flex-1">
+              <button 
+                onClick={scrollToTop}
+                className="flex items-center space-x-4 hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" 
+                  alt="Chalet Tuftra Logo" 
+                  className="h-16 w-auto"
+                />
+                <div>
+                  <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
+                </div>
+              </button>
+            </div>
+            <div className="hidden lg:flex items-center space-x-6 ml-8">
+              <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
+              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
+              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amenities</a>
+              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Contact</a>
+              <LanguageSelector />
+              <Button 
+                onClick={() => setIsInquiryOpen(true)}
+                className="bg-emerald-900 hover:bg-emerald-800 text-white whitespace-nowrap"
+                size="sm"
+              >
+                {t('make_inquiry')}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Sections with anchor ids */}
       <HeroSection 
         id="home"
