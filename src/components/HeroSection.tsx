@@ -30,7 +30,7 @@ export const HeroSection = ({
       id={id}
       className="relative h-screen w-full overflow-hidden"
     >
-      {/* Full-viewport slideshow */}
+      {/* Full-viewport slideshow - Edge to edge */}
       <div className="relative w-full h-full">
         {/* Slideshow Images - Full Edge-to-Edge */}
         {images.map((image, idx) => (
@@ -48,7 +48,7 @@ export const HeroSection = ({
           />
         ))}
 
-        {/* Content Overlay - Centered with Transparent Background */}
+        {/* Content Overlay - Centered */}
         <div className="absolute inset-0 z-20 flex items-center justify-center">
           <div className="text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
             <div className="bg-black/40 backdrop-blur-sm px-6 sm:px-8 py-8 sm:py-12 rounded-lg">

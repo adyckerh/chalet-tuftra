@@ -85,8 +85,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      {/* Navigation - Floating over hero */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
+      {/* Navigation - Transparent overlay */}
+      <nav className="absolute top-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4 flex-1">
@@ -100,19 +100,19 @@ const Index = () => {
                   className="h-16 w-auto"
                 />
                 <div>
-                  <h1 className="text-lg md:text-xl font-bold text-emerald-700 whitespace-nowrap">Chalet Tuftra Findelbach</h1>
+                  <h1 className="text-lg md:text-xl font-bold text-white whitespace-nowrap drop-shadow-lg">Chalet Tuftra Findelbach</h1>
                 </div>
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="#philosophy" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our chalet philosophy</a>
-              <a href="#about" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Our Story</a>
-              <a href="#amenities" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Amenities</a>
-              <a href="#contact" className="text-stone-700 hover:text-emerald-900 transition-colors whitespace-nowrap">Contact</a>
+              <a href="#philosophy" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Our chalet philosophy</a>
+              <a href="#about" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Our Story</a>
+              <a href="#amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Amenities</a>
+              <a href="#contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
               <LanguageSelector />
               <Button 
                 onClick={() => setIsInquiryOpen(true)}
-                className="bg-emerald-900 hover:bg-emerald-800 text-white whitespace-nowrap"
+                className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10"
                 size="sm"
               >
                 {t('make_inquiry')}
@@ -122,7 +122,7 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Full-width Hero Section */}
+      {/* Full-width Hero Section - No top margin */}
       <HeroSection 
         id="home"
         heading="Savor Luxury: Space, Light, Views"
