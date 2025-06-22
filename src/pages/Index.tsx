@@ -87,7 +87,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-stone-200">
+      <nav className="fixed top-0 w-full bg-white z-50 border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-4 flex-1">
