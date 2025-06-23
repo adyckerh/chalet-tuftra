@@ -1,14 +1,10 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
@@ -26,7 +22,7 @@ const CorporateRetreats = () => {
               <img src="/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png" alt="Corporate meeting space" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-emerald-900 mb-6">Corporate Retreats</h1>
+              
               <p className="text-lg text-stone-700 mb-6 leading-relaxed">
                 Elevate your corporate events and team building activities in our exclusive mountain chalet. 
                 Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
@@ -63,8 +59,6 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default CorporateRetreats;
