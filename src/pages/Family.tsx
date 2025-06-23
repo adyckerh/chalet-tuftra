@@ -1,10 +1,21 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { StoryVision } from "@/components/StoryVision";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  return <div className="min-h-screen bg-stone-50">
+
+  const familyImages = [
+    "/lovable-uploads/84ea2813-67cd-4c34-890d-a46a2093cb0c.png",
+    "/lovable-uploads/773f80b8-ec03-4ecb-b0b3-f9a01732ad9d.png",
+    "/lovable-uploads/d6519bec-7b63-47c4-8181-9fed442f7a11.png"
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,12 +38,9 @@ const Family = () => {
         </div>
       </nav>
 
-      {/* Inquiry Form at top */}
-      
-
       {/* Family Content */}
       <div className="max-w-6xl mx-auto px-4 py-[30px]">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h1 className="text-4xl font-bold text-emerald-900 mb-6">The perfect getaway for families</h1>
             <p className="text-lg text-stone-700 mb-6">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
@@ -55,8 +63,30 @@ const Family = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <img src="/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png" alt="Family living area" className="rounded-lg shadow-lg w-full h-auto" />
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {familyImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <img
+                        src={image}
+                        alt={`Family accommodation ${index + 1}`}
+                        className="rounded-lg shadow-lg w-full h-auto object-cover"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+            </Carousel>
           </div>
         </div>
       </div>
@@ -65,6 +95,8 @@ const Family = () => {
       <StoryVision setIsInquiryOpen={setIsInquiryOpen} />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>;
+    </div>
+  );
 };
+
 export default Family;
