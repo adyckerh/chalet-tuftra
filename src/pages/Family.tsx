@@ -35,22 +35,6 @@ const familyFeatures = [
   }
 ];
 
-// Family-focused gallery categories
-const familyGalleryCategories = [
-  {
-    title: "Family Spaces",
-    description: "Explore the family-friendly spaces designed for creating lasting memories together",
-    images: [
-      "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png",
-      "/lovable-uploads/4d3ccb14-31e7-4789-93ff-5780dacf71d7.png",
-      "/lovable-uploads/65fc1e7e-089d-47d3-8967-52fc7e13c53f.png",
-      "/lovable-uploads/5b2630cc-3a20-43ba-a20d-e17bc6d0a5d7.png",
-      "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
-      "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png"
-    ]
-  }
-];
-
 const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
@@ -85,7 +69,7 @@ const Family = () => {
         
         <div className="relative z-10">
           <FeaturesSection id="family-features" features={familyFeatures} />
-          <GallerySection categories={familyGalleryCategories} />
+          <GallerySection />
           <FooterSection />
         </div>
 

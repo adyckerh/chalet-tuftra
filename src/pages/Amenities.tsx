@@ -35,22 +35,6 @@ const amenitiesFeatures = [
   }
 ];
 
-// Amenities-focused gallery categories
-const amenitiesGalleryCategories = [
-  {
-    title: "Luxury Amenities",
-    description: "Discover the exceptional amenities that make Chalet Tuftra your perfect Alpine retreat",
-    images: [
-      "/lovable-uploads/0e3fa725-c79c-4dfc-8dad-a9c374647053.png",
-      "/lovable-uploads/1a6a7f76-373c-4d9f-98fc-c7b187b134cd.png",
-      "/lovable-uploads/2589f8ef-d129-4e6f-ac97-6658575eba2b.png",
-      "/lovable-uploads/27ab3278-20aa-4a5e-9e4f-bdcd3865b305.png",
-      "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
-      "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png"
-    ]
-  }
-];
-
 const Amenities = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
@@ -85,7 +69,7 @@ const Amenities = () => {
         
         <div className="relative z-10">
           <FeaturesSection id="amenities-features" features={amenitiesFeatures} />
-          <GallerySection categories={amenitiesGalleryCategories} />
+          <GallerySection />
           <FooterSection />
         </div>
 
