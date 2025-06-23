@@ -59,7 +59,7 @@ const CorporateRetreats = () => {
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
                     Dedicated meeting and conference spaces with mountain views
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
                     High speed-internet and a meeting table to accommodate 16 people comfortably
                   </li>
