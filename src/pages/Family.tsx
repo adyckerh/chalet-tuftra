@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { StoryVision } from "@/components/StoryVision";
+import { FooterSection } from "@/components/FooterSection";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Section, Container, ContentGrid } from "@/components/ui/Layout";
 import { H1, BodyLarge } from "@/components/ui/Typography";
@@ -79,6 +80,8 @@ const Family = () => {
         </Section>
 
         <StoryVision setIsInquiryOpen={setIsInquiryOpen} />
+
+        <FooterSection />
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>

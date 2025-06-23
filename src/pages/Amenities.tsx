@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { GallerySection } from "@/components/GallerySection";
+import { FooterSection } from "@/components/FooterSection";
 import { Section, Container } from "@/components/ui/Layout";
 import { H2 } from "@/components/ui/Typography";
 import { SEOHead } from "@/components/SEOHead";
@@ -91,6 +91,8 @@ const Amenities = () => {
             </div>
           </Container>
         </Section>
+
+        <FooterSection />
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>

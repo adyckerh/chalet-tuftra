@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
+import { FooterSection } from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SEOHead } from "@/components/SEOHead";
@@ -85,6 +85,8 @@ const CorporateRetreats = () => {
             </div>
           </Container>
         </Section>
+
+        <FooterSection />
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>
