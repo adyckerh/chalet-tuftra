@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
+import { StoryVision } from "@/components/StoryVision";
 import { Button } from "@/components/ui/button";
 
 const Family = () => {
@@ -19,6 +20,7 @@ const Family = () => {
             <div className="flex items-center space-x-6">
               <a href="/" className="text-emerald-900 hover:text-emerald-800 transition-colors">Home</a>
               <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Family</a>
+              <a href="/amenities" className="text-emerald-900 hover:text-emerald-800 transition-colors">Amenities</a>
               <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors">Corporate Retreats</a>
               <a href="/contact" className="text-emerald-900 hover:text-emerald-800 transition-colors">Contact</a>
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white" size="sm">
@@ -89,6 +91,9 @@ const Family = () => {
           </div>
         </div>
       </div>
+
+      {/* Story & Vision Section */}
+      <StoryVision setIsInquiryOpen={setIsInquiryOpen} />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
     </div>

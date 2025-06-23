@@ -2,10 +2,9 @@ import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
-import { AboutSection } from "@/components/AboutSection";
+import { AirbnbReviews } from "@/components/AirbnbReviews";
 import { GallerySection } from "@/components/GallerySection";
 import { CtaSection } from "@/components/CtaSection";
-import { LocationSection } from "@/components/LocationSection";
 import { FooterSection } from "@/components/FooterSection";
 import { Button } from "@/components/ui/button";
 
@@ -66,6 +65,7 @@ const Index = () => {
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
               <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Family</a>
+              <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Amenities</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Corporate Retreats</a>
               <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10" size="sm">
@@ -76,18 +76,15 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Inquiry Form at top of page */}
-      
-
       {/* Full-width Hero Section */}
       <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} onDiscoverMore={scrollToPhilosophy} />
       
       {/* Other sections with proper spacing */}
       <div className="relative z-10">
         <FeaturesSection id="philosophy" features={heroFeatures} />
-        <AboutSection id="about" setIsInquiryOpen={setIsInquiryOpen} />
+        <AirbnbReviews />
         <GallerySection id="amenities" categories={galleryCategories} />
-        <LocationSection id="contact" />
+        <CtaSection />
         <FooterSection />
       </div>
 
