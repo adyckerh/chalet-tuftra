@@ -1,4 +1,5 @@
 
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { StoryVision } from "@/components/StoryVision";
@@ -51,11 +52,11 @@ const Family = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                  Child-friendly amenities and safety features
+                  Child friendly bedroom and amenities such as cinema room
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                  Easy access to family hiking trails and activities
+                  Elevator and step free access for less able guests
                 </li>
               </ul>
             </div>
@@ -86,3 +87,4 @@ const Family = () => {
     </div>;
 };
 export default Family;
+
