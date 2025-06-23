@@ -19,7 +19,7 @@ const heroFeatures = [
   {
     iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
     title: "Iconic Views",
-    description: "Immerse yourself into nature as every room allows you to experience the iconic Matterhorn peak or the rushing Findelbach stream"
+    description: "Wake up to the magnificent Matterhorn view or the soothing sounds of the Findelbach stream right outside your window."
   }, 
   {
     iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
