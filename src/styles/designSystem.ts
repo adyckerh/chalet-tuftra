@@ -1,4 +1,3 @@
-
 // Design System Tokens
 export const designTokens = {
   // Typography Scale with fluid responsive sizing
@@ -77,10 +76,10 @@ export const designTokens = {
     }
   },
   
-  // Responsive Spacing Scale - Reduced by 50%
+  // Responsive Spacing Scale - Further reduced for tighter sections
   spacing: {
     section: {
-      paddingY: 'py-3 sm:py-4 md:py-6 lg:py-8',
+      paddingY: 'py-2 sm:py-3 md:py-4 lg:py-6',
       marginBottom: ''
     },
     container: {
@@ -89,17 +88,17 @@ export const designTokens = {
       margin: 'mx-auto'
     },
     contentBlock: {
-      marginBottom: 'mb-3 sm:mb-4 lg:mb-6',
-      gap: 'gap-2 sm:gap-3 lg:gap-4'
+      marginBottom: 'mb-2 sm:mb-3 lg:mb-4',
+      gap: 'gap-1.5 sm:gap-2 lg:gap-3'
     },
     grid: {
-      gap: 'gap-2 sm:gap-3 md:gap-4 lg:gap-6'
+      gap: 'gap-1.5 sm:gap-2 md:gap-3 lg:gap-4'
     },
     textBlock: {
-      marginBottom: 'mb-1.5 sm:mb-2 lg:mb-3'
+      marginBottom: 'mb-1 sm:mb-1.5 lg:mb-2'
     },
     listSpacing: {
-      marginBottom: 'mb-2 sm:mb-3 lg:mb-4'
+      marginBottom: 'mb-1.5 sm:mb-2 lg:mb-3'
     }
   },
   
