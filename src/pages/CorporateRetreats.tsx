@@ -1,13 +1,9 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Button } from "@/components/ui/button";
-
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +13,7 @@ const CorporateRetreats = () => {
               <h1 className="text-lg md:text-xl font-bold text-emerald-900">Chalet Tuftra Findelbach</h1>
             </div>
             <div className="flex items-center space-x-6">
-              <a href="/" className="text-emerald-900 hover:text-emerald-800 transition-colors">Home</a>
+              
               <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors">Family</a>
               <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Corporate Retreats</a>
               <a href="/contact" className="text-emerald-900 hover:text-emerald-800 transition-colors">Contact</a>
@@ -40,11 +36,7 @@ const CorporateRetreats = () => {
             <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
               Plan Corporate Retreat
             </Button>
-            <Button 
-              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
-              variant="outline" 
-              className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white"
-            >
+            <Button onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')} variant="outline" className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white">
               Explore 3D Virtual Tour
             </Button>
           </div>
@@ -55,11 +47,7 @@ const CorporateRetreats = () => {
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <img 
-              src="/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png" 
-              alt="Corporate meeting space" 
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+            <img src="/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png" alt="Corporate meeting space" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
           <div>
             <h1 className="text-4xl font-bold text-emerald-900 mb-6">Corporate Retreats</h1>
@@ -91,8 +79,6 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default CorporateRetreats;
