@@ -94,7 +94,7 @@ export const AirbnbReviews = ({
                       <img src={review.reviewer_picture_url} alt={review.reviewer_name} className="w-12 h-12 rounded-full object-cover" />
                       <div className="flex-1">
                         <h4 className="font-semibold text-gray-900">{review.reviewer_name}</h4>
-                        <p className="text-sm text-gray-500">{review.published_at}</p>
+                        
                       </div>
                     </div>
                     
