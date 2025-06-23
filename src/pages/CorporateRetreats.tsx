@@ -1,14 +1,10 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
@@ -23,9 +19,7 @@ const CorporateRetreats = () => {
             <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
               Plan Corporate Retreat
             </Button>
-            <Button onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')} variant="outline" className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white">
-              Explore 3D Virtual Tour
-            </Button>
+            
           </div>
         </div>
       </div>
@@ -66,8 +60,6 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default CorporateRetreats;
