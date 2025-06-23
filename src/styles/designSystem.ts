@@ -1,12 +1,12 @@
-
 // Design System Tokens
 export const designTokens = {
   // Typography Scale with fluid responsive sizing
   typography: {
-    // Headings
+    // Headings - Now using Playfair Display for warmth and elegance
     h1: {
       fontSize: 'text-fluid-4xl md:text-fluid-5xl',
       fontWeight: 'font-bold',
+      fontFamily: 'font-playfair',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
       marginBottom: ''
@@ -14,6 +14,7 @@ export const designTokens = {
     h2: {
       fontSize: 'text-fluid-3xl md:text-fluid-4xl',
       fontWeight: 'font-bold',
+      fontFamily: 'font-playfair',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
       marginBottom: ''
@@ -21,6 +22,7 @@ export const designTokens = {
     h3: {
       fontSize: 'text-fluid-2xl md:text-fluid-3xl',
       fontWeight: 'font-bold',
+      fontFamily: 'font-playfair',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
       marginBottom: ''
@@ -28,11 +30,12 @@ export const designTokens = {
     h4: {
       fontSize: 'text-fluid-xl md:text-fluid-2xl',
       fontWeight: 'font-semibold',
+      fontFamily: 'font-playfair',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
       marginBottom: ''
     },
-    // Body Text
+    // Body Text - Keeping sans-serif for readability
     bodyLarge: {
       fontSize: 'text-fluid-lg md:text-fluid-xl',
       fontWeight: 'font-normal',
@@ -124,6 +127,11 @@ export const getTypographyClasses = (variant: keyof typeof designTokens.typograp
     token.fontWeight,
     token.lineHeight
   ];
+  
+  // Add font family for headings
+  if (token.fontFamily) {
+    classes.push(token.fontFamily);
+  }
   
   // Only add color and marginBottom if they exist and are not empty
   if (token.color) {
