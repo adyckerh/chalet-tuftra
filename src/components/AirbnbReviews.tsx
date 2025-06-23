@@ -25,9 +25,7 @@ export const AirbnbReviews = ({
           <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
             What Our Guests Say
           </h2>
-          <p className="text-xl text-stone-600 max-w-3xl mx-auto">
-            Read authentic reviews from families and guests who have experienced the magic of Chalet Tuftra.
-          </p>
+          
         </div>
         
         {/* Elfsight Airbnb Reviews Widget */}
