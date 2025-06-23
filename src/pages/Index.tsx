@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
@@ -59,7 +60,7 @@ const Index = () => {
 
         <HeroSection 
           id="home" 
-          heading="Savor Luxury: Space, Light, Views" 
+          heading="Savor Luxury: Views, Space, Light" 
           images={heroImages} 
           setIsInquiryOpen={setIsInquiryOpen} 
           onDiscoverMore={scrollToPhilosophy} 
