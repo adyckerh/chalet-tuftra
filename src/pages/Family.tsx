@@ -1,14 +1,10 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { StoryVision } from "@/components/StoryVision";
 import { Button } from "@/components/ui/button";
-
 const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,37 +28,14 @@ const Family = () => {
       </nav>
 
       {/* Inquiry Form at top */}
-      <div className="bg-emerald-50 py-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Perfect for Families</h2>
-            <p className="text-emerald-700">Create lasting memories in our family-friendly chalet with spacious accommodations and stunning mountain views.</p>
-          </div>
-          <div className="flex justify-center space-x-4">
-            <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
-              Make Family Inquiry
-            </Button>
-            <Button 
-              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
-              variant="outline" 
-              className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white"
-            >
-              Explore 3D Virtual Tour
-            </Button>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Family Content */}
-      <div className="max-w-6xl mx-auto px-4 py-16">
+      <div className="max-w-6xl mx-auto px-4 py-[30px]">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl font-bold text-emerald-900 mb-6">Family Getaways</h1>
-            <p className="text-lg text-stone-700 mb-6">
-              Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, 
-              and amenities that cater to guests of all ages. From the youngest adventurers to grandparents, 
-              everyone will find comfort and joy in our mountain retreat.
-            </p>
+            <h1 className="text-4xl font-bold text-emerald-900 mb-6">The perfect getaway for families</h1>
+            <p className="text-lg text-stone-700 mb-6">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
             <ul className="space-y-3 text-stone-700">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
@@ -83,11 +56,7 @@ const Family = () => {
             </ul>
           </div>
           <div>
-            <img 
-              src="/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png" 
-              alt="Family living area" 
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+            <img src="/lovable-uploads/849116f8-0d57-4a06-bfc9-39b46ad4b2bd.png" alt="Family living area" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
         </div>
       </div>
@@ -96,8 +65,6 @@ const Family = () => {
       <StoryVision setIsInquiryOpen={setIsInquiryOpen} />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default Family;
