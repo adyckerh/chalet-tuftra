@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Button } from "@/components/ui/button";
 import { GallerySection } from "@/components/GallerySection";
+import { HotTub, Ski, Fire, Spa, Bed, BalconyIcon as Balcony } from "lucide-react";
 
 const galleryCategories = [{
   title: "Living & Dining Areas",
@@ -17,6 +18,17 @@ const galleryCategories = [{
   description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
   images: ["/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png", "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png", "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png", "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png", "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png", "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"]
 }];
+
+const chaletFeatures = [
+  { icon: HotTub, name: "Outdoor Hot Tub", description: "Relax under the stars" },
+  { icon: Ski, name: "Ski In", description: "Direct access to slopes" },
+  { icon: Fire, name: "Matterhorn Views", description: "Iconic mountain vistas" },
+  { icon: Spa, name: "Private Spa & Wellness", description: "Complete relaxation facilities" },
+  { icon: Fire, name: "Open Fireplace", description: "Cozy alpine atmosphere" },
+  { icon: Bed, name: "Relaxation Area", description: "Peaceful retreat spaces" },
+  { icon: Spa, name: "Sauna & Gym", description: "Health and fitness facilities" },
+  { icon: Balcony, name: "Private Balconies", description: "Mountain view terraces" }
+];
 
 const Amenities = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
@@ -49,6 +61,10 @@ const Amenities = () => {
       <div className="bg-emerald-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-emerald-900 mb-6">Chalet Amenities</h1>
+          <div className="inline-flex items-center bg-emerald-900 text-white px-6 py-2 rounded-full mb-6">
+            <Bed className="w-5 h-5 mr-2" />
+            <span className="font-semibold">Sleeps 12 people</span>
+          </div>
           <p className="text-xl text-emerald-700 mb-8">
             A chalet that accommodates to every desire, featuring luxurious spaces designed for comfort, 
             relaxation, and unforgettable experiences in the heart of the Swiss Alps.
@@ -67,6 +83,35 @@ const Amenities = () => {
           </div>
         </div>
       </div>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium Features & Amenities</h2>
+            <p className="text-lg text-emerald-700 max-w-3xl mx-auto">
+              Experience the finest alpine luxury with our carefully curated selection of premium amenities and facilities.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {chaletFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="bg-emerald-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-emerald-900 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white" aria-hidden="true" />
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-semibold text-emerald-900 mb-2">{feature.name}</h3>
+                  <p className="text-sm text-emerald-700">{feature.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* Gallery Section */}
       <GallerySection categories={galleryCategories} />
