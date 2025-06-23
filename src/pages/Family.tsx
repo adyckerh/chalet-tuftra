@@ -43,50 +43,54 @@ const Family = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h1 className="text-4xl font-bold text-emerald-900 mb-6">The perfect getaway for families</h1>
-            <p className="text-lg text-stone-700 mb-6">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
-            <ul className="space-y-3 text-stone-700">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                Multiple family bedrooms with stunning views
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                Large common areas for family gatherings
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                Child-friendly amenities and safety features
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                Easy access to family hiking trails and activities
-              </li>
-            </ul>
-          </div>
-          <div className="relative">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {familyImages.map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-1">
-                      <img
-                        src={image}
-                        alt={`Family accommodation ${index + 1}`}
-                        className="rounded-lg shadow-lg w-full h-auto object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
-            </Carousel>
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <p className="text-lg text-stone-700 mb-6">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
+                <ul className="space-y-3 text-stone-700">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Multiple family bedrooms with stunning views
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Large common areas for family gatherings
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Child-friendly amenities and safety features
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Easy access to family hiking trails and activities
+                  </li>
+                </ul>
+              </div>
+              <div className="relative">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent>
+                    {familyImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <img
+                            src={image}
+                            alt={`Family accommodation ${index + 1}`}
+                            className="rounded-lg shadow-lg w-full h-auto object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                </Carousel>
+              </div>
+            </div>
           </div>
         </div>
       </div>
