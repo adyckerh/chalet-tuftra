@@ -85,7 +85,7 @@ const Amenities = () => {
       <section className="bg-white py-0">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium Features & Amenities</h2>
+            <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium features &amp; amneties</h2>
             <div className="flex justify-center">
               <div className="inline-flex items-center bg-emerald-900 text-white px-6 py-2 rounded-full">
                 <Bed className="w-5 h-5 mr-2" />
