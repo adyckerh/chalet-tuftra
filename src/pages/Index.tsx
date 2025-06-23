@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { HeroSection } from "@/components/HeroSection";
@@ -23,7 +22,6 @@ const heroFeatures = [{
   title: "Family Hub Concept",
   description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
 }];
-
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const scrollToTop = () => {
@@ -55,7 +53,7 @@ const Index = () => {
               <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Amenities</a>
               <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Family</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Corporate Retreats</a>
-              <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Contact</a>
+              <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Finding us</a>
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10 text-lg" size="sm">
                 Make an Inquiry
               </Button>
