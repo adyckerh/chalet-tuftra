@@ -1,11 +1,9 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { AirbnbReviews } from "@/components/AirbnbReviews";
-import { CtaSection } from "@/components/CtaSection";
 import { FooterSection } from "@/components/FooterSection";
 import { SEOHead } from "@/components/SEOHead";
 
@@ -70,7 +68,6 @@ const Index = () => {
         <div className="relative z-10">
           <FeaturesSection id="philosophy" features={heroFeatures} />
           <AirbnbReviews setIsInquiryOpen={setIsInquiryOpen} />
-          <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
           <FooterSection />
         </div>
 
