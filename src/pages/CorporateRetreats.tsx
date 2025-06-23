@@ -1,10 +1,14 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  return <div className="min-h-screen bg-stone-50">
+
+  return (
+    <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
@@ -35,7 +39,7 @@ const CorporateRetreats = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                  High-speed internet and presentation facilities
+                  High speed-internet and a meeting table to accomodate 16 people comfortably
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
@@ -59,6 +63,8 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>;
+    </div>
+  );
 };
+
 export default CorporateRetreats;
