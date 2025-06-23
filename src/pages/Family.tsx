@@ -16,7 +16,7 @@ const Family = () => {
               <h1 className="text-lg md:text-xl font-bold text-emerald-900">Chalet Tuftra Findelbach</h1>
             </div>
             <div className="flex items-center space-x-6">
-              <a href="/" className="text-emerald-900 hover:text-emerald-800 transition-colors">Home</a>
+              
               <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Family</a>
               <a href="/amenities" className="text-emerald-900 hover:text-emerald-800 transition-colors">Amenities</a>
               <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors">Corporate Retreats</a>
