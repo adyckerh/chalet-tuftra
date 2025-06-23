@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { useLocation } from "react-router-dom";
 
 interface NavigationProps {
   setIsInquiryOpen: (open: boolean) => void;
@@ -7,16 +8,23 @@ interface NavigationProps {
 }
 
 export const Navigation = ({ setIsInquiryOpen, isHomePage = false }: NavigationProps) => {
+  const location = useLocation();
+  
   const navClass = isHomePage ? "absolute top-0 w-full z-50" : "w-full bg-white shadow-sm";
   const logoTextClass = isHomePage 
     ? "text-lg md:text-xl font-bold text-white drop-shadow-md" 
     : "text-lg md:text-xl font-bold text-emerald-900";
-  const linkClass = isHomePage
+  const baseLinkClass = isHomePage
     ? "text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg"
     : "text-emerald-900 hover:text-emerald-800 transition-colors text-lg";
   const buttonClass = isHomePage
     ? "bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10 text-lg"
     : "bg-emerald-900 hover:bg-emerald-800 text-white text-lg";
+
+  const getLinkClass = (path: string) => {
+    const isActive = location.pathname === path;
+    return `${baseLinkClass} ${isActive ? 'font-bold' : ''}`;
+  };
 
   return (
     <nav className={navClass}>
@@ -29,10 +37,10 @@ export const Navigation = ({ setIsInquiryOpen, isHomePage = false }: NavigationP
             </a>
           </div>
           <div className="flex items-center space-x-8">
-            <a href="/amenities" className={linkClass}>Amenities</a>
-            <a href="/family" className={linkClass}>For families</a>
-            <a href="/corporate-retreats" className={linkClass}>Corporate retreats</a>
-            <a href="/contact" className={linkClass}>Finding us</a>
+            <a href="/amenities" className={getLinkClass('/amenities')}>Amenities</a>
+            <a href="/family" className={getLinkClass('/family')}>For families</a>
+            <a href="/corporate-retreats" className={getLinkClass('/corporate-retreats')}>Corporate retreats</a>
+            <a href="/contact" className={getLinkClass('/contact')}>Finding us</a>
             <Button onClick={() => setIsInquiryOpen(true)} className={buttonClass} size="sm">
               Make an Inquiry
             </Button>
