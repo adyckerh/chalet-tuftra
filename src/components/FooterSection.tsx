@@ -1,5 +1,5 @@
 import { MapPin, Mail, Phone } from "lucide-react";
-export const FooterSection = () => <footer id="contact" className="bg-stone-900 text-white py-[30px]">
+export const FooterSection = () => <footer id="contact" className="bg-stone-900 text-white py-[5px]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-6 px-4">
         {/* Logo Section */}
