@@ -1,10 +1,22 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  return <div className="min-h-screen bg-stone-50">
+
+  const corporateImages = [
+    "/lovable-uploads/07a6cf29-a6a7-4257-8e65-2ba8a0278088.png",
+    "/lovable-uploads/2589f8ef-d129-4e6f-ac97-6658575eba2b.png", 
+    "/lovable-uploads/12a92a73-6fa3-4be4-be10-2fe2fb3e7e91.png",
+    "/lovable-uploads/4bb6b12c-9cbf-4217-b4c6-ce9922453780.png"
+  ];
+
+  return (
+    <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
@@ -18,11 +30,32 @@ const CorporateRetreats = () => {
           
           {/* Image and Content Grid */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
-            <div>
-              <img src="/lovable-uploads/b60214bc-d718-4076-a212-65921d7f6efe.png" alt="Corporate meeting space" className="rounded-lg shadow-lg w-full h-auto" />
+            <div className="relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {corporateImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <img 
+                          src={image} 
+                          alt={`Corporate meeting space ${index + 1}`} 
+                          className="rounded-lg shadow-lg w-full h-auto object-cover" 
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+              </Carousel>
             </div>
             <div>
-              
               <p className="text-lg text-stone-700 mb-6 leading-relaxed">
                 Elevate your corporate events and team building activities in our exclusive mountain chalet. 
                 Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
@@ -59,6 +92,8 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>;
+    </div>
+  );
 };
+
 export default CorporateRetreats;
