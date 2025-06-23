@@ -18,27 +18,27 @@ export const FeaturesSection = ({
 }) => (
   <Section id={id} background="primary">
     <Container>
-      <div className="text-center mb-12">
-        <H2 className="mb-4">
+      <div className="text-center mb-6">
+        <H2 className="mb-2">
           Our Chalet Philosophy
         </H2>
-        <BodyLarge className="max-w-3xl mx-auto mb-6">
+        <BodyLarge className="max-w-3xl mx-auto mb-3">
           Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
         </BodyLarge>
         
-        <BodyLarge className="max-w-3xl mx-auto mb-12">
+        <BodyLarge className="max-w-3xl mx-auto mb-6">
           Choose the level of service that suits you - from a fully catered, ultra-luxury dining experience to a hands-on cook-together stay. Housekeeping and cleaning services mean you can enjoy a completely "no-worries" package.
         </BodyLarge>
         
-        {/* Features wrapper with flex utilities positioned close beneath the text */}
-        <div className="flex flex-col md:flex-row gap-8">
+        {/* Features wrapper with tighter spacing */}
+        <div className="flex flex-col md:flex-row gap-4">
           {features.map((feature, index) => (
             <div key={index} className="text-center group">
-              <div className="inline-flex items-center justify-center w-32 h-32 mb-6 group-hover:scale-110 transition-transform">
-                <img src={feature.iconSrc} alt={feature.title} className="w-24 h-24" />
+              <div className="inline-flex items-center justify-center w-24 h-24 mb-3 group-hover:scale-110 transition-transform">
+                <img src={feature.iconSrc} alt={feature.title} className="w-18 h-18" />
               </div>
-              <H3 className="mb-4">{feature.title}</H3>
+              <H3 className="mb-2">{feature.title}</H3>
               <BodyBase className="leading-relaxed">{feature.description}</BodyBase>
             </div>
           ))}
