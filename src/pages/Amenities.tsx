@@ -78,15 +78,6 @@ const Amenities = () => {
       {/* Hero Section */}
       <div className="bg-emerald-50 py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium Features & Amenities</h2>
-            <div className="flex justify-center">
-              <div className="inline-flex items-center bg-emerald-900 text-white px-6 py-2 rounded-full">
-                <Bed className="w-5 h-5 mr-2" />
-                <span className="font-semibold">Sleeps 12 people</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -96,6 +87,16 @@ const Amenities = () => {
       {/* Features Section - moved to bottom */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium Features & Amenities</h2>
+            <div className="flex justify-center">
+              <div className="inline-flex items-center bg-emerald-900 text-white px-6 py-2 rounded-full">
+                <Bed className="w-5 h-5 mr-2" />
+                <span className="font-semibold">Sleeps 12 people</span>
+              </div>
+            </div>
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {chaletFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
