@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Button } from "@/components/ui/button";
@@ -22,9 +23,9 @@ const chaletFeatures = [
   "Matterhorn Views",
   "Open Fireplace", 
   "Outdoor Hot Tub",
-  "Sleeps 12 people",
+  "Sleeps 20 people",
   "Private Spa & Wellness",
-  "Relaxation Area",
+  "Massage Room",
   "Sauna & Gym", 
   "Ski In"
 ];
