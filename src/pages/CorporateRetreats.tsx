@@ -35,6 +35,22 @@ const corporateFeatures = [
   }
 ];
 
+// Corporate retreat-focused gallery categories
+const corporateGalleryCategories = [
+  {
+    title: "Executive Retreat Spaces",
+    description: "Professional environments designed to inspire productivity and team collaboration",
+    images: [
+      "/lovable-uploads/132cb960-93a5-42e9-9798-c75565ab4b13.png",
+      "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png",
+      "/lovable-uploads/21fff439-a418-44a3-ac6a-54ee7236d35d.png",
+      "/lovable-uploads/225a0397-7cce-4537-8071-ee957909d9fb.png",
+      "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
+      "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png"
+    ]
+  }
+];
+
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
@@ -69,7 +85,7 @@ const CorporateRetreats = () => {
         
         <div className="relative z-10">
           <FeaturesSection id="corporate-features" features={corporateFeatures} />
-          <GallerySection />
+          <GallerySection categories={corporateGalleryCategories} />
           <FooterSection />
         </div>
 
