@@ -4,7 +4,7 @@ export const FooterSection = () => <footer id="contact" className="bg-stone-900 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-6 px-4">
         {/* Logo Section */}
         <div className="flex flex-col items-center md:items-start">
-          <img src="/lovable-uploads/f9c4054d-f36e-4e59-bdba-d00862247950.png" alt="Chalet Tuftra Logo" className="w-28 h-28 mb-2" />
+          <img src="/lovable-uploads/f9c4054d-f36e-4e59-bdba-d00862247950.png" alt="Chalet Tuftra Logo" className="w-40 h-40 mb-0" />
         </div>
 
         {/* Contact Section */}
