@@ -76,10 +76,7 @@ const Amenities = () => {
       </nav>
 
       {/* Hero Section */}
-      <div className="bg-emerald-50 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-        </div>
-      </div>
+      
 
       {/* Gallery Section */}
       <GallerySection categories={galleryCategories} />
