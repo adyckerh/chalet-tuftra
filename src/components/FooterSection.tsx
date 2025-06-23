@@ -30,7 +30,7 @@ export const FooterSection = () => <footer id="contact" className="bg-stone-900 
         <div className="text-center md:text-left">
           <h4 className="font-semibold mb-4 text-3xl">Partnership</h4>
           <p className="text-stone-300 mb-2 text-xl">Managed by</p>
-          <a href="https://zermattskichalets.com/accommodation/chalet-tuftra-findelbach/" target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:text-emerald-200 font-semibold">
+          <a href="https://zermattskichalets.com/accommodation/chalet-tuftra-findelbach/" target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:text-emerald-200 font-semibold text-xl">
             Zermatt Ski Chalets
           </a>
         </div>
