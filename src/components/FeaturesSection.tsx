@@ -22,12 +22,12 @@ export const FeaturesSection = ({
         <H2 className="mb-2">
           Our Chalet Philosophy
         </H2>
-        <BodyLarge className="max-w-3xl mx-auto mb-3">
+        <BodyLarge className="mb-3">
           Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
         </BodyLarge>
         
-        <BodyLarge className="max-w-3xl mx-auto mb-6">
+        <BodyLarge className="mb-6">
           Choose the level of service that suits you - from a fully catered, ultra-luxury dining experience to a hands-on cook-together stay. Housekeeping and cleaning services mean you can enjoy a completely "no-worries" package.
         </BodyLarge>
         
