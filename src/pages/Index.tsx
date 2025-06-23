@@ -49,7 +49,7 @@ const Index = () => {
                 <h1 className="text-lg md:text-xl font-bold text-white drop-shadow-md">Chalet Tuftra Findelbach</h1>
               </button>
             </div>
-            <div className="hidden lg:flex items-center space-x-6 ml-8">
+            <div className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">
               <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">Family</a>
               <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold">Amenities</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold">Corporate Retreats</a>
