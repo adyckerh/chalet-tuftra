@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -125,9 +124,7 @@ export const AirbnbReviews = ({
 
           {/* Book Your Stay Button */}
           <div className="text-center">
-            {setIsInquiryOpen && <Button size="lg" onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-4 text-lg">
-                Book Your Stay
-              </Button>}
+            {setIsInquiryOpen && <Button size="lg" onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-4 text-lg">Book your stay today</Button>}
           </div>
         </div>
       </div>
