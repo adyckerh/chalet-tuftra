@@ -67,7 +67,7 @@ const CorporateRetreats = () => {
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
                     Premium catering services and executive dining areas
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center text-xl ">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
                     Dedicated workspaces in every room and communal workspaces in the upstairs living area
                   </li>
