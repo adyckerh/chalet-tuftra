@@ -51,7 +51,7 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-8">
               <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Amenities</a>
-              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Family</a>
+              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">For families</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Corporate Retreats</a>
               <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Finding us</a>
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10 text-lg" size="sm">
