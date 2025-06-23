@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 interface StoryVisionProps {
@@ -7,7 +8,7 @@ export const StoryVision = ({
   setIsInquiryOpen
 }: StoryVisionProps) => <section className="bg-white py-[40px]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="flex flex-col sm:flex-col md:flex-row gap-16 items-start">
         <div>
           <h2 className="text-4xl font-bold text-emerald-900 mb-6">
             Our Story & Vision
@@ -34,8 +35,8 @@ export const StoryVision = ({
             Begin Your Journey
           </Button>
         </div>
-        <div className="relative">
-          <img src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png" alt="Our family at a beautiful temple location" className="rounded-lg shadow-2xl" />
+        <div className="relative self-stretch">
+          <img src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png" alt="Our family at a beautiful temple location" className="rounded-lg shadow-2xl h-full object-cover" />
         </div>
       </div>
     </div>
