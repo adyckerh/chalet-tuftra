@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -32,7 +31,6 @@ const reviews = [{
   fullText: "Amazing Place! Amazing staff! Excellent Food 🍘 Loved it 🙌",
   published_at: "March 29, 2021"
 }];
-
 export const AirbnbReviews = ({
   setIsInquiryOpen
 }: AirbnbReviewsProps) => {
@@ -58,9 +56,7 @@ export const AirbnbReviews = ({
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 mb-4">
               What our guests say
             </h2>
-            <p className="text-lg sm:text-xl leading-relaxed text-stone-700 mb-8">
-              Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
-            </p>
+            <p className="text-lg sm:text-xl leading-relaxed text-stone-700 mb-8">Join our family of satisfied guests and experience the charm of Chalet Tuftra yourself.</p>
           </div>
           
           {/* Airbnb Widget Style Container */}
@@ -80,10 +76,7 @@ export const AirbnbReviews = ({
                 </div>
               </div>
               
-              <Button 
-                onClick={handleAirbnbClick} 
-                className="w-full sm:w-auto text-white px-4 sm:px-6 py-2 rounded-lg text-base sm:text-lg lg:text-xl bg-[#ff5a5f] hover:bg-[#e04e52] whitespace-nowrap"
-              >
+              <Button onClick={handleAirbnbClick} className="w-full sm:w-auto text-white px-4 sm:px-6 py-2 rounded-lg text-base sm:text-lg lg:text-xl bg-[#ff5a5f] hover:bg-[#e04e52] whitespace-nowrap">
                 <span className="hidden sm:inline">Review us on Airbnb</span>
                 <span className="sm:hidden">Review on Airbnb</span>
               </Button>
