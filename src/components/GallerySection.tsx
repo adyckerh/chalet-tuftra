@@ -17,6 +17,15 @@ export const GallerySection = ({ id, categories }: GallerySectionProps): JSX.Ele
   return (
     <section id={id} className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
+            Experience Our Spaces
+          </h2>
+          <p className="text-xl text-stone-600 max-w-3xl mx-auto">
+            Discover the thoughtfully designed areas that make Chalet Tuftra your perfect alpine retreat
+          </p>
+        </div>
+
         <div className="space-y-16">
           {categories.map((category, index) => (
             <div key={index} className="space-y-8">
