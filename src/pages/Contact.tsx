@@ -4,6 +4,8 @@ import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { LocationSection } from "@/components/LocationSection";
+import { Section, Container } from "@/components/ui/Layout";
+import { H2, BodyBase } from "@/components/ui/Typography";
 
 const Contact = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
@@ -14,11 +16,11 @@ const Contact = () => {
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
       {/* Inquiry Form at top */}
-      <div className="bg-emerald-50 py-8">
-        <div className="max-w-4xl mx-auto px-4">
+      <Section background="accent">
+        <Container>
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Get in Touch</h2>
-            <p className="text-emerald-700">Ready to plan your mountain getaway? Contact us directly or submit an inquiry below.</p>
+            <H2 className="text-emerald-900 mb-2">Get in Touch</H2>
+            <BodyBase className="text-emerald-700">Ready to plan your mountain getaway? Contact us directly or submit an inquiry below.</BodyBase>
           </div>
           <div className="flex justify-center space-x-4">
             <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
@@ -32,8 +34,8 @@ const Contact = () => {
               Explore 3D Virtual Tour
             </Button>
           </div>
-        </div>
-      </div>
+        </Container>
+      </Section>
 
       {/* Contact Content */}
       <LocationSection id="contact" />

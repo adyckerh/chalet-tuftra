@@ -7,7 +7,8 @@ import { AirbnbReviews } from "@/components/AirbnbReviews";
 import { CtaSection } from "@/components/CtaSection";
 import { FooterSection } from "@/components/FooterSection";
 import { SEOHead } from "@/components/SEOHead";
-import { Button } from "@/components/ui/button";
+import { Section, Container } from "@/components/ui/Layout";
+import { H2, BodyLarge } from "@/components/ui/Typography";
 
 // Static data
 const heroImages = ["/lovable-uploads/47275c04-31d6-4425-b897-fac02724f9b3.png", "/lovable-uploads/3c42e4b1-1032-4d5a-bacb-801c3ed34f86.png", "/lovable-uploads/0540039b-0208-4d99-a683-e9eccc46a31c.png", "/lovable-uploads/0803ce83-71ca-4192-95f0-a084a80c4d0e.png"];
@@ -67,22 +68,22 @@ const Index = () => {
         />
         
         {/* Enhanced content for SEO */}
-        <section className="bg-white py-8">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="prose prose-lg mx-auto text-center">
-              <h2 className="text-3xl font-bold text-emerald-900 mb-6">
+        <Section background="primary">
+          <Container>
+            <div className="text-center">
+              <H2 className="mb-6">
                 Exclusive Luxury Chalet Rental in Zermatt, Switzerland
-              </h2>
-              <p className="text-lg text-stone-700 leading-relaxed">
+              </H2>
+              <BodyLarge className="max-w-4xl mx-auto">
                 Discover unparalleled luxury at Chalet Tuftra, an exclusive Alpine sanctuary nestled in the heart of Zermatt. 
                 Our premium mountain chalet offers breathtaking Matterhorn views, sophisticated accommodations for up to 20 guests, 
                 and world-class amenities including private spa facilities, wellness center, and direct ski access. 
                 Experience the pinnacle of Swiss hospitality in our light-filled spaces designed for unforgettable family gatherings 
                 and exclusive mountain retreats.
-              </p>
+              </BodyLarge>
             </div>
-          </div>
-        </section>
+          </Container>
+        </Section>
         
         {/* Other sections with proper spacing */}
         <div className="relative z-10">

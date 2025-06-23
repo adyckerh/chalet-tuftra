@@ -1,8 +1,10 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
-import { Button } from "@/components/ui/button";
 import { GallerySection } from "@/components/GallerySection";
+import { Section, Container } from "@/components/ui/Layout";
+import { H2 } from "@/components/ui/Typography";
 import { Check } from "lucide-react";
 
 const galleryCategories = [{
@@ -42,10 +44,10 @@ const Amenities = () => {
       <GallerySection categories={galleryCategories} />
 
       {/* Features Section - moved to bottom */}
-      <section className="bg-stone-100 py-12">
-        <div className="max-w-7xl mx-auto px-4">
+      <Section background="secondary">
+        <Container>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-emerald-900 mb-8">Premium features &amp; amenities</h2>
+            <H2 className="mb-8">Premium features &amp; amenities</H2>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
@@ -56,8 +58,8 @@ const Amenities = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
     </div>

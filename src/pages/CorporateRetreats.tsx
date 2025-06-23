@@ -5,6 +5,8 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SEOHead } from "@/components/SEOHead";
+import { Section, Container, ContentGrid } from "@/components/ui/Layout";
+import { H1, H2, BodyLarge } from "@/components/ui/Typography";
 
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
@@ -36,18 +38,18 @@ const CorporateRetreats = () => {
         <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
         {/* Corporate Content - Enhanced Green Section */}
-        <div className="bg-emerald-50 py-16">
-          <div className="max-w-6xl mx-auto px-4">
+        <Section background="accent">
+          <Container>
             <div className="text-center mb-8">
-              <h1 className="text-4xl font-bold text-emerald-900 mb-4">Corporate Retreats & Executive Meetings</h1>
-              <p className="text-xl text-emerald-700 max-w-3xl mx-auto">
+              <H1 className="mb-4 text-emerald-900">Corporate Retreats & Executive Meetings</H1>
+              <BodyLarge className="text-emerald-700 max-w-3xl mx-auto">
                 Inspire your team in our sophisticated mountain setting with premium meeting spaces, luxury accommodations, 
                 and breathtaking Alpine views that elevate every corporate event and strategic planning session.
-              </p>
+              </BodyLarge>
             </div>
             
             {/* Image and Content Grid */}
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-8">
+            <ContentGrid className="mb-8">
               <div className="relative">
                 <Carousel
                   opts={{
@@ -74,12 +76,12 @@ const CorporateRetreats = () => {
                 </Carousel>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-emerald-900 mb-4">Executive Mountain Retreats</h2>
-                <p className="text-lg text-stone-700 mb-6 leading-relaxed">
+                <H2 className="mb-4 text-emerald-900">Executive Mountain Retreats</H2>
+                <BodyLarge className="mb-6 text-stone-700">
                   Elevate your corporate events and team building activities in our exclusive mountain chalet. 
                   Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
                   strategic planning sessions, executive meetings, and team bonding experiences that drive results.
-                </p>
+                </BodyLarge>
                 <ul className="space-y-3 text-stone-700">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
@@ -99,7 +101,7 @@ const CorporateRetreats = () => {
                   </li>
                 </ul>
               </div>
-            </div>
+            </ContentGrid>
 
             {/* Button at Bottom */}
             <div className="flex justify-center">
@@ -107,8 +109,8 @@ const CorporateRetreats = () => {
                 Plan Corporate Retreat
               </Button>
             </div>
-          </div>
-        </div>
+          </Container>
+        </Section>
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>
