@@ -7,7 +7,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { SEOHead } from "@/components/SEOHead";
 import { Section, Container, ContentGrid } from "@/components/ui/Layout";
 import { H1, H2, BodyLarge } from "@/components/ui/Typography";
-
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const corporateImages = ["/lovable-uploads/07a6cf29-a6a7-4257-8e65-2ba8a0278088.png", "/lovable-uploads/2589f8ef-d129-4e6f-ac97-6658575eba2b.png", "/lovable-uploads/12a92a73-6fa3-4be4-be10-2fe2fb3e7e91.png", "/lovable-uploads/4bb6b12c-9cbf-4217-b4c6-ce9922453780.png"];
@@ -18,7 +17,6 @@ const CorporateRetreats = () => {
     name: "Corporate Retreats",
     item: "https://chalettuftra.com/corporate-retreats"
   }];
-  
   return <>
       <SEOHead title="Corporate Retreats & Executive Meetings" description="Host exceptional corporate retreats at Chalet Tuftra in Zermatt. Premium meeting spaces with Matterhorn views, executive accommodations, and team building activities in an inspiring Alpine setting." canonical="https://chalettuftra.com/corporate-retreats" keywords="corporate retreats Zermatt, executive meetings Switzerland, luxury business accommodation, alpine corporate events, team building Zermatt" breadcrumbs={breadcrumbs} />
       
@@ -81,7 +79,7 @@ const CorporateRetreats = () => {
 
             {/* Button at Bottom */}
             <div className="flex justify-center">
-              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white text-lg px-8 py-3">Plan corporate retreat</Button>
+              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white text-lg px-8 py-3">Plan your corporate retreat</Button>
             </div>
           </Container>
         </Section>
@@ -92,5 +90,4 @@ const CorporateRetreats = () => {
       </div>
     </>;
 };
-
 export default CorporateRetreats;
