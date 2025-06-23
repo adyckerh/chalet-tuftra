@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { HeroSection } from "@/components/HeroSection";
@@ -51,11 +52,11 @@ const Index = () => {
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Family</a>
-              <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Amenities</a>
-              <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Corporate Retreats</a>
-              <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
-              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10" size="sm">
+              <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Amenities</a>
+              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Family</a>
+              <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Corporate Retreats</a>
+              <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Contact</a>
+              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10 text-lg" size="sm">
                 Make an Inquiry
               </Button>
             </div>
