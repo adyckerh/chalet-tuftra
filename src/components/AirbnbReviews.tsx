@@ -1,7 +1,12 @@
 
 import React from "react";
+import { Button } from "@/components/ui/button";
 
-export const AirbnbReviews = () => (
+interface AirbnbReviewsProps {
+  setIsInquiryOpen?: (open: boolean) => void;
+}
+
+export const AirbnbReviews = ({ setIsInquiryOpen }: AirbnbReviewsProps) => (
   <section className="py-20 bg-stone-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
@@ -14,15 +19,27 @@ export const AirbnbReviews = () => (
       </div>
       
       {/* Elfsight Airbnb Reviews Widget */}
-      <div className="w-full">
-        <iframe 
-          src="https://b8eeec20598b434b9d04dca2f924885c.elf.site" 
-          width="100%" 
-          height="600" 
-          frameBorder="0"
-          title="Airbnb Reviews"
-          className="rounded-lg shadow-lg"
-        />
+      <div className="w-full mb-16">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div className="elfsight-app-b8eeec20-598b-434b-9d04-dca2f924885c" data-elfsight-app-lazy></div>
+      </div>
+
+      {/* CTA Section moved below the widget */}
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="border-4 border-emerald-700 bg-emerald-50 rounded-2xl px-6 py-12 shadow-lg">
+          <p className="text-xl mb-10 leading-relaxed text-stone-700">
+            Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
+          </p>
+          {setIsInquiryOpen && (
+            <Button 
+              size="lg"
+              onClick={() => setIsInquiryOpen(true)}
+              className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-4 text-lg"
+            >
+              Book Your Stay
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   </section>

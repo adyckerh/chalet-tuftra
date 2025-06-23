@@ -82,9 +82,9 @@ const Index = () => {
       {/* Other sections with proper spacing */}
       <div className="relative z-10">
         <FeaturesSection id="philosophy" features={heroFeatures} />
-        <AirbnbReviews />
+        <AirbnbReviews setIsInquiryOpen={setIsInquiryOpen} />
         <GallerySection id="amenities" categories={galleryCategories} />
-        <CtaSection />
+        <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
         <FooterSection />
       </div>
 
