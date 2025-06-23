@@ -50,7 +50,7 @@ const Index = () => {
               </button>
             </div>
             <div className="hidden lg:flex items-center space-x-6 ml-8">
-              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Family</a>
+              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">Family</a>
               <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">Amenities</a>
               <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Corporate Retreats</a>
               <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md">Contact</a>
