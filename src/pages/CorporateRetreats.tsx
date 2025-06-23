@@ -80,11 +80,6 @@ const CorporateRetreats = () => {
               </div>
               <div>
                 <H2 className="mb-6">Executive Mountain Retreats</H2>
-                <BodyLarge className="mb-8">
-                  Elevate your corporate events and team building activities in our exclusive mountain chalet. 
-                  Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
-                  strategic planning sessions, executive meetings, and team bonding experiences that drive results.
-                </BodyLarge>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
