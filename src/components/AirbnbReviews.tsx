@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -62,11 +61,7 @@ export const AirbnbReviews = ({
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-6">
               {/* Airbnb Logo */}
-              <img 
-                src="/lovable-uploads/2ca3668b-8983-41aa-83bb-bf7d96db0330.png" 
-                alt="Airbnb"
-                className="h-8 w-auto"
-              />
+              <img src="/lovable-uploads/2ca3668b-8983-41aa-83bb-bf7d96db0330.png" alt="Airbnb" className="h-8 w-auto" />
               
               {/* Rating Summary */}
               <div className="flex items-center gap-2">
@@ -87,7 +82,7 @@ export const AirbnbReviews = ({
             {reviews.map(review => {
             const isExpanded = expandedReviews.has(review.id);
             const showReadMore = review.text !== review.fullText;
-            return <div key={review.id} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            return <div key={review.id} className="bg-gray-50 rounded-xl p-6 border border-gray-200 py-[10px] px-[10px]">
                   {/* Reviewer Info */}
                   <div className="flex items-start gap-3 mb-4">
                     <img src={review.reviewer_picture_url} alt={review.reviewer_name} className="w-12 h-12 rounded-full object-cover" />
@@ -113,11 +108,7 @@ export const AirbnbReviews = ({
                   {/* Airbnb Logo */}
                   <div className="flex justify-end mt-4">
                     <div className="flex items-center gap-1 text-[#FF5A5F]">
-                      <div className="w-4 h-4 bg-[#FF5A5F] rounded flex items-center justify-center">
-                        <svg viewBox="0 0 32 32" className="w-3 h-3 fill-white">
-                          <path d="M16 1C7.7 1 1 7.7 1 16s6.7 15 15 15 15-6.7 15-15S24.3 1 16 1zm0 2.8c6.7 0 12.2 5.5 12.2 12.2S22.7 28.2 16 28.2 3.8 22.7 3.8 16 9.3 3.8 16 3.8z" />
-                        </svg>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>;
