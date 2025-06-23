@@ -128,8 +128,8 @@ export const getTypographyClasses = (variant: keyof typeof designTokens.typograp
     token.lineHeight
   ];
   
-  // Add font family for headings
-  if (token.fontFamily) {
+  // Add font family for headings - safely check if fontFamily exists
+  if ('fontFamily' in token && token.fontFamily) {
     classes.push(token.fontFamily);
   }
   
