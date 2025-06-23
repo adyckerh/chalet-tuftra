@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
@@ -6,6 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { SEOHead } from "@/components/SEOHead";
 import { Section, Container, ContentGrid } from "@/components/ui/Layout";
 import { H1, H2, BodyLarge } from "@/components/ui/Typography";
+
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const corporateImages = ["/lovable-uploads/07a6cf29-a6a7-4257-8e65-2ba8a0278088.png", "/lovable-uploads/2589f8ef-d129-4e6f-ac97-6658575eba2b.png", "/lovable-uploads/12a92a73-6fa3-4be4-be10-2fe2fb3e7e91.png", "/lovable-uploads/4bb6b12c-9cbf-4217-b4c6-ce9922453780.png"];
@@ -16,6 +18,7 @@ const CorporateRetreats = () => {
     name: "Corporate Retreats",
     item: "https://chalettuftra.com/corporate-retreats"
   }];
+  
   return <>
       <SEOHead title="Corporate Retreats & Executive Meetings" description="Host exceptional corporate retreats at Chalet Tuftra in Zermatt. Premium meeting spaces with Matterhorn views, executive accommodations, and team building activities in an inspiring Alpine setting." canonical="https://chalettuftra.com/corporate-retreats" keywords="corporate retreats Zermatt, executive meetings Switzerland, luxury business accommodation, alpine corporate events, team building Zermatt" breadcrumbs={breadcrumbs} />
       
@@ -27,11 +30,7 @@ const CorporateRetreats = () => {
         <Section background="accent">
           <Container>
             <div className="text-center mb-8">
-              <H1 className="mb-4 text-emerald-900">Corporate Retreats & Executive Meetings</H1>
-              <BodyLarge className="text-emerald-700 max-w-3xl mx-auto">
-                Inspire your team in our sophisticated mountain setting with premium meeting spaces, luxury accommodations, 
-                and breathtaking Alpine views that elevate every corporate event and strategic planning session.
-              </BodyLarge>
+              <H1 className="mb-4 text-emerald-900">Corporate retreats & executive meetings</H1>
             </div>
             
             {/* Image and Content Grid */}
@@ -91,4 +90,5 @@ const CorporateRetreats = () => {
       </div>
     </>;
 };
+
 export default CorporateRetreats;
