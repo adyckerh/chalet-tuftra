@@ -25,7 +25,12 @@ export const FooterSection = () => (
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <Mail className="w-5 h-5 flex-shrink-0" />
-              <span className="text-lg">info@chalettuftra.ch</span>
+              <a 
+                href="mailto:info@chalettuftra.ch" 
+                className="text-lg hover:text-emerald-300 transition-colors"
+              >
+                info@chalettuftra.ch
+              </a>
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-3">
               <Phone className="w-5 h-5 flex-shrink-0" />
