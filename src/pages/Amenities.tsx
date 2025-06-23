@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Button } from "@/components/ui/button";
 import { GallerySection } from "@/components/GallerySection";
-import { HotTub, Ski, Fire, Spa, Bed, BalconyIcon as Balcony } from "lucide-react";
+import { Bath, Mountain, Flame, Dumbbell, Bed, Building } from "lucide-react";
 
 const galleryCategories = [{
   title: "Living & Dining Areas",
@@ -20,14 +19,14 @@ const galleryCategories = [{
 }];
 
 const chaletFeatures = [
-  { icon: HotTub, name: "Outdoor Hot Tub", description: "Relax under the stars" },
-  { icon: Ski, name: "Ski In", description: "Direct access to slopes" },
-  { icon: Fire, name: "Matterhorn Views", description: "Iconic mountain vistas" },
-  { icon: Spa, name: "Private Spa & Wellness", description: "Complete relaxation facilities" },
-  { icon: Fire, name: "Open Fireplace", description: "Cozy alpine atmosphere" },
+  { icon: Bath, name: "Outdoor Hot Tub", description: "Relax under the stars" },
+  { icon: Mountain, name: "Ski In", description: "Direct access to slopes" },
+  { icon: Mountain, name: "Matterhorn Views", description: "Iconic mountain vistas" },
+  { icon: Dumbbell, name: "Private Spa & Wellness", description: "Complete relaxation facilities" },
+  { icon: Flame, name: "Open Fireplace", description: "Cozy alpine atmosphere" },
   { icon: Bed, name: "Relaxation Area", description: "Peaceful retreat spaces" },
-  { icon: Spa, name: "Sauna & Gym", description: "Health and fitness facilities" },
-  { icon: Balcony, name: "Private Balconies", description: "Mountain view terraces" }
+  { icon: Dumbbell, name: "Sauna & Gym", description: "Health and fitness facilities" },
+  { icon: Building, name: "Private Balconies", description: "Mountain view terraces" }
 ];
 
 const Amenities = () => {
