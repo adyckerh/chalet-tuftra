@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -57,25 +58,28 @@ export const AirbnbReviews = ({
         
         {/* Airbnb Widget Style Container */}
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-16 max-w-6xl mx-auto">
-          {/* Header */}
+          {/* Header with Logo, Rating and Button */}
           <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-6">
+              {/* Airbnb Logo */}
+              <img 
+                src="/lovable-uploads/2ca3668b-8983-41aa-83bb-bf7d96db0330.png" 
+                alt="Airbnb"
+                className="h-8 w-auto"
+              />
               
-              
-              
+              {/* Rating Summary */}
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-gray-900">5.0</span>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+                </div>
+              </div>
             </div>
-            <Button onClick={handleAirbnbClick} className="bg-[#1976D2] hover:bg-[#1565C0] text-white px-6 py-2 rounded-lg">
+            
+            <Button onClick={handleAirbnbClick} className="bg-[#FF5A5F] hover:bg-[#E00007] text-white px-6 py-2 rounded-lg">
               Review us on Airbnb
             </Button>
-          </div>
-
-          {/* Rating Summary */}
-          <div className="flex items-center gap-2 mb-8">
-            <span className="text-4xl font-bold text-gray-900">5.0</span>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />)}
-            </div>
-            <span className="text-gray-600 ml-2">(4)</span>
           </div>
 
           {/* Reviews Grid */}
@@ -102,7 +106,7 @@ export const AirbnbReviews = ({
                   <div className="text-gray-700 leading-relaxed">
                     <p>{isExpanded ? review.fullText : review.text}</p>
                     {showReadMore && <button onClick={() => toggleReadMore(review.id)} className="text-gray-500 hover:text-gray-700 mt-2 text-sm font-medium">
-                        {isExpanded ? "" : "Read more"}
+                        {isExpanded ? "Hide" : "Read more"}
                       </button>}
                   </div>
 
@@ -114,7 +118,6 @@ export const AirbnbReviews = ({
                           <path d="M16 1C7.7 1 1 7.7 1 16s6.7 15 15 15 15-6.7 15-15S24.3 1 16 1zm0 2.8c6.7 0 12.2 5.5 12.2 12.2S22.7 28.2 16 28.2 3.8 22.7 3.8 16 9.3 3.8 16 3.8z" />
                         </svg>
                       </div>
-                      
                     </div>
                   </div>
                 </div>;
