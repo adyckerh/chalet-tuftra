@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Section, Container } from "@/components/ui/Layout";
-import { H2, H3, BodyLarge, BodyBase, ServiceDescription } from "@/components/ui/Typography";
+import { H2, H3, BodyLarge, BodyBase } from "@/components/ui/Typography";
 
 interface Feature {
   iconSrc: string;
@@ -27,9 +27,9 @@ export const FeaturesSection = ({
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
         </BodyLarge>
         
-        <ServiceDescription className="max-w-3xl mx-auto mb-12">
-          {/* Empty children since the text is hardcoded in the component */}
-        </ServiceDescription>
+        <BodyLarge className="max-w-3xl mx-auto mb-12">
+          Choose the level of service that suits you - from a fully catered, ultra-luxury dining experience to a hands-on cook-together stay. Housekeeping and cleaning services mean you can enjoy a completely "no-worries" package.
+        </BodyLarge>
         
         {/* Features wrapper with flex utilities positioned close beneath the text */}
         <div className="flex flex-col md:flex-row gap-8">
