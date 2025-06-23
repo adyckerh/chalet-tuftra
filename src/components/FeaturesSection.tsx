@@ -27,7 +27,9 @@ export const FeaturesSection = ({
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
         </BodyLarge>
         
-        <ServiceDescription className="max-w-3xl mx-auto mb-12" />
+        <ServiceDescription className="max-w-3xl mx-auto mb-12">
+          {/* Empty children since the text is hardcoded in the component */}
+        </ServiceDescription>
         
         {/* Features wrapper with flex utilities positioned close beneath the text */}
         <div className="flex flex-col md:flex-row gap-8">
