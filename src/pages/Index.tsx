@@ -6,6 +6,7 @@ import { FeaturesSection } from "@/components/FeaturesSection";
 import { AirbnbReviews } from "@/components/AirbnbReviews";
 import { CtaSection } from "@/components/CtaSection";
 import { FooterSection } from "@/components/FooterSection";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 
 // Static data
@@ -17,21 +18,23 @@ const heroFeatures = [{
 }, {
   iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
   title: "Light-Flooded Spaces",
-  description: "Our chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
+  description: "Our luxury chalet celebrates natural light with generous windows and open spaces, creating a bright and welcoming atmosphere throughout"
 }, {
   iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
-  title: "Family Hub Concept",
+  title: "Family Hub Concept", 
   description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
 }];
 
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
+  
   const scrollToPhilosophy = () => {
     const element = document.getElementById('philosophy');
     if (element) {
@@ -40,24 +43,58 @@ const Index = () => {
       });
     }
   };
+
   return (
-    <div className="min-h-screen bg-stone-50">
-      {/* Navigation */}
-      <Navigation setIsInquiryOpen={setIsInquiryOpen} isHomePage={true} />
-
-      {/* Full-width Hero Section */}
-      <HeroSection id="home" heading="Savor Luxury: Space, Light, Views" images={heroImages} setIsInquiryOpen={setIsInquiryOpen} onDiscoverMore={scrollToPhilosophy} />
+    <>
+      <SEOHead
+        title="Luxury Chalet Zermatt with Matterhorn Views"
+        description="Experience premium Alpine luxury at Chalet Tuftra in Zermatt. Breathtaking Matterhorn views, spacious family accommodation, private spa & wellness facilities. Book your exclusive Swiss mountain retreat today."
+        canonical="https://chalettuftra.com/"
+        keywords="luxury chalet Zermatt, Matterhorn views, premium alpine accommodation, Switzerland luxury rental, exclusive mountain chalet, Zermatt ski chalet, Swiss luxury vacation"
+      />
       
-      {/* Other sections with proper spacing */}
-      <div className="relative z-10">
-        <FeaturesSection id="philosophy" features={heroFeatures} />
-        <AirbnbReviews setIsInquiryOpen={setIsInquiryOpen} />
-        <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
-        <FooterSection />
-      </div>
+      <div className="min-h-screen bg-stone-50">
+        {/* Navigation */}
+        <Navigation setIsInquiryOpen={setIsInquiryOpen} isHomePage={true} />
 
-      <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
+        {/* Full-width Hero Section */}
+        <HeroSection 
+          id="home" 
+          heading="Savor Luxury: Space, Light, Views" 
+          images={heroImages} 
+          setIsInquiryOpen={setIsInquiryOpen} 
+          onDiscoverMore={scrollToPhilosophy} 
+        />
+        
+        {/* Enhanced content for SEO */}
+        <section className="bg-white py-8">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="prose prose-lg mx-auto text-center">
+              <h2 className="text-3xl font-bold text-emerald-900 mb-6">
+                Exclusive Luxury Chalet Rental in Zermatt, Switzerland
+              </h2>
+              <p className="text-lg text-stone-700 leading-relaxed">
+                Discover unparalleled luxury at Chalet Tuftra, an exclusive Alpine sanctuary nestled in the heart of Zermatt. 
+                Our premium mountain chalet offers breathtaking Matterhorn views, sophisticated accommodations for up to 20 guests, 
+                and world-class amenities including private spa facilities, wellness center, and direct ski access. 
+                Experience the pinnacle of Swiss hospitality in our light-filled spaces designed for unforgettable family gatherings 
+                and exclusive mountain retreats.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        {/* Other sections with proper spacing */}
+        <div className="relative z-10">
+          <FeaturesSection id="philosophy" features={heroFeatures} />
+          <AirbnbReviews setIsInquiryOpen={setIsInquiryOpen} />
+          <CtaSection setIsInquiryOpen={setIsInquiryOpen} />
+          <FooterSection />
+        </div>
+
+        <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
+      </div>
+    </>
   );
 };
 
