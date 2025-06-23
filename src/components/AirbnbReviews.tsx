@@ -56,7 +56,7 @@ export const AirbnbReviews = ({
         </div>
         
         {/* Airbnb Widget Style Container */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-16 max-w-6xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-lg p-6 mb-16 max-w-6xl mx-auto py-[15px] px-[15px]">
           {/* Header with Logo, Rating and Button */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-6">
@@ -72,7 +72,7 @@ export const AirbnbReviews = ({
               </div>
             </div>
             
-            <Button onClick={handleAirbnbClick} className="bg-[#FF5A5F] hover:bg-[#E00007] text-white px-6 py-2 rounded-lg">
+            <Button onClick={handleAirbnbClick} className="bg-[#FF5A5F] hover:bg-[#E00007] text-white px-6 py-2 rounded-lg text-2xl">
               Review us on Airbnb
             </Button>
           </div>
