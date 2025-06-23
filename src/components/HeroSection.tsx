@@ -51,8 +51,8 @@ export const HeroSection = ({
         <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-0 right-0 z-20 h-1/2 flex items-end justify-center">
           <div className="w-full h-full flex items-end justify-center pb-2 sm:pb-3 md:pb-4">
             <div className="backdrop-blur-sm absolute inset-x-0 bottom-1 h-35 flex flex-col justify-end items-center rounded-tl-lg bg-[#064e18]/35 px-0 rounded-lg mx-0 py-[10px] my-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center lg:text-6xl">
-                {heading || "Welcome to Chalet Tuftra"}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center lg:text-6xl">
+                {heading || "Savor Luxury: Views, Space, Light"}
               </h1>
               
               {/* CTA Buttons */}
