@@ -2,83 +2,76 @@
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
-import { StoryVision } from "@/components/StoryVision";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Section, Container, ContentGrid } from "@/components/ui/Layout";
-import { H1, BodyLarge } from "@/components/ui/Typography";
+import { HeroSection } from "@/components/HeroSection";
+import { FeaturesSection } from "@/components/FeaturesSection";
+import { GallerySection } from "@/components/GallerySection";
+import { FooterSection } from "@/components/FooterSection";
 import { SEOHead } from "@/components/SEOHead";
 
-const familyImages = [
-  "/lovable-uploads/861b4521-a0b0-4626-9807-f70c124fba59.png", 
-  "/lovable-uploads/5cee333c-729f-4b83-942e-55b0ea89c65b.png", 
-  "/lovable-uploads/27ab3278-20aa-4a5e-9e4f-bdcd3865b305.png", 
-  "/lovable-uploads/597aa27c-c20d-4cd0-89bb-849c2d9f41fc.png"
+// Family-focused hero images
+const familyHeroImages = [
+  "/lovable-uploads/48c4eb2b-451a-4ce9-8e8a-504b22fcd8e6.png",
+  "/lovable-uploads/4d3ccb14-31e7-4789-93ff-5780dacf71d7.png",
+  "/lovable-uploads/65fc1e7e-089d-47d3-8967-52fc7e13c53f.png",
+  "/lovable-uploads/5b2630cc-3a20-43ba-a20d-e17bc6d0a5d7.png"
 ];
 
+// Family-focused features
 const familyFeatures = [
-  "Multiple family bedrooms with stunning views",
-  "Large common areas for family gatherings",
-  "Child friendly bedroom and amenities such as cinema room",
-  "Elevator and step free access for less able guests"
+  {
+    iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
+    title: "Spacious Family Bedrooms",
+    description: "Six thoughtfully designed bedrooms that provide comfortable spaces for every family member, from cozy nooks for children to elegant master suites for parents"
+  },
+  {
+    iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
+    title: "Indoor & Outdoor Play Areas",
+    description: "Dedicated spaces where children can play safely while parents relax, including indoor entertainment areas and secure outdoor spaces with mountain views"
+  },
+  {
+    iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
+    title: "Multi-Generational Design",
+    description: "Thoughtfully planned common areas and private spaces that bring families together while respecting everyone's need for personal space and comfort"
+  }
 ];
 
 const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  
+
+  const scrollToFeatures = () => {
+    const element = document.getElementById('family-features');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
       <SEOHead
-        title="Perfect Family Getaway - Luxury Chalet Zermatt"
-        description="Family-friendly luxury chalet in Zermatt with spacious accommodations, multiple bedrooms, child-friendly amenities, and elevator access. Perfect for multi-generational family holidays."
+        title="Family-Friendly Luxury Chalet Zermatt - Multi-Generational Getaways"
+        description="Perfect for multi-generational family holidays in Zermatt. Spacious bedrooms, kid-friendly amenities, and stunning Matterhorn views. Create lasting family memories in the Swiss Alps."
         canonical="https://chalettuftra.com/family"
-        keywords="family chalet Zermatt, child-friendly luxury accommodation, multi-generational holidays Switzerland, accessible mountain chalet, family vacation Matterhorn"
+        keywords="family chalet Zermatt, multi-generational vacation, kids-friendly luxury accommodation, family ski holiday Switzerland, large group family rental"
       />
       
       <div className="min-h-screen bg-stone-50">
         <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
-        <Section background="secondary">
-          <Container>
-            <ContentGrid>
-              <div>
-                <H1 className="mb-6">The perfect getaway for families</H1>
-                <div className="space-y-6">
-                  <BodyLarge>
-                    Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.
-                  </BodyLarge>
-                  <ul className="space-y-3 text-stone-700">
-                    {familyFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="relative">
-                <Carousel opts={{
-                  align: "start",
-                  loop: true
-                }} className="w-full">
-                  <CarouselContent>
-                    {familyImages.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <div className="p-1">
-                          <img src={image} alt={`Family accommodation ${index + 1}`} className="rounded-lg shadow-lg w-full h-auto object-cover" />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
-                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
-                </Carousel>
-              </div>
-            </ContentGrid>
-          </Container>
-        </Section>
-
-        <StoryVision setIsInquiryOpen={setIsInquiryOpen} />
+        <HeroSection 
+          id="family-hero"
+          heading="Where Families Create Timeless Memories" 
+          images={familyHeroImages} 
+          setIsInquiryOpen={setIsInquiryOpen} 
+          onDiscoverMore={scrollToFeatures}
+        />
+        
+        <div className="relative z-10">
+          <FeaturesSection id="family-features" features={familyFeatures} />
+          <GallerySection />
+          <FooterSection />
+        </div>
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>
