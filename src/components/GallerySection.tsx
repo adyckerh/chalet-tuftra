@@ -1,10 +1,13 @@
+
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 interface GalleryCategory {
   title: string;
   description: string;
   images: string[];
 }
+
 export const GallerySection = ({
   id,
   categories
@@ -12,6 +15,48 @@ export const GallerySection = ({
   id?: string;
   categories: GalleryCategory[];
 }): JSX.Element => {
-  return;
+  return (
+    <section id={id} className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        {categories.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-emerald-900 mb-4">{category.title}</h3>
+              <p className="text-lg text-emerald-700 max-w-3xl mx-auto">{category.description}</p>
+            </div>
+            
+            <div className="relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-6xl mx-auto"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {category.images.map((image, imageIndex) => (
+                    <CarouselItem key={imageIndex} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <div className="relative overflow-hidden rounded-lg shadow-lg group">
+                          <img
+                            src={image}
+                            alt={`${category.title} ${imageIndex + 1}`}
+                            className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+              </Carousel>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
+
 export default GallerySection;
