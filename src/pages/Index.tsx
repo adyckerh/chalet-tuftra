@@ -8,8 +8,6 @@ import { AirbnbReviews } from "@/components/AirbnbReviews";
 import { CtaSection } from "@/components/CtaSection";
 import { FooterSection } from "@/components/FooterSection";
 import { SEOHead } from "@/components/SEOHead";
-import { Section, Container } from "@/components/ui/Layout";
-import { H2, BodyLarge } from "@/components/ui/Typography";
 
 // Static data optimized and moved to constants
 const heroImages = [
@@ -68,23 +66,6 @@ const Index = () => {
           setIsInquiryOpen={setIsInquiryOpen} 
           onDiscoverMore={scrollToPhilosophy} 
         />
-        
-        <Section background="primary">
-          <Container>
-            <div className="text-center">
-              <H2 className="mb-6">
-                Exclusive Luxury Chalet Rental in Zermatt, Switzerland
-              </H2>
-              <BodyLarge className="max-w-4xl mx-auto">
-                Discover unparalleled luxury at Chalet Tuftra, an exclusive Alpine sanctuary nestled in the heart of Zermatt. 
-                Our premium mountain chalet offers breathtaking Matterhorn views, sophisticated accommodations for up to 20 guests, 
-                and world-class amenities including private spa facilities, wellness center, and direct ski access. 
-                Experience the pinnacle of Swiss hospitality in our light-filled spaces designed for unforgettable family gatherings 
-                and exclusive mountain retreats.
-              </BodyLarge>
-            </div>
-          </Container>
-        </Section>
         
         <div className="relative z-10">
           <FeaturesSection id="philosophy" features={heroFeatures} />

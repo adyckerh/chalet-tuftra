@@ -1,4 +1,3 @@
-
 // Design System Tokens
 export const designTokens = {
   // Typography Scale
@@ -72,10 +71,10 @@ export const designTokens = {
     }
   },
   
-  // Spacing Scale
+  // Spacing Scale - Reduced for less disjointed feel
   spacing: {
     section: {
-      paddingY: 'py-16',
+      paddingY: 'py-8 md:py-12',
       marginBottom: ''
     },
     container: {
@@ -84,17 +83,17 @@ export const designTokens = {
       margin: 'mx-auto'
     },
     contentBlock: {
-      marginBottom: 'mb-12',
-      gap: 'gap-8'
+      marginBottom: 'mb-8',
+      gap: 'gap-6'
     },
     grid: {
-      gap: 'gap-8 md:gap-12'
+      gap: 'gap-6 md:gap-8'
     },
     textBlock: {
-      marginBottom: 'mb-6'
+      marginBottom: 'mb-4'
     },
     listSpacing: {
-      marginBottom: 'mb-8'
+      marginBottom: 'mb-6'
     }
   },
   

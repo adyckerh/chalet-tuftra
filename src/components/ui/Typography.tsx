@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { getTypographyClasses } from '@/styles/designSystem';
 interface TypographyProps {
@@ -16,7 +17,9 @@ export const H2: React.FC<TypographyProps> = ({
   children,
   className = '',
   id
-}) => {};
+}) => <h2 id={id} className={`${getTypographyClasses('h2')} ${className}`}>
+    {children}
+  </h2>;
 export const H3: React.FC<TypographyProps> = ({
   children,
   className = '',
