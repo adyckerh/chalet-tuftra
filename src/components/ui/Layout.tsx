@@ -22,20 +22,20 @@ export const Section: React.FC<SectionProps> = ({
 }) => {
   const bgClass = designTokens.backgrounds[background];
   return (
-    <section id={id} className={`${getSectionClasses()} ${bgClass} ${className}`}>
+    <section id={id} className={`${getSectionClasses()} ${bgClass} ${className} container-query`}>
       {children}
     </section>
   );
 };
 
 export const Container: React.FC<ContainerProps> = ({ children, className = '' }) => (
-  <div className={`${getContainerClasses()} ${className}`}>
+  <div className={`${getContainerClasses()} ${className} container-responsive`}>
     {children}
   </div>
 );
 
 export const ContentGrid: React.FC<ContainerProps> = ({ children, className = '' }) => (
-  <div className={`grid md:grid-cols-2 ${designTokens.spacing.grid.gap} items-center ${className}`}>
+  <div className={`grid grid-cols-1 lg:grid-cols-2 ${designTokens.spacing.grid.gap} items-center ${className}`}>
     {children}
   </div>
 );
