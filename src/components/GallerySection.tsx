@@ -12,11 +12,16 @@ interface GalleryCategory {
 
 export const GallerySection = ({
   id,
-  categories
+  categories = []
 }: {
   id?: string;
   categories: GalleryCategory[];
 }): JSX.Element => {
+  // Add safety check to prevent undefined error
+  if (!categories || categories.length === 0) {
+    return null;
+  }
+
   return (
     <Section id={id} background="primary">
       <Container>
