@@ -51,7 +51,6 @@ const chaletFeatures = [{
 }];
 const Amenities = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  
   return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
@@ -84,17 +83,10 @@ const Amenities = () => {
             <Bed className="w-5 h-5 mr-2" />
             <span className="font-semibold">Sleeps 12 people</span>
           </div>
-          <p className="text-xl text-emerald-700 mb-8">
-            A chalet that accommodates to every desire, featuring luxurious spaces designed for comfort, 
-            relaxation, and unforgettable experiences in the heart of the Swiss Alps.
-          </p>
+          
           <div className="flex justify-center space-x-4">
-            <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
-              Plan Your Stay
-            </Button>
-            <Button onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')} variant="outline" className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white">
-              Explore 3D Virtual Tour
-            </Button>
+            
+            
           </div>
         </div>
       </div>
