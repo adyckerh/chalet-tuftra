@@ -38,6 +38,27 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
 
       console.log('Submitting inquiry:', inquiryData);
 
+      // Send to Zapier webhook
+      try {
+        const zapierResponse = await fetch('https://hooks.zapier.com/hooks/catch/23481071/uox56ft/', {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          mode: "no-cors",
+          body: JSON.stringify({
+            ...inquiryData,
+            timestamp: new Date().toISOString(),
+            source: 'chalet_tuftra_website'
+          }),
+        });
+
+        console.log('Zapier webhook triggered successfully');
+      } catch (zapierError) {
+        console.error('Error sending to Zapier:', zapierError);
+        // Continue with Supabase submission even if Zapier fails
+      }
+
       // Insert into Supabase api schema
       const { data, error } = await (supabase as any)
         .schema('api')
