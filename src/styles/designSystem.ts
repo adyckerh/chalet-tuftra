@@ -58,13 +58,17 @@ export const designTokens = {
     navText: {
       fontSize: 'text-lg',
       fontWeight: 'font-medium',
-      lineHeight: 'leading-normal'
+      lineHeight: 'leading-normal',
+      color: 'text-stone-700',
+      marginBottom: ''
     },
     // Button text
     buttonText: {
       fontSize: 'text-lg',
       fontWeight: 'font-semibold',
-      lineHeight: 'leading-normal'
+      lineHeight: 'leading-normal',
+      color: 'text-white',
+      marginBottom: ''
     }
   },
   
@@ -109,7 +113,22 @@ export const designTokens = {
 // Utility function to combine classes
 export const getTypographyClasses = (variant: keyof typeof designTokens.typography) => {
   const token = designTokens.typography[variant];
-  return `${token.fontSize} ${token.fontWeight} ${token.color} ${token.lineHeight} ${token.marginBottom}`;
+  const classes = [
+    token.fontSize,
+    token.fontWeight,
+    token.lineHeight
+  ];
+  
+  // Only add color and marginBottom if they exist and are not empty
+  if (token.color) {
+    classes.push(token.color);
+  }
+  
+  if (token.marginBottom) {
+    classes.push(token.marginBottom);
+  }
+  
+  return classes.filter(Boolean).join(' ');
 };
 
 export const getSectionClasses = () => {
