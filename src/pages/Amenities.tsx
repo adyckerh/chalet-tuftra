@@ -82,7 +82,7 @@ const Amenities = () => {
       <GallerySection categories={galleryCategories} />
 
       {/* Features Section - moved to bottom */}
-      <section className="py-16 bg-white">
+      <section className="bg-white py-0">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-emerald-900 mb-4">Premium Features & Amenities</h2>

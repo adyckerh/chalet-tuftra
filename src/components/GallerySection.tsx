@@ -12,11 +12,11 @@ export const GallerySection = ({
   id?: string;
   categories: GalleryCategory[];
 }): JSX.Element => {
-  return <section id={id} className="bg-white py-[10px]">
+  return <section id={id} className="bg-white py-0">
       <div className="max-w-7xl mx-auto px-4">
         {categories.map((category, categoryIndex) => <div key={categoryIndex} className="mb-16">
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-emerald-900 mb-4">{category.title}</h3>
+              <h3 className="text-3xl font-bold text-emerald-900 mb-4 py-0">{category.title}</h3>
               <p className="text-lg text-emerald-700 max-w-3xl mx-auto">{category.description}</p>
             </div>
             
