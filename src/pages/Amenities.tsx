@@ -3,7 +3,6 @@ import { InquiryModal } from "@/components/InquiryModal";
 import { Button } from "@/components/ui/button";
 import { GallerySection } from "@/components/GallerySection";
 import { Bath, Mountain, Flame, Dumbbell, Bed, Building } from "lucide-react";
-
 const galleryCategories = [{
   title: "Living & Dining Areas",
   description: "Generous open spaces flooded with natural light, perfect for shared meals and conversations while enjoying panoramic views of the Matterhorn and Findelbach.",
@@ -17,23 +16,42 @@ const galleryCategories = [{
   description: "Each beautifully appointed room offers a peaceful sanctuary where guests can retreat and recharge, all while maintaining connection to the stunning natural surroundings.",
   images: ["/lovable-uploads/891b3067-fb78-4adb-8270-05607e570eb8.png", "/lovable-uploads/93296546-af66-4a2f-8830-fbef8d319d4c.png", "/lovable-uploads/3c156848-370b-49f8-824a-d3a2c98f3740.png", "/lovable-uploads/ce888522-22ed-49db-902b-1e5c398eabfc.png", "/lovable-uploads/08fe6bc4-8b52-4c79-a6d2-7e3dcd26a0fb.png", "/lovable-uploads/6294aed9-51e4-401e-a8d4-eb751c668a3d.png"]
 }];
-
-const chaletFeatures = [
-  { icon: Bath, name: "Outdoor Hot Tub", description: "Relax under the stars" },
-  { icon: Mountain, name: "Ski In", description: "Direct access to slopes" },
-  { icon: Mountain, name: "Matterhorn Views", description: "Iconic mountain vistas" },
-  { icon: Dumbbell, name: "Private Spa & Wellness", description: "Complete relaxation facilities" },
-  { icon: Flame, name: "Open Fireplace", description: "Cozy alpine atmosphere" },
-  { icon: Bed, name: "Relaxation Area", description: "Peaceful retreat spaces" },
-  { icon: Dumbbell, name: "Sauna & Gym", description: "Health and fitness facilities" },
-  { icon: Building, name: "Private Balconies", description: "Mountain view terraces" }
-];
-
+const chaletFeatures = [{
+  icon: Bath,
+  name: "Outdoor Hot Tub",
+  description: "Relax under the stars"
+}, {
+  icon: Mountain,
+  name: "Ski In",
+  description: "Direct access to slopes"
+}, {
+  icon: Mountain,
+  name: "Matterhorn Views",
+  description: "Iconic mountain vistas"
+}, {
+  icon: Dumbbell,
+  name: "Private Spa & Wellness",
+  description: "Complete relaxation facilities"
+}, {
+  icon: Flame,
+  name: "Open Fireplace",
+  description: "Cozy alpine atmosphere"
+}, {
+  icon: Bed,
+  name: "Relaxation Area",
+  description: "Peaceful retreat spaces"
+}, {
+  icon: Dumbbell,
+  name: "Sauna & Gym",
+  description: "Health and fitness facilities"
+}, {
+  icon: Building,
+  name: "Private Balconies",
+  description: "Mountain view terraces"
+}];
 const Amenities = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +61,7 @@ const Amenities = () => {
               <h1 className="text-lg md:text-xl font-bold text-emerald-900">Chalet Tuftra Findelbach</h1>
             </div>
             <div className="flex items-center space-x-6">
-              <a href="/" className="text-emerald-900 hover:text-emerald-800 transition-colors">Home</a>
+              
               <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors">Family</a>
               <a href="/amenities" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Amenities</a>
               <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors">Corporate Retreats</a>
@@ -72,11 +90,7 @@ const Amenities = () => {
             <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">
               Plan Your Stay
             </Button>
-            <Button 
-              onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')}
-              variant="outline" 
-              className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white"
-            >
+            <Button onClick={() => window.open('https://my.matterport.com/show/?m=Fe6veqTfV1f', '_blank')} variant="outline" className="border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white">
               Explore 3D Virtual Tour
             </Button>
           </div>
@@ -95,9 +109,8 @@ const Amenities = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {chaletFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="bg-emerald-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
+            const IconComponent = feature.icon;
+            return <div key={index} className="bg-emerald-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-emerald-900 rounded-full flex items-center justify-center">
                       <IconComponent className="w-6 h-6 text-white" aria-hidden="true" />
@@ -105,9 +118,8 @@ const Amenities = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-emerald-900 mb-2">{feature.name}</h3>
                   <p className="text-sm text-emerald-700">{feature.description}</p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -116,8 +128,6 @@ const Amenities = () => {
       <GallerySection categories={galleryCategories} />
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default Amenities;
