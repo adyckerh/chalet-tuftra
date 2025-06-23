@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
 import { MobileNavigation } from "@/components/MobileNavigation";
+import { getTypographyClasses } from "@/styles/designSystem";
 
 interface NavigationProps {
   setIsInquiryOpen: (open: boolean) => void;
@@ -13,11 +14,11 @@ export const Navigation = ({ setIsInquiryOpen, isHomePage = false }: NavigationP
   
   const navClass = isHomePage ? "absolute top-0 w-full z-50" : "w-full bg-white shadow-sm";
   const logoTextClass = isHomePage 
-    ? "text-fluid-lg font-bold text-white drop-shadow-md" 
-    : "text-fluid-lg font-bold text-emerald-900";
+    ? "text-fluid-lg font-bold font-playfair text-white drop-shadow-md" 
+    : "text-fluid-lg font-bold font-playfair text-emerald-900";
   const baseLinkClass = isHomePage
-    ? "nav-text text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md"
-    : "nav-text text-emerald-900 hover:text-emerald-800 transition-colors";
+    ? `${getTypographyClasses('navText')} text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md`
+    : `${getTypographyClasses('navText')} text-emerald-900 hover:text-emerald-800 transition-colors`;
   const buttonClass = isHomePage
     ? "bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10"
     : "bg-emerald-900 hover:bg-emerald-800 text-white";

@@ -57,10 +57,11 @@ export const designTokens = {
       lineHeight: 'leading-relaxed',
       marginBottom: ''
     },
-    // Navigation text
+    // Navigation text - Now using Playfair Display for consistency
     navText: {
       fontSize: 'text-fluid-sm md:text-fluid-base',
       fontWeight: 'font-medium',
+      fontFamily: 'font-playfair',
       lineHeight: 'leading-normal',
       color: 'text-stone-700',
       marginBottom: ''
@@ -128,7 +129,7 @@ export const getTypographyClasses = (variant: keyof typeof designTokens.typograp
     token.lineHeight
   ];
   
-  // Add font family for headings - safely check if fontFamily exists
+  // Add font family for headings and navigation - safely check if fontFamily exists
   if ('fontFamily' in token && token.fontFamily) {
     classes.push(token.fontFamily);
   }

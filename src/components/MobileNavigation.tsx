@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { getTypographyClasses } from "@/styles/designSystem";
 
 interface MobileNavigationProps {
   setIsInquiryOpen: (open: boolean) => void;
@@ -16,12 +17,12 @@ export const MobileNavigation = ({ setIsInquiryOpen, isHomePage = false }: Mobil
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const logoTextClass = isHomePage 
-    ? "text-lg font-bold text-white drop-shadow-md" 
-    : "text-lg font-bold text-emerald-900";
+    ? "text-lg font-bold font-playfair text-white drop-shadow-md" 
+    : "text-lg font-bold font-playfair text-emerald-900";
 
   const baseLinkClass = isHomePage
-    ? "block px-4 py-3 text-white/90 hover:text-white transition-colors border-b border-white/10"
-    : "block px-4 py-3 text-emerald-900 hover:text-emerald-800 transition-colors border-b border-gray-200";
+    ? `block px-4 py-3 ${getTypographyClasses('navText')} text-white/90 hover:text-white transition-colors border-b border-white/10`
+    : `block px-4 py-3 ${getTypographyClasses('navText')} text-emerald-900 hover:text-emerald-800 transition-colors border-b border-gray-200`;
 
   const buttonClass = isHomePage
     ? "w-full bg-emerald-900/80 hover:bg-emerald-800/80 text-white backdrop-blur-sm border border-white/10"
