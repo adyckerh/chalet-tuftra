@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Section, Container } from "@/components/ui/Layout";
-import { H2, H3, BodyLarge, BodyBase } from "@/components/ui/Typography";
+import { H2, H3, BodyLarge, BodyBase, ServiceDescription } from "@/components/ui/Typography";
 
 interface Feature {
   iconSrc: string;
@@ -22,10 +22,12 @@ export const FeaturesSection = ({
         <H2 className="mb-4">
           Our Chalet Philosophy
         </H2>
-        <BodyLarge className="max-w-3xl mx-auto mb-12">
+        <BodyLarge className="max-w-3xl mx-auto mb-6">
           Space, Light, and Views - the fundamental elements that make Chalet Tuftra a place where every guest 
           can retreat to beautiful rooms while enjoying generous shared spaces for unforgettable experiences.
         </BodyLarge>
+        
+        <ServiceDescription className="max-w-3xl mx-auto mb-12" />
         
         {/* Features wrapper with flex utilities positioned close beneath the text */}
         <div className="flex flex-col md:flex-row gap-8">
