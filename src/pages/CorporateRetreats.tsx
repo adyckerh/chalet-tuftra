@@ -2,81 +2,93 @@
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
-import { HeroSection } from "@/components/HeroSection";
-import { FeaturesSection } from "@/components/FeaturesSection";
-import { GallerySection } from "@/components/GallerySection";
-import { FooterSection } from "@/components/FooterSection";
+import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { SEOHead } from "@/components/SEOHead";
-
-// Corporate retreat-focused hero images
-const corporateHeroImages = [
-  "/lovable-uploads/132cb960-93a5-42e9-9798-c75565ab4b13.png",
-  "/lovable-uploads/13dd9e8f-748b-4b92-ab82-10267f6cac76.png",
-  "/lovable-uploads/21fff439-a418-44a3-ac6a-54ee7236d35d.png",
-  "/lovable-uploads/225a0397-7cce-4537-8071-ee957909d9fb.png"
-];
-
-// Corporate retreat-focused features
-const corporateFeatures = [
-  {
-    iconSrc: "/lovable-uploads/8632c840-b866-4671-b08f-99e721251c1e.png",
-    title: "Executive Meeting Spaces",
-    description: "Sophisticated meeting areas with inspiring Alpine views, high-speed connectivity, and flexible layouts perfect for strategy sessions and team building"
-  },
-  {
-    iconSrc: "/lovable-uploads/5c03715d-46bb-46ec-8e5c-cec1806efce3.png",
-    title: "Team Building Environment",
-    description: "Spacious common areas and outdoor terraces that foster collaboration, creativity, and meaningful connections among team members"
-  },
-  {
-    iconSrc: "/lovable-uploads/517d4fa4-498f-4b4f-90db-9840ff3b4e42.png",
-    title: "Privacy & Productivity",
-    description: "Secluded location offering the perfect balance of inspiring mountain setting and professional atmosphere for focused corporate work"
-  }
-];
+import { Section, Container, ContentGrid } from "@/components/ui/Layout";
+import { H1, H2, BodyLarge } from "@/components/ui/Typography";
 
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  const scrollToFeatures = () => {
-    const element = document.getElementById('corporate-features');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  return (
-    <>
-      <SEOHead
-        title="Corporate Retreats Zermatt - Executive Chalet Rental"
-        description="Elevate your corporate retreat at Chalet Tuftra in Zermatt. Executive meeting spaces, team building environment, inspiring Alpine setting. Perfect for leadership retreats and company events."
-        canonical="https://chalettuftra.com/corporate-retreats"
-        keywords="corporate retreat Zermatt, executive chalet rental, business meeting space Alps, company retreat Switzerland, team building luxury accommodation"
-      />
+  const corporateImages = ["/lovable-uploads/07a6cf29-a6a7-4257-8e65-2ba8a0278088.png", "/lovable-uploads/2589f8ef-d129-4e6f-ac97-6658575eba2b.png", "/lovable-uploads/12a92a73-6fa3-4be4-be10-2fe2fb3e7e91.png", "/lovable-uploads/4bb6b12c-9cbf-4217-b4c6-ce9922453780.png"];
+  const breadcrumbs = [{
+    name: "Home",
+    item: "https://chalettuftra.com/"
+  }, {
+    name: "Corporate Retreats",
+    item: "https://chalettuftra.com/corporate-retreats"
+  }];
+  
+  return <>
+      <SEOHead title="Corporate Retreats & Executive Meetings" description="Host exceptional corporate retreats at Chalet Tuftra in Zermatt. Premium meeting spaces with Matterhorn views, executive accommodations, and team building activities in an inspiring Alpine setting." canonical="https://chalettuftra.com/corporate-retreats" keywords="corporate retreats Zermatt, executive meetings Switzerland, luxury business accommodation, alpine corporate events, team building Zermatt" breadcrumbs={breadcrumbs} />
       
       <div className="min-h-screen bg-stone-50">
+        {/* Navigation */}
         <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
-        <HeroSection 
-          id="corporate-hero"
-          heading="Inspire Excellence in Alpine Luxury" 
-          images={corporateHeroImages} 
-          setIsInquiryOpen={setIsInquiryOpen} 
-          onDiscoverMore={scrollToFeatures}
-        />
-        
-        <div className="relative z-10">
-          <FeaturesSection id="corporate-features" features={corporateFeatures} />
-          <GallerySection />
-          <FooterSection />
-        </div>
+        {/* Corporate Content - Enhanced Green Section */}
+        <Section background="accent">
+          <Container>
+            <div className="text-center mb-12">
+              <H1 className="mb-6">Corporate retreats & executive meetings</H1>
+            </div>
+            
+            {/* Image and Content Grid */}
+            <ContentGrid className="mb-12">
+              <div className="relative">
+                <Carousel opts={{
+                align: "start",
+                loop: true
+              }} className="w-full">
+                  <CarouselContent>
+                    {corporateImages.map((image, index) => <CarouselItem key={index}>
+                        <div className="p-1">
+                          <img src={image} alt={`Corporate meeting space ${index + 1} - Luxury business facilities at Chalet Tuftra`} className="rounded-lg shadow-lg w-full h-auto object-cover" />
+                        </div>
+                      </CarouselItem>)}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                  <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-emerald-900 border-emerald-200" />
+                </Carousel>
+              </div>
+              <div>
+                <H2 className="mb-6">Executive Mountain Retreats</H2>
+                <BodyLarge className="mb-8">
+                  Elevate your corporate events and team building activities in our exclusive mountain chalet. 
+                  Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
+                  strategic planning sessions, executive meetings, and team bonding experiences that drive results.
+                </BodyLarge>
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Dedicated meeting and conference spaces with mountain views
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    High speed-internet and a meeting table to accommodate 16 people comfortably
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Premium catering services and executive dining areas
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
+                    Professional team building activities and outdoor Alpine experiences
+                  </li>
+                </ul>
+              </div>
+            </ContentGrid>
+
+            {/* Button at Bottom */}
+            <div className="flex justify-center">
+              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white text-lg px-8 py-3">Plan corporate retreat</Button>
+            </div>
+          </Container>
+        </Section>
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>
-    </>
-  );
+    </>;
 };
 
 export default CorporateRetreats;

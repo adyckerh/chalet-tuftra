@@ -3,7 +3,6 @@ import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { LocationSection } from "@/components/LocationSection";
-import { FooterSection } from "@/components/FooterSection";
 import { SEOHead } from "@/components/SEOHead";
 
 const Contact = () => {
@@ -22,8 +21,6 @@ const Contact = () => {
         <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
         <LocationSection id="contact" />
-        
-        <FooterSection />
 
         <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
       </div>
