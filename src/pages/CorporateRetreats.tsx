@@ -1,14 +1,10 @@
-
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-
 const CorporateRetreats = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-
-  return (
-    <div className="min-h-screen bg-stone-50">
+  return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <Navigation setIsInquiryOpen={setIsInquiryOpen} />
 
@@ -16,7 +12,7 @@ const CorporateRetreats = () => {
       <div className="bg-emerald-50 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Executive Corporate Retreats</h2>
+            <h2 className="text-2xl font-bold text-emerald-900 mb-2">Corporate Retreats</h2>
             <p className="text-emerald-700">Inspire your team in our sophisticated mountain setting with premium meeting spaces and luxury accommodations.</p>
           </div>
           
@@ -63,8 +59,6 @@ const CorporateRetreats = () => {
       </div>
 
       <InquiryModal open={isInquiryOpen} onOpenChange={setIsInquiryOpen} />
-    </div>
-  );
+    </div>;
 };
-
 export default CorporateRetreats;
