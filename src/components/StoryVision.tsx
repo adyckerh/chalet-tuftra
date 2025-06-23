@@ -1,13 +1,11 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
-
 interface StoryVisionProps {
   setIsInquiryOpen: (open: boolean) => void;
 }
-
-export const StoryVision = ({ setIsInquiryOpen }: StoryVisionProps) => (
-  <section className="py-20 bg-white">
+export const StoryVision = ({
+  setIsInquiryOpen
+}: StoryVisionProps) => <section className="bg-white py-[40px]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -32,22 +30,13 @@ export const StoryVision = ({ setIsInquiryOpen }: StoryVisionProps) => (
               spending time together and with friends. We hope that you will find it equally fulfilling.
             </p>
           </div>
-          <Button 
-            size="lg"
-            onClick={() => setIsInquiryOpen(true)}
-            className="mt-8 bg-emerald-900 hover:bg-emerald-800 text-white"
-          >
+          <Button size="lg" onClick={() => setIsInquiryOpen(true)} className="mt-8 bg-emerald-900 hover:bg-emerald-800 text-white">
             Begin Your Journey
           </Button>
         </div>
         <div className="relative">
-          <img 
-            src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png"
-            alt="Our family at a beautiful temple location"
-            className="rounded-lg shadow-2xl"
-          />
+          <img src="/lovable-uploads/f5836598-b10f-4074-acad-8d6d7569ff16.png" alt="Our family at a beautiful temple location" className="rounded-lg shadow-2xl" />
         </div>
       </div>
     </div>
-  </section>
-);
+  </section>;

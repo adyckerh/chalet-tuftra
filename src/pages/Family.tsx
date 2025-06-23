@@ -30,10 +30,10 @@ const Family = () => {
       </nav>
 
       {/* Family Content */}
-      <div className="max-w-6xl mx-auto px-4 py-[30px]">
+      <div className="max-w-6xl mx-auto py-0 px-0">
         <div className="grid md:grid-cols-2 gap-12 items-end">
           <div>
-            <h1 className="text-5xl font-bold text-emerald-900 mb-6 whitespace-nowrap py-0 my-[40px]">The perfect getaway for families</h1>
+            <h1 className="font-bold text-emerald-900 mb-6 whitespace-nowrap py-2 text-4xl my-[20px]">The perfect getaway for families</h1>
             <div className="space-y-6">
               <p className="text-lg text-stone-700">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
               <ul className="space-y-3 text-stone-700">
