@@ -9,9 +9,10 @@ const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
 
   const familyImages = [
-    "/lovable-uploads/84ea2813-67cd-4c34-890d-a46a2093cb0c.png",
-    "/lovable-uploads/773f80b8-ec03-4ecb-b0b3-f9a01732ad9d.png",
-    "/lovable-uploads/d6519bec-7b63-47c4-8181-9fed442f7a11.png"
+    "/lovable-uploads/861b4521-a0b0-4626-9807-f70c124fba59.png",
+    "/lovable-uploads/5cee333c-729f-4b83-942e-55b0ea89c65b.png",
+    "/lovable-uploads/27ab3278-20aa-4a5e-9e4f-bdcd3865b305.png",
+    "/lovable-uploads/597aa27c-c20d-4cd0-89bb-849c2d9f41fc.png"
   ];
 
   return (
@@ -43,9 +44,9 @@ const Family = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h1 className="text-4xl font-bold text-emerald-900 mb-6">The perfect getaway for families</h1>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <p className="text-lg text-stone-700 mb-6">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="space-y-6">
+                <p className="text-lg text-stone-700">Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.</p>
                 <ul className="space-y-3 text-stone-700">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
