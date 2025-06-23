@@ -1,46 +1,69 @@
 
 import { Button } from "@/components/ui/button";
+import { Section, Container } from "@/components/ui/Layout";
+import { H2, BodyLarge, BodyBase } from "@/components/ui/Typography";
 
-const reviews = [
+interface Review {
+  text: string;
+  author: string;
+}
+
+const reviews: Review[] = [
   {
-    text: '“A beautiful chalet with first-class amenities. Outstanding service and attentive care. The location suited us perfectly too—slightly outside the village center, yet wonderfully quiet.”',
+    text: '"A beautiful chalet with first-class amenities. Outstanding service and attentive care. The location suited us perfectly too—slightly outside the village center, yet wonderfully quiet."',
     author: "Verified Airbnb Guest"
   },
   {
-    text: '“Lovely chalet, equipped with quality appliances all around. Fantastic concierge and housekeeping. Truly exceeded our expectations.”',
+    text: '"Lovely chalet, equipped with quality appliances all around. Fantastic concierge and housekeeping. Truly exceeded our expectations."',
     author: "Verified Airbnb Guest"
   },
   {
-    text: '“Amazing accommodation! Incredible staff! Excellent food—loved it! 🙌”',
+    text: '"Amazing accommodation! Incredible staff! Excellent food—loved it! 🙌"',
     author: "Verified Airbnb Guest"
   }
 ];
 
-export const ReviewsSection = () => (
-  <div className="bg-stone-50 py-16 px-2">
-    <div className="max-w-7xl mx-auto flex flex-col items-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-emerald-900 mb-3 text-center">What Our Guests Say</h2>
-      <p className="text-lg text-stone-600 mb-10 text-center max-w-2xl">
-        Discover why guests return again and again to create lasting memories at Chalet Tuftra.
-      </p>
-      <div className="w-full flex flex-col md:flex-row gap-8 justify-center mb-10">
-        {reviews.map((review, i) => (
-          <div key={i} className="bg-white rounded-xl shadow-md flex-1 p-6 min-w-[270px] text-center">
-            <div className="flex justify-center mb-2 text-2xl text-[#FFD700]">
-              {"★★★★★"}
-            </div>
-            <blockquote className="italic text-stone-800 text-base mb-4">{review.text}</blockquote>
-            <div className="text-stone-500 text-sm font-medium">{review.author}</div>
-          </div>
-        ))}
-      </div>
-      <p className="text-stone-700 mb-6 text-center">
-        Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
-      </p>
-      <Button size="lg" className="bg-emerald-900 hover:bg-emerald-800 text-white font-semibold px-8 py-4 text-base">
-        Book Your Stay
-      </Button>
-    </div>
-  </div>
-);
+interface ReviewsSectionProps {
+  setIsInquiryOpen?: (open: boolean) => void;
+}
 
+export const ReviewsSection = ({ setIsInquiryOpen }: ReviewsSectionProps) => (
+  <Section background="secondary">
+    <Container>
+      <div className="text-center">
+        <H2 className="mb-4">What Our Guests Say</H2>
+        <BodyLarge className="max-w-2xl mx-auto mb-12 text-stone-600">
+          Discover why guests return again and again to create lasting memories at Chalet Tuftra.
+        </BodyLarge>
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {reviews.map((review, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-md p-6 text-center">
+              <div className="flex justify-center mb-4 text-2xl text-yellow-400">
+                {"★★★★★"}
+              </div>
+              <blockquote className="italic text-stone-800 mb-4">
+                <BodyBase className="mb-0">{review.text}</BodyBase>
+              </blockquote>
+              <div className="text-stone-500 text-sm font-medium">{review.author}</div>
+            </div>
+          ))}
+        </div>
+        
+        <BodyBase className="text-stone-700 mb-6">
+          Join our family of satisfied guests and experience the magic of Chalet Tuftra yourself.
+        </BodyBase>
+        
+        {setIsInquiryOpen && (
+          <Button 
+            size="lg" 
+            onClick={() => setIsInquiryOpen(true)}
+            className="bg-emerald-900 hover:bg-emerald-800 text-white font-semibold px-8 py-4"
+          >
+            Book Your Stay
+          </Button>
+        )}
+      </div>
+    </Container>
+  </Section>
+);
