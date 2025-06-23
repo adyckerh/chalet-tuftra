@@ -32,7 +32,7 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
         email: formData.get('email') as string,
         check_in: formData.get('checkin') as string || null,
         check_out: formData.get('checkout') as string || null,
-        guests: guestsValue ? parseInt(guestsValue.split('-')[0]) : null,
+        guests: guestsValue ? parseInt(guestsValue) : null,
         message: formData.get('message') as string || null
       };
 
@@ -165,10 +165,22 @@ export const InquiryModal = ({ open, onOpenChange }: InquiryModalProps) => {
                 <SelectValue placeholder="Select number of guests" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1-4">1-4 guests</SelectItem>
-                <SelectItem value="5-8">5-8 guests</SelectItem>
-                <SelectItem value="9-12">9-12 guests</SelectItem>
-                <SelectItem value="13+">13+ guests</SelectItem>
+                <SelectItem value="5">5 guests</SelectItem>
+                <SelectItem value="6">6 guests</SelectItem>
+                <SelectItem value="7">7 guests</SelectItem>
+                <SelectItem value="8">8 guests</SelectItem>
+                <SelectItem value="9">9 guests</SelectItem>
+                <SelectItem value="10">10 guests</SelectItem>
+                <SelectItem value="11">11 guests</SelectItem>
+                <SelectItem value="12">12 guests</SelectItem>
+                <SelectItem value="13">13 guests</SelectItem>
+                <SelectItem value="14">14 guests</SelectItem>
+                <SelectItem value="15">15 guests</SelectItem>
+                <SelectItem value="16">16 guests</SelectItem>
+                <SelectItem value="17">17 guests</SelectItem>
+                <SelectItem value="18">18 guests</SelectItem>
+                <SelectItem value="19">19 guests</SelectItem>
+                <SelectItem value="20">20 guests</SelectItem>
               </SelectContent>
             </Select>
           </div>
