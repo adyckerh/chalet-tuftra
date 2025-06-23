@@ -1,27 +1,31 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { StoryVision } from "@/components/StoryVision";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 const Family = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const familyImages = ["/lovable-uploads/861b4521-a0b0-4626-9807-f70c124fba59.png", "/lovable-uploads/5cee333c-729f-4b83-942e-55b0ea89c65b.png", "/lovable-uploads/27ab3278-20aa-4a5e-9e4f-bdcd3865b305.png", "/lovable-uploads/597aa27c-c20d-4cd0-89bb-849c2d9f41fc.png"];
+  
   return <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="w-full bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
-              <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
-              <h1 className="text-lg md:text-xl font-bold text-emerald-900">Chalet Tuftra Findelbach</h1>
+              <a href="/" className="flex items-center space-x-3">
+                <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
+                <h1 className="text-lg md:text-xl font-bold text-emerald-900">Chalet Tuftra Findelbach</h1>
+              </a>
             </div>
-            <div className="flex items-center space-x-6">
-              
-              <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors font-semibold">Family</a>
-              <a href="/amenities" className="text-emerald-900 hover:text-emerald-800 transition-colors">Amenities</a>
-              <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors">Corporate Retreats</a>
-              <a href="/contact" className="text-emerald-900 hover:text-emerald-800 transition-colors">Contact</a>
-              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white" size="sm">
+            <div className="flex items-center space-x-8">
+              <a href="/amenities" className="text-emerald-900 hover:text-emerald-800 transition-colors text-lg">Amenities</a>
+              <a href="/family" className="text-emerald-900 hover:text-emerald-800 transition-colors font-bold text-lg">Family</a>
+              <a href="/corporate-retreats" className="text-emerald-900 hover:text-emerald-800 transition-colors text-lg">Corporate Retreats</a>
+              <a href="/contact" className="text-emerald-900 hover:text-emerald-800 transition-colors text-lg">Contact</a>
+              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white text-lg" size="sm">
                 Make an Inquiry
               </Button>
             </div>

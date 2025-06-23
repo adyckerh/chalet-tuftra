@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { HeroSection } from "@/components/HeroSection";
@@ -22,6 +23,7 @@ const heroFeatures = [{
   title: "Family Hub Concept",
   description: "Designed as a gathering place where families and friends return again and again to create lasting memories together"
 }];
+
 const Index = () => {
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const scrollToTop = () => {
@@ -44,17 +46,17 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
-              <button onClick={scrollToTop} className="flex items-center space-x-3">
+              <a href="/" className="flex items-center space-x-3">
                 <img src="/lovable-uploads/d18c950a-05e2-4013-9d7d-b0248de119bf.png" alt="Chalet Tuftra Logo" className="h-16 w-auto" />
                 <h1 className="text-lg md:text-xl font-bold text-white drop-shadow-md">Chalet Tuftra Findelbach</h1>
-              </button>
+              </a>
             </div>
-            <div className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">
-              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold ">Family</a>
-              <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold">Amenities</a>
-              <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md font-bold">Corporate Retreats</a>
+            <div className="flex items-center space-x-8">
+              <a href="/amenities" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Amenities</a>
+              <a href="/family" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Family</a>
+              <a href="/corporate-retreats" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Corporate Retreats</a>
               <a href="/contact" className="text-white/90 hover:text-white transition-colors whitespace-nowrap drop-shadow-md text-lg">Contact</a>
-              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10" size="sm">
+              <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900/80 hover:bg-emerald-800/80 text-white whitespace-nowrap backdrop-blur-sm border border-white/10 text-lg" size="sm">
                 Make an Inquiry
               </Button>
             </div>
