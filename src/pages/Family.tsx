@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { InquiryModal } from "@/components/InquiryModal";
 import { StoryVision } from "@/components/StoryVision";
@@ -40,7 +41,7 @@ const Family = () => {
 
       {/* Family Content */}
       <div className="max-w-6xl mx-auto px-4 py-[30px]">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-12 items-end">
           <div>
             <h1 className="text-4xl font-bold text-emerald-900 mb-6">The perfect getaway for families</h1>
             <div className="space-y-6">
