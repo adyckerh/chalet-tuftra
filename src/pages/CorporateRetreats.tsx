@@ -29,12 +29,12 @@ const CorporateRetreats = () => {
         {/* Corporate Content - Enhanced Green Section */}
         <Section background="accent">
           <Container>
-            <div className="text-center mb-8">
-              <H1 className="mb-4 text-emerald-900">Corporate retreats & executive meetings</H1>
+            <div className="text-center mb-12">
+              <H1 className="mb-6">Corporate retreats & executive meetings</H1>
             </div>
             
             {/* Image and Content Grid */}
-            <ContentGrid className="mb-8">
+            <ContentGrid className="mb-12">
               <div className="relative">
                 <Carousel opts={{
                 align: "start",
@@ -52,13 +52,13 @@ const CorporateRetreats = () => {
                 </Carousel>
               </div>
               <div>
-                <H2 className="mb-4 text-emerald-900">Executive Mountain Retreats</H2>
-                <BodyLarge className="mb-6 text-stone-700">
+                <H2 className="mb-6">Executive Mountain Retreats</H2>
+                <BodyLarge className="mb-8">
                   Elevate your corporate events and team building activities in our exclusive mountain chalet. 
                   Our sophisticated spaces and inspiring alpine setting provide the perfect environment for 
                   strategic planning sessions, executive meetings, and team bonding experiences that drive results.
                 </BodyLarge>
-                <ul className="space-y-3 text-stone-700">
+                <ul className="space-y-3">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-emerald-900 rounded-full mr-3"></span>
                     Dedicated meeting and conference spaces with mountain views

@@ -77,8 +77,8 @@ const Amenities = () => {
 
         <Section background="secondary">
           <Container>
-            <div className="text-center mb-8">
-              <H2 className="mb-8">Premium features &amp; amenities</H2>
+            <div className="text-center mb-12">
+              <H2 className="mb-6">Premium features & amenities</H2>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">

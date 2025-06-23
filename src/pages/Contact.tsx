@@ -26,9 +26,9 @@ const Contact = () => {
 
         <Section background="accent">
           <Container>
-            <div className="text-center mb-6">
-              <H2 className="text-emerald-900 mb-2">Get in Touch</H2>
-              <BodyBase className="text-emerald-700">Ready to plan your mountain getaway? Contact us directly or submit an inquiry below.</BodyBase>
+            <div className="text-center mb-12">
+              <H2 className="mb-6">Get in Touch</H2>
+              <BodyBase className="text-emerald-700 mb-8">Ready to plan your mountain getaway? Contact us directly or submit an inquiry below.</BodyBase>
             </div>
             <div className="flex justify-center space-x-4">
               <Button onClick={() => setIsInquiryOpen(true)} className="bg-emerald-900 hover:bg-emerald-800 text-white">

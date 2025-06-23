@@ -9,28 +9,28 @@ export const designTokens = {
       fontWeight: 'font-bold',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
-      marginBottom: 'mb-6'
+      marginBottom: ''
     },
     h2: {
       fontSize: 'text-3xl md:text-4xl',
       fontWeight: 'font-bold',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
-      marginBottom: 'mb-4'
+      marginBottom: ''
     },
     h3: {
       fontSize: 'text-2xl md:text-3xl',
       fontWeight: 'font-bold',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
-      marginBottom: 'mb-4'
+      marginBottom: ''
     },
     h4: {
       fontSize: 'text-xl md:text-2xl',
       fontWeight: 'font-semibold',
       color: 'text-emerald-900',
       lineHeight: 'leading-tight',
-      marginBottom: 'mb-3'
+      marginBottom: ''
     },
     // Body Text
     bodyLarge: {
@@ -38,21 +38,21 @@ export const designTokens = {
       fontWeight: 'font-normal',
       color: 'text-stone-700',
       lineHeight: 'leading-relaxed',
-      marginBottom: 'mb-4'
+      marginBottom: ''
     },
     bodyBase: {
       fontSize: 'text-lg',
       fontWeight: 'font-normal',
       color: 'text-stone-700',
       lineHeight: 'leading-relaxed',
-      marginBottom: 'mb-4'
+      marginBottom: ''
     },
     bodySmall: {
       fontSize: 'text-base',
       fontWeight: 'font-normal',
       color: 'text-stone-600',
       lineHeight: 'leading-relaxed',
-      marginBottom: 'mb-3'
+      marginBottom: ''
     },
     // Navigation text
     navText: {
@@ -76,7 +76,7 @@ export const designTokens = {
   spacing: {
     section: {
       paddingY: 'py-16',
-      marginBottom: 'mb-16'
+      marginBottom: ''
     },
     container: {
       maxWidth: 'max-w-7xl',
@@ -84,11 +84,17 @@ export const designTokens = {
       margin: 'mx-auto'
     },
     contentBlock: {
-      marginBottom: 'mb-8',
+      marginBottom: 'mb-12',
       gap: 'gap-8'
     },
     grid: {
       gap: 'gap-8 md:gap-12'
+    },
+    textBlock: {
+      marginBottom: 'mb-6'
+    },
+    listSpacing: {
+      marginBottom: 'mb-8'
     }
   },
   
@@ -137,4 +143,12 @@ export const getSectionClasses = () => {
 
 export const getContainerClasses = () => {
   return `${designTokens.spacing.container.maxWidth} ${designTokens.spacing.container.padding} ${designTokens.spacing.container.margin}`;
+};
+
+export const getTextBlockClasses = () => {
+  return designTokens.spacing.textBlock.marginBottom;
+};
+
+export const getListSpacingClasses = () => {
+  return designTokens.spacing.listSpacing.marginBottom;
 };
