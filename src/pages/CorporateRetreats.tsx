@@ -49,6 +49,9 @@ const CorporateRetreats = () => {
           <Container>
             <div className="text-center mb-12">
               <H1 className="mb-6">Corporate retreats & executive meetings</H1>
+              <BodyLarge className="mb-6">
+                Choose the level of service that suits you - from a fully catered, ultra-luxury dining experience to a hands-on cook-together stay. Housekeeping and cleaning services mean you can enjoy a completely "no-worries" package.
+              </BodyLarge>
             </div>
             
             {/* Image and Content Grid */}

@@ -74,12 +74,3 @@ export const BodySmall: React.FC<TypographyProps> = ({
     {children}
   </p>
 );
-
-export const ServiceDescription: React.FC<TypographyProps> = ({
-  children,
-  className = ''
-}) => (
-  <p className={`${getTypographyClasses('bodyLarge')} ${className}`}>
-    Choose the level of service that suits you - from a fully catered, ultra-luxury dining experience to a hands-on cook-together stay. Housekeeping and cleaning services mean you can enjoy a completely "no-worries" package.
-  </p>
-);
