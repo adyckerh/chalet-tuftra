@@ -4,9 +4,9 @@ import { MapPin, Mail, Phone } from "lucide-react";
 export const FooterSection = () => (
   <footer id="contact" className="bg-stone-900 text-white py-[30px]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="grid md:grid-cols-3 gap-8 items-start">
+      <div className="flex flex-col sm:flex-col md:flex-row justify-between items-start gap-8 py-8 px-4">
         {/* Logo Section */}
-        <div className="flex flex-col items-center md:items-start">
+        <div className="flex flex-col items-center md:items-start flex-1">
           <img 
             src="/lovable-uploads/f9c4054d-f36e-4e59-bdba-d00862247950.png" 
             alt="Chalet Tuftra Logo" 
@@ -16,7 +16,7 @@ export const FooterSection = () => (
         </div>
 
         {/* Contact Section */}
-        <div>
+        <div className="flex-1">
           <h4 className="font-semibold mb-4">Contact</h4>
           <div className="space-y-2 text-stone-300">
             <div className="flex items-center space-x-2">
@@ -35,7 +35,7 @@ export const FooterSection = () => (
         </div>
         
         {/* Partnership Section */}
-        <div>
+        <div className="flex-1">
           <h4 className="font-semibold mb-4">Partnership</h4>
           <p className="text-stone-300 mb-2">Managed by</p>
           <a href="https://zermattskichalets.com/accommodation/chalet-tuftra-findelbach/" target="_blank" rel="noopener noreferrer" className="text-emerald-300 hover:text-emerald-200 font-semibold">
