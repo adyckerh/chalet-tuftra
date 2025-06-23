@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -73,7 +72,7 @@ export const AirbnbReviews = ({
               </div>
             </div>
             
-            <Button onClick={handleAirbnbClick} className="bg-[#FF5A5F] hover:bg-[#E00007] text-white px-6 py-2 rounded-lg text-2xl">
+            <Button onClick={handleAirbnbClick} className="text-white px-6 py-2 rounded-lg text-2xl bg-[#ff5a5f]">
               Review us on Airbnb
             </Button>
           </div>
