@@ -25,25 +25,29 @@ export const GallerySection = ({
               <p className="text-lg text-emerald-700 max-w-3xl mx-auto">{category.description}</p>
             </div>
             
-            <div className="relative max-w-5xl mx-auto">
-              <Carousel className="w-full">
-                <CarouselContent>
+            <div className="relative max-w-4xl mx-auto px-12">
+              <Carousel 
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
                   {category.images.map((image, imageIndex) => (
-                    <CarouselItem key={imageIndex} className="md:basis-1/2 lg:basis-1/3">
-                      <div className="p-2">
-                        <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                          <img
-                            src={image}
-                            alt={`${category.title} ${imageIndex + 1}`}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
+                    <CarouselItem key={imageIndex} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                      <div className="aspect-[4/3] overflow-hidden rounded-lg">
+                        <img
+                          src={image}
+                          alt={`${category.title} ${imageIndex + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" />
               </Carousel>
             </div>
           </div>
