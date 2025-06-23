@@ -11,7 +11,7 @@ export const FooterSection = () => (
           <img 
             src="/lovable-uploads/f9c4054d-f36e-4e59-bdba-d00862247950.png" 
             alt="Chalet Tuftra Logo" 
-            className="w-32 h-32 mb-4" 
+            className="w-40 h-40 mb-4" 
           />
         </div>
 
