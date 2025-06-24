@@ -19,7 +19,7 @@ export const FeaturesSection = ({
   <Section id={id} background="primary">
     <Container>
       <div className="text-center mb-6">
-        <H2 className="mb-2">
+        <H2 className="mb-6">
           Our Chalet Philosophy
         </H2>
         <BodyLarge className="mb-3">

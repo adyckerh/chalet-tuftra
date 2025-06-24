@@ -1,5 +1,5 @@
 
-import { Mountain, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Container, ContentGrid } from "@/components/ui/Layout";
 import { H2, BodyLarge, BodyBase, H4 } from "@/components/ui/Typography";
@@ -27,7 +27,14 @@ export const LocationSection = ({ id }: LocationSectionProps) => {
         </div>
         
         <ContentGrid>
-          <div>
+          <div className="order-2 md:order-1">
+            <Button 
+              size="lg"
+              onClick={handleMapClick}
+              className="bg-emerald-700 hover:bg-emerald-600 text-white order-first md:order-none mt-4 md:mb-6"
+            >
+              View on Google Maps
+            </Button>
             <div 
               className="rounded-lg overflow-hidden shadow-2xl cursor-pointer hover:shadow-3xl transition-shadow group"
               onClick={handleMapClick}
@@ -40,7 +47,7 @@ export const LocationSection = ({ id }: LocationSectionProps) => {
             </div>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-6 order-1 md:order-2">
             <div className="flex items-start space-x-4">
               <MapPin className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
               <div>
@@ -53,23 +60,14 @@ export const LocationSection = ({ id }: LocationSectionProps) => {
             </div>
             
             <div className="flex items-start space-x-4">
-              <Mountain className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
+              <MapPin className="w-6 h-6 text-emerald-900 flex-shrink-0 mt-1" />
               <div>
-                <H4 className="mb-2">Unobstructed Mountain Views</H4>
+                <H4 className="mb-2">How to find us</H4>
                 <BodyBase className="text-stone-600 mb-0">
-                  Wake up to the magnificent Matterhorn right outside your window, with the soothing sounds 
-                  of the Findelbach stream creating a natural symphony throughout your stay.
+                  We are directly at the bus station and it only takes 10 minutes from the train station via public transportation.
                 </BodyBase>
               </div>
             </div>
-            
-            <Button 
-              size="lg"
-              onClick={handleMapClick}
-              className="bg-emerald-700 hover:bg-emerald-600 text-white"
-            >
-              View on Google Maps
-            </Button>
           </div>
         </ContentGrid>
       </Container>

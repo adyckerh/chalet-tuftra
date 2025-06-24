@@ -6,7 +6,7 @@ import { StoryVision } from "@/components/StoryVision";
 import { FooterSection } from "@/components/FooterSection";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Section, Container, ContentGrid } from "@/components/ui/Layout";
-import { H1, BodyLarge } from "@/components/ui/Typography";
+import { H1, H2, BodyLarge } from "@/components/ui/Typography";
 import { SEOHead } from "@/components/SEOHead";
 
 const familyImages = [
@@ -40,9 +40,11 @@ const Family = () => {
 
         <Section background="secondary">
           <Container>
+            <div className="text-center mb-12">
+              <H1 className="mb-6 whitespace-nowrap">The perfect getaway for families</H1>
+            </div>
             <ContentGrid>
               <div>
-                <H1 className="mb-6">The perfect getaway for families</H1>
                 <div className="space-y-6">
                   <BodyLarge>
                     Our chalet is designed with families in mind, offering spacious living areas, multiple bedrooms, and amenities that cater to guests of all ages. From the youngest guests to grandparents, everyone will find comfort and joy in our chalet.
@@ -76,6 +78,17 @@ const Family = () => {
                 </Carousel>
               </div>
             </ContentGrid>
+          </Container>
+        </Section>
+
+        <Section background="primary">
+          <Container>
+            <div className="text-center mb-12">
+              <H2 className="mb-6">Our Story</H2>
+              <BodyLarge className="max-w-4xl mx-auto text-stone-600">
+                We are pleased that you have found your way here and wish you wonderful holidays. After 17 years living in Shanghai and Hong Kong, we returned to Switzerland and now live next to Lake Lucerne with our family of 5 children.
+              </BodyLarge>
+            </div>
           </Container>
         </Section>
 
