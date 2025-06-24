@@ -25,7 +25,7 @@ export const Navigation = ({ setIsInquiryOpen, isHomePage = false }: NavigationP
 
   const getLinkClass = (path: string) => {
     const isActive = location.pathname === path;
-    return `${baseLinkClass} ${isActive ? 'font-bold' : ''}`;
+    return `${baseLinkClass} ${isActive ? 'font-bold text-emerald-600 underline decoration-2 underline-offset-4' : ''}`;
   };
 
   return (

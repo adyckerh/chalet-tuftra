@@ -41,7 +41,7 @@ const Family = () => {
         <Section background="secondary">
           <Container>
             <div className="text-center mb-12">
-              <H1 className="mb-6 whitespace-nowrap">The perfect getaway for families</H1>
+              <H1 className="mb-6">The perfect getaway for families</H1>
             </div>
             <ContentGrid>
               <div>
@@ -78,17 +78,6 @@ const Family = () => {
                 </Carousel>
               </div>
             </ContentGrid>
-          </Container>
-        </Section>
-
-        <Section background="primary">
-          <Container>
-            <div className="text-center mb-12">
-              <H2 className="mb-6">Our Story</H2>
-              <BodyLarge className="max-w-4xl mx-auto text-stone-600">
-                We are pleased that you have found your way here and wish you wonderful holidays. After 17 years living in Shanghai and Hong Kong, we returned to Switzerland and now live next to Lake Lucerne with our family of 5 children.
-              </BodyLarge>
-            </div>
           </Container>
         </Section>
 

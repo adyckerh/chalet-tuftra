@@ -34,7 +34,7 @@ export const MobileNavigation = ({ setIsInquiryOpen, isHomePage = false }: Mobil
 
   const getLinkClass = (path: string) => {
     const isActive = location.pathname === path;
-    return `${baseLinkClass} ${isActive ? 'font-bold' : ''}`;
+    return `${baseLinkClass} ${isActive ? 'font-bold bg-emerald-100/20' : ''}`;
   };
 
   return (

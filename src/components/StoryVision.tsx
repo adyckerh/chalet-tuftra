@@ -14,7 +14,7 @@ export const StoryVision = ({ setIsInquiryOpen }: StoryVisionProps) => (
       <ContentGrid>
         <div>
           <H2 className="mb-6">
-            Our Story & Vision
+            Our Story
           </H2>
           <div className="space-y-6 text-stone-600 leading-relaxed">
             <BodyBase>

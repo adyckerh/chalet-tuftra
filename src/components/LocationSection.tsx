@@ -28,13 +28,15 @@ export const LocationSection = ({ id }: LocationSectionProps) => {
         
         <ContentGrid>
           <div className="order-2 md:order-1">
-            <Button 
-              size="lg"
-              onClick={handleMapClick}
-              className="bg-emerald-700 hover:bg-emerald-600 text-white order-first md:order-none mt-4 md:mb-6"
-            >
-              View on Google Maps
-            </Button>
+            <div className="text-center mb-4">
+              <Button 
+                size="lg"
+                onClick={handleMapClick}
+                className="bg-emerald-700 hover:bg-emerald-600 text-white"
+              >
+                View on Google Maps
+              </Button>
+            </div>
             <div 
               className="rounded-lg overflow-hidden shadow-2xl cursor-pointer hover:shadow-3xl transition-shadow group"
               onClick={handleMapClick}
