@@ -34,9 +34,7 @@ export const H4: React.FC<TypographyProps> = ({
 export const BodyLarge: React.FC<TypographyProps> = ({
   children,
   className = ''
-}) => <p className={`${getTypographyClasses('bodyLarge')} ${className}`}>
-    {children}
-  </p>;
+}) => {};
 export const BodyBase: React.FC<TypographyProps> = ({
   children,
   className = ''
